@@ -9,13 +9,11 @@ function openSidebar() {
     sidebarOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
-
 function closeSidebar() {
     sidebar.classList.remove('active');
     sidebarOverlay.classList.remove('active');
     document.body.style.overflow = '';
 }
-
 hamburger.addEventListener('click', openSidebar);
 sidebarClose.addEventListener('click', closeSidebar);
 sidebarOverlay.addEventListener('click', closeSidebar);
@@ -99,43 +97,51 @@ function animateParticles() {
 }
 animateParticles();
 
-/* ================= DYNAMIC TYPING & CONTENT ================= */
+/* ============================================================
+   DYNAMIC TYPING, TEXT & SINGLE IMAGE
+============================================================ */
 const data = [
     {
         title: "Plastic Packaging",
         desc: "Plastic packaging is a versatile, durable, and cost-effective solution for preserving and protecting products. Customizable in design and size, plastic packaging enhances brand visibility.",
         btnText: "Get Plastic Packaging",
-        link: "#plastic-packaging"
+        link: "#plastic-packaging",
+        image: "images/plastic-packing.png" 
     },
     {
         title: "Tissue Conversion",
         desc: "Tissue conversion transforms raw tissue paper into finished products like napkins, facial tissues, and paper towels.",
         btnText: "Get Tissue Conversion",
-        link: "#tissue-conversion"
+        link: "#tissue-conversion",
+        image: "images/tissue-conversion.png"
     },
     {
         title: "Flexible Printing",
         desc: "Flexible printing offers versatile, efficient solutions for packaging and custom designs. It adapts to different materials and shapes, ensuring high-quality, durable prints that enhance product appeal and branding.",
         btnText: "Get Flexible Printing",
-        link: "#flexible-printing"
+        link: "#flexible-printing",
+        image: "images/flexible-printing.png"
     },
     {
         title: "Roll to Roll Printing",
         desc: "Roll-to-roll label printing is an efficient, high-speed solution for producing custom labels in bulk. Ideal for industries.",
         btnText: "Get Roll to Roll Labels",
-        link: "#roll-to-roll"
+        link: "#roll-to-roll",
+        image: "images/roll-to-roll.png"
     },
     {
         title: "Laminated Tubes",
         desc: "Laminated tubes are durable, lightweight packaging solutions ideal for cosmetics, pharmaceuticals, and food products.",
         btnText: "Get Laminated Tubes",
-        link: "#laminated-tubes"
+        link: "#laminated-tubes",
+        image: "images/laminated-tubes.png"
     },
     {
         title: "Offset Printing",
         desc: "Offset printing is a high-quality, cost-effective method ideal for large volumes. It ensures vibrant colors, sharp images, and professional results on various materials.",
         btnText: "Get Offset Printing",
-        link: "#offset-printing"
+        link: "#offset-printing",
+        image: "images/offset-printing.jpg"
     }
 ];
 
@@ -143,10 +149,27 @@ const typedElement = document.getElementById('typedText');
 const descElement = document.getElementById('dynamicDesc');
 const btnStart = document.getElementById('dynamicBtnStart');
 const btnStartText = document.getElementById('btnStartText');
+const dynamicImage = document.getElementById('dynamicImage');
 
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
+
+// Initial Image load
+dynamicImage.src = data[0].image;
+
+function updateImage(imageUrl) {
+    dynamicImage.style.opacity = '0';
+    dynamicImage.style.transform = 'scale(0.95)';
+
+    setTimeout(() => {
+        dynamicImage.src = imageUrl;
+        dynamicImage.onload = () => {
+            dynamicImage.style.opacity = '1';
+            dynamicImage.style.transform = 'scale(1)';
+        };
+    }, 300); 
+}
 
 function typeEffect() {
     const currentItem = data[phraseIndex];
@@ -177,6 +200,9 @@ function typeEffect() {
             
             btnStart.href = data[phraseIndex].link;
             btnStartText.textContent = data[phraseIndex].btnText;
+
+            updateImage(data[phraseIndex].image);
+
         }, 200);
 
         speed = 500; 
