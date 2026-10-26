@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYPER-MOTION — Premium Packaging</title>
+
+    <!-- Font Awesome & Tailwind CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white text-[#0A0C12] overflow-x-hidden min-h-screen font-sans relative flex flex-col">
+
+    <!-- BACKGROUNDS -->
+    <div class="bg-morph fixed inset-0 -z-50"></div>
+    <div class="glow fixed rounded-full -z-40 pointer-events-none glow-1"></div>
+    <div class="glow fixed rounded-full -z-40 pointer-events-none glow-2"></div>
+    <canvas id="particle-canvas" class="fixed inset-0 -z-30 pointer-events-none opacity-45"></canvas>
+
+    <!-- TOPBAR -->
+    <div class="relative z-50 flex flex-col md:flex-row justify-center md:justify-between items-center py-2 md:py-3 px-4 md:px-12 text-xs tracking-wider font-medium bg-[#0a0c12]/95 backdrop-blur-md border-b border-[#46B77B]/20 text-white/80 overflow-hidden topbar">
+        <div class="flex items-center gap-4 md:gap-6 relative z-10 flex-wrap justify-center">
+            <span class="flex items-center gap-2 whitespace-nowrap"><i class="fas fa-envelope text-[#46B77B]"></i> info@mfp.com.pk</span>
+            <span class="flex items-center gap-2 whitespace-nowrap"><i class="fas fa-phone text-[#46B77B]"></i> +92 111333301</span>
+        </div>
+        <div class="hidden md:flex items-center gap-4 relative z-10">
+            <a href="#" class="flex items-center gap-2 bg-white/5 py-1 px-4 rounded-full border border-white/10 text-white/85 hover:bg-white/10 transition-colors">
+                <i class="fas fa-map-marker-alt text-[#46B77B]"></i> 18-Km Ferozpur Road, Lahore.
+            </a>
+            <a href="#" class="flex items-center justify-center w-7 h-7 rounded-full bg-white/5 text-white hover:bg-[#46B77B] transition-colors"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="flex items-center justify-center w-7 h-7 rounded-full bg-white/5 text-white hover:bg-[#46B77B] transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="flex items-center justify-center w-7 h-7 rounded-full bg-white/5 text-white hover:bg-[#46B77B] transition-colors"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-[60] flex justify-between items-center py-2 md:py-3 px-4 md:px-12 bg-white/95 backdrop-blur-md border-b border-black/5 navbar">
+        <a href="#" class="flex items-center">
+            <img src="images/logo.png" alt="Maqsood Faisal Logo" class="h-9 md:h-14 w-auto object-contain">
+        </a>
+
+        <ul class="hidden lg:flex items-center gap-8 list-none">
+            <li><a href="#" class="group relative flex items-center gap-2 text-[#0A0C12] text-sm font-semibold py-2 transition-colors"><i class="fas fa-home text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Home<span class="absolute bottom-0 left-0 w-full h-[2px] bg-[#46B77B] scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-transform duration-300 rounded-full"></span></a></li>
+            <li><a href="#" class="group relative flex items-center gap-2 text-[#0A0C12] text-sm font-semibold py-2 transition-colors"><i class="fas fa-info-circle text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> About Us<span class="absolute bottom-0 left-0 w-full h-[2px] bg-[#46B77B] scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-transform duration-300 rounded-full"></span></a></li>
+            <li><a href="#" class="group relative flex items-center gap-2 text-[#0A0C12] text-sm font-semibold py-2 transition-colors"><i class="fas fa-cogs text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Services<span class="absolute bottom-0 left-0 w-full h-[2px] bg-[#46B77B] scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-transform duration-300 rounded-full"></span></a></li>
+            <li><a href="#" class="group relative flex items-center gap-2 text-[#0A0C12] text-sm font-semibold py-2 transition-colors"><i class="fas fa-award text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Quality<span class="absolute bottom-0 left-0 w-full h-[2px] bg-[#46B77B] scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-transform duration-300 rounded-full"></span></a></li>
+            <li><a href="#" class="group relative flex items-center gap-2 text-[#0A0C12] text-sm font-semibold py-2 transition-colors"><i class="fas fa-envelope-open-text text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Contact Us<span class="absolute bottom-0 left-0 w-full h-[2px] bg-[#46B77B] scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-transform duration-300 rounded-full"></span></a></li>
+        </ul>
+
+        <a href="#" class="hidden lg:flex items-center gap-2 py-2.5 px-6 rounded-lg text-sm font-bold text-white bg-gradient-to-br from-[#46B77B] to-[#61CE70] hover:-translate-y-0.5 hover:shadow-lg transition-all">Get a Quote <i class="fas fa-arrow-right"></i></a>
+
+        <div class="lg:hidden text-2xl text-[#0A0C12] cursor-pointer z-[100]" id="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- SIDEBAR MOBILE -->
+    <div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[150] opacity-0 invisible transition-all duration-300" id="sidebarOverlay"></div>
+    <div class="fixed top-0 -right-full w-80 h-screen bg-white z-[200] p-8 flex flex-col shadow-2xl transition-all duration-400" id="sidebar">
+        <div class="flex justify-between items-center mb-10">
+            <img src="images/logo.png" alt="Logo" class="h-10">
+            <i class="fas fa-times text-xl cursor-pointer text-gray-500 hover:text-[#46B77B] hover:rotate-90 transition-all bg-gray-100 w-9 h-9 flex items-center justify-center rounded-full" id="sidebarClose"></i>
+        </div>
+        <ul class="flex flex-col gap-6 list-none">
+            <li><a href="#" class="flex items-center gap-4 text-[#0A0C12] text-lg font-semibold hover:text-[#46B77B] hover:translate-x-1 transition-all"><i class="fas fa-home text-gray-400 w-5 text-center"></i> Home</a></li>
+            <li><a href="#" class="flex items-center gap-4 text-[#0A0C12] text-lg font-semibold hover:text-[#46B77B] hover:translate-x-1 transition-all"><i class="fas fa-info-circle text-gray-400 w-5 text-center"></i> About Us</a></li>
+            <li><a href="#" class="flex items-center gap-4 text-[#0A0C12] text-lg font-semibold hover:text-[#46B77B] hover:translate-x-1 transition-all"><i class="fas fa-cogs text-gray-400 w-5 text-center"></i> Services</a></li>
+            <li><a href="#" class="flex items-center gap-4 text-[#0A0C12] text-lg font-semibold hover:text-[#46B77B] hover:translate-x-1 transition-all"><i class="fas fa-award text-gray-400 w-5 text-center"></i> Quality</a></li>
+            <li><a href="#" class="flex items-center gap-4 text-[#0A0C12] text-lg font-semibold hover:text-[#46B77B] hover:translate-x-1 transition-all"><i class="fas fa-envelope-open-text text-gray-400 w-5 text-center"></i> Contact Us</a></li>
+        </ul>
+        <a href="#" class="mt-auto flex justify-center items-center gap-2 py-3 px-6 rounded-lg text-sm font-bold text-white bg-gradient-to-br from-[#46B77B] to-[#61CE70] hover:-translate-y-0.5 transition-all">Get a Quote <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+        <!-- HERO SECTION -->
+    <section class="relative z-10 flex-1 flex flex-col-reverse lg:flex-row items-center justify-center text-center lg:text-left py-4 px-4 md:py-12 md:px-12 max-w-7xl mx-auto w-full gap-8 lg:gap-16">
+        
+        <!-- LEFT COLUMN (TEXT) -->
+        <div class="flex flex-col items-center lg:items-start w-full lg:w-1/2 z-20 mt-0">
+            
+            <div class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full text-[0.65rem] md:text-xs font-bold tracking-widest uppercase text-[#46B77B] bg-[#46B77B]/10 border border-[#46B77B]/30 mb-5">
+                <i class="fas fa-leaf"></i> Premium Packaging
+            </div>
+
+            <!-- NEW HEADING (For Your + Typing in one flow) -->
+            <h1 class="text-[2rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] xl:text-[3.8rem] font-black leading-[1.2] tracking-tight text-[#0A0C12] mb-4 w-full">
+                We Are Solutions For Your <br>
+                <span class="text-[#46B77B] inline-flex items-center whitespace-nowrap">
+                    <span id="typedText"></span><span class="inline-block w-1 h-[0.9em] bg-[#46B77B] ml-1 animate-pulse"></span>
+                </span>
+            </h1>
+
+            <!-- DYNAMIC PARAGRAPH -->
+            <p id="dynamicDesc" class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 mb-6 md:mb-8 max-w-lg transition-opacity duration-300">
+                Offset printing is a high-quality, cost-effective method ideal for large volumes. It ensures vibrant colors, sharp images, and professional results on various materials.
+            </p>
+
+            <!-- BUTTONS -->
+            <div class="flex flex-row justify-center lg:justify-start items-center gap-3 w-full max-w-[400px] mx-auto lg:mx-0">
+                
+                <!-- Start Button -->
+                <a href="#offset-printing" id="dynamicBtnStart"
+                    class="flex-1 flex items-center justify-center gap-2 py-3 px-3 md:px-6 rounded-xl font-bold text-xs md:text-base text-white bg-gradient-to-br from-[#46B77B] to-[#61CE70] hover:-translate-y-1 hover:shadow-lg transition-all group whitespace-nowrap">
+                    <span id="btnStartText" class="truncate">Get Offset Printing</span> 
+                    <i class="fas fa-arrow-right text-[0.9em] shrink-0 transition-transform group-hover:translate-x-1"></i>
+                </a>
+                
+                <!-- Explore Button -->
+                <a href="#"
+                    class="flex-1 flex items-center justify-center gap-2 py-3 px-3 md:px-6 rounded-xl font-bold text-xs md:text-base text-[#0A0C12] bg-white border-2 border-[#61CE70] hover:-translate-y-1 hover:shadow-lg transition-all group whitespace-nowrap">
+                    <span class="truncate">Explore Services</span> 
+                    <i class="fas fa-cogs text-[0.9em] shrink-0 transition-transform group-hover:rotate-90"></i> 
+                </a>
+
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN (IMAGE) -->
+        <div class="w-full lg:w-1/2 flex justify-center items-center relative z-10 mt-0">
+            
+            <div class="absolute inset-0 bg-[#46B77B]/20 blur-[60px] rounded-full scale-75 animate-pulse"></div>
+            
+            <div class="relative w-full max-w-[320px] md:max-w-[380px] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(70,183,123,0.3)] border-[6px] border-white bg-white group transition-all duration-500" id="mainImageWrapper">
+                <img src="" id="dynamicImage" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Service Image">
+                
+                <!-- Overlay badge -->
+                <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-3 rounded-xl flex justify-between items-center shadow-lg">
+                    <span class="text-xs md:text-sm font-bold text-[#0A0C12] uppercase tracking-wide">Premium Quality</span>
+                    <i class="fas fa-check-circle text-[#46B77B] text-lg"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- JS File -->
+    <script src="script.js"></script>
+</body>
+
+</html>

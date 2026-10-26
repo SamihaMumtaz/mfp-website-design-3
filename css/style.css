@@ -1,0 +1,74 @@
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* ================= BACKGROUNDS ================= */
+.bg-morph {
+    background: linear-gradient(125deg, #FFFFFF, #F0F9F3, #FFFFFF, #E6F5EC, #FFFFFF);
+    background-size: 400% 400%;
+    animation: morphBg 22s ease infinite;
+}
+
+@keyframes morphBg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.glow {
+    filter: blur(150px);
+}
+
+.glow-1 {
+    width: 600px;
+    height: 600px;
+    background: rgba(97, 206, 112, .12);
+    top: -200px;
+    left: -200px;
+    animation: glowFloat 18s infinite alternate;
+}
+
+.glow-2 {
+    width: 700px;
+    height: 700px;
+    background: rgba(70, 183, 123, .09);
+    bottom: -250px;
+    right: -150px;
+    animation: glowFloat 22s infinite alternate-reverse;
+}
+
+@keyframes glowFloat {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(60px, -50px) scale(1.2); }
+}
+
+/* ================= TOPBAR ANIMATION ================= */
+.topbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -50%;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #46B77B, #61CE70, transparent);
+    animation: topbarGlow 6s infinite linear;
+    box-shadow: 0 0 15px #46B77B;
+}
+
+@keyframes topbarGlow {
+    0% { left: -50%; }
+    100% { left: 100%; }
+}
+
+/* ================= SIDEBAR TRANSITION ================= */
+#sidebar.active {
+    right: 0;
+}
+
+#sidebarOverlay.active {
+    opacity: 1;
+    visibility: visible;
+}
