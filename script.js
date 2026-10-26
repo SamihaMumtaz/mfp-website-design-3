@@ -106,48 +106,42 @@ const data = [
         desc: "Plastic packaging is a versatile, durable, and cost-effective solution for preserving and protecting products. Customizable in design and size, plastic packaging enhances brand visibility.",
         btnText: "Get Plastic Packaging",
         link: "#plastic-packaging",
-        // Yahan apni image lagayen: "images/plastic.jpg"
-        image: "https://images.unsplash.com/photo-1605600659908-0ef719419d41?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+        image: "images/plastic-packing.png" 
     },
     {
         title: "Tissue Conversion",
         desc: "Tissue conversion transforms raw tissue paper into finished products like napkins, facial tissues, and paper towels.",
         btnText: "Get Tissue Conversion",
         link: "#tissue-conversion",
-        // Yahan apni image lagayen: "images/tissue.jpg"
-        image: "https://images.unsplash.com/photo-1584302179602-e4c3d3fd629d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "images/tissue-conversion.png"
     },
     {
         title: "Flexible Printing",
         desc: "Flexible printing offers versatile, efficient solutions for packaging and custom designs. It adapts to different materials and shapes, ensuring high-quality, durable prints that enhance product appeal and branding.",
         btnText: "Get Flexible Printing",
         link: "#flexible-printing",
-        // Yahan apni image lagayen: "images/flexible.jpg"
-        image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "images/flexible-printing.png"
     },
     {
         title: "Roll to Roll Printing",
         desc: "Roll-to-roll label printing is an efficient, high-speed solution for producing custom labels in bulk. Ideal for industries.",
         btnText: "Get Roll to Roll Labels",
         link: "#roll-to-roll",
-        // Yahan apni image lagayen: "images/roll.jpg"
-        image: "https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "images/roll-to-roll.png"
     },
     {
         title: "Laminated Tubes",
         desc: "Laminated tubes are durable, lightweight packaging solutions ideal for cosmetics, pharmaceuticals, and food products.",
         btnText: "Get Laminated Tubes",
         link: "#laminated-tubes",
-        // Yahan apni image lagayen: "images/tubes.jpg"
-        image: "https://images.unsplash.com/photo-1591291621164-2c6367723315?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "images/laminated-tubes.png"
     },
     {
         title: "Offset Printing",
         desc: "Offset printing is a high-quality, cost-effective method ideal for large volumes. It ensures vibrant colors, sharp images, and professional results on various materials.",
         btnText: "Get Offset Printing",
         link: "#offset-printing",
-        // Yahan apni image lagayen: "images/offset.jpg"
-        image: "https://images.unsplash.com/photo-1562408590-e32931084e23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        image: "images/offset-printing.jpg"
     }
 ];
 
