@@ -276,3 +276,58 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/* ============================================================
+   CLEAN BRANDS MARQUEE INJECTION
+============================================================ */
+// Apni 39 images ke paths yahan daalein
+const partnerLogos = [
+    "images/brand1.png",
+    "images/brand2.png",
+    "images/brand3.png",
+    "images/brand4.png",
+    "images/brand5.png",
+    "images/brand6.png",
+    "images/brand7.png",
+    "images/brand8.png",
+    "images/brand9.png",
+    "images/brand10.png",
+    "images/brand11.png",
+    "images/brand12.png",
+    "images/brand13.png",
+    "images/brand14.png",
+    "images/brand15.png",
+    "images/brand16.png",
+    "images/brand17.png",
+    "images/brand18.png",
+    "images/brand19.png",
+    "images/brand20.png",
+    "images/brand21.png",
+    "images/brand22.png",
+    "images/brand23.png",
+    "images/brand24.png",
+    "images/brand25.png",
+    "images/brand26.png",
+    "images/brand27.png",
+    "images/brand28.png",
+    "images/brand29.png",
+    "images/brand30.png",
+    "images/brand31.png",
+    "images/brand32.png",
+    "images/brand33.png",
+    "images/brand34.png",
+    "images/brand35.png",
+    "images/brand36.png",
+    "images/brand37.png",
+    "images/brand38.png",
+    "images/brand39.png"
+];
+
+const brandMarquee = document.getElementById('brand-marquee');
+
+if (brandMarquee && partnerLogos.length > 0) {
+    const imagesHTML = partnerLogos.map(src => `
+        <img src="${src}" alt="Partner Logo" class="marquee-logo" loading="lazy">
+    `).join('');
+
+    brandMarquee.innerHTML = imagesHTML + imagesHTML;
+}
