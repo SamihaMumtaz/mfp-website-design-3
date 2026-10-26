@@ -13,9 +13,17 @@ body {
 }
 
 @keyframes morphBg {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .glow {
@@ -41,8 +49,13 @@ body {
 }
 
 @keyframes glowFloat {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(60px, -50px) scale(1.2); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(60px, -50px) scale(1.2);
+    }
 }
 
 /* ================= TOPBAR ANIMATION ================= */
@@ -59,8 +72,13 @@ body {
 }
 
 @keyframes topbarGlow {
-    0% { left: -50%; }
-    100% { left: 100%; }
+    0% {
+        left: -50%;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
 
 /* ================= SIDEBAR TRANSITION ================= */
@@ -72,3 +90,50 @@ body {
     opacity: 1;
     visibility: visible;
 }
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.05);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.spotlight-panel {
+    position: relative;
+}
+
+.spotlight-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(97, 206, 112, 0.08), transparent 40%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.spotlight-panel:hover::before {
+    opacity: 1;
+}
+

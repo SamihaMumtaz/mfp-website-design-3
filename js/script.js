@@ -63,12 +63,12 @@ window.addEventListener('mousemove', e => {
 
 function animateParticles() {
     ctx.clearRect(0, 0, W, H);
-    
+
     particles.forEach(p => {
         const dx = p.x - mouseX;
         const dy = p.y - mouseY;
         const dist = Math.hypot(dx, dy);
-        
+
         if (dist < 180 && dist > 0) {
             p.x += (dx / dist) * 0.6;
             p.y += (dy / dist) * 0.6;
@@ -82,7 +82,7 @@ function animateParticles() {
             const dx = particles[i].x - particles[j].x;
             const dy = particles[i].y - particles[j].y;
             const dist = Math.hypot(dx, dy);
-            
+
             if (dist < 140) {
                 ctx.beginPath();
                 ctx.moveTo(particles[i].x, particles[i].y);
@@ -104,42 +104,42 @@ const data = [
     {
         title: "Plastic Packaging",
         desc: "Plastic packaging is a versatile, durable, and cost-effective solution for preserving and protecting products. Customizable in design and size, plastic packaging enhances brand visibility.",
-        btnText: "Get Plastic Packaging",
+        btnText: "Plastic Packaging",
         link: "#plastic-packaging",
-        image: "images/plastic-packing.png" 
+        image: "images/plastic-packing.png"
     },
     {
         title: "Tissue Conversion",
         desc: "Tissue conversion transforms raw tissue paper into finished products like napkins, facial tissues, and paper towels.",
-        btnText: "Get Tissue Conversion",
+        btnText: "Tissue Conversion",
         link: "#tissue-conversion",
         image: "images/tissue-conversion.png"
     },
     {
         title: "Flexible Printing",
         desc: "Flexible printing offers versatile, efficient solutions for packaging and custom designs. It adapts to different materials and shapes, ensuring high-quality, durable prints that enhance product appeal and branding.",
-        btnText: "Get Flexible Printing",
+        btnText: "Flexible Printing",
         link: "#flexible-printing",
         image: "images/flexible-printing.png"
     },
     {
-        title: "Roll to Roll Printing",
+        title: "Roll to Roll Labels",
         desc: "Roll-to-roll label printing is an efficient, high-speed solution for producing custom labels in bulk. Ideal for industries.",
-        btnText: "Get Roll to Roll Labels",
+        btnText: "Roll to Roll Labels",
         link: "#roll-to-roll",
         image: "images/roll-to-roll.png"
     },
     {
         title: "Laminated Tubes",
         desc: "Laminated tubes are durable, lightweight packaging solutions ideal for cosmetics, pharmaceuticals, and food products.",
-        btnText: "Get Laminated Tubes",
+        btnText: "Laminated Tubes",
         link: "#laminated-tubes",
         image: "images/laminated-tubes.png"
     },
     {
         title: "Offset Printing",
         desc: "Offset printing is a high-quality, cost-effective method ideal for large volumes. It ensures vibrant colors, sharp images, and professional results on various materials.",
-        btnText: "Get Offset Printing",
+        btnText: "Offset Printing",
         link: "#offset-printing",
         image: "images/offset-printing.jpg"
     }
@@ -168,7 +168,7 @@ function updateImage(imageUrl) {
             dynamicImage.style.opacity = '1';
             dynamicImage.style.transform = 'scale(1)';
         };
-    }, 300); 
+    }, 300);
 }
 
 function typeEffect() {
@@ -185,19 +185,19 @@ function typeEffect() {
     let speed = isDeleting ? 40 : 80;
 
     if (!isDeleting && charIndex === currentItem.title.length) {
-        speed = 2000; 
+        speed = 2000;
         isDeleting = true;
-    } 
+    }
     else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % data.length;
-        
+
         descElement.style.opacity = 0;
-        
+
         setTimeout(() => {
             descElement.textContent = data[phraseIndex].desc;
             descElement.style.opacity = 1;
-            
+
             btnStart.href = data[phraseIndex].link;
             btnStartText.textContent = data[phraseIndex].btnText;
 
@@ -205,10 +205,74 @@ function typeEffect() {
 
         }, 200);
 
-        speed = 500; 
+        speed = 500;
     }
 
     setTimeout(typeEffect, speed);
 }
 
 typeEffect();
+
+/* ============================================================
+   PERFORMANCE SECTION
+============================================================ */
+
+document.addEventListener("DOMContentLoaded", function () {
+    // 1. Scroll Animation (Circles & Numbers)
+    const performanceSection = document.getElementById('performance-grid');
+    const counters = document.querySelectorAll('.counter');
+    const perfCircles = document.querySelectorAll('.perf-circle');
+    const CIRCUMFERENCE = 2 * Math.PI * 52;
+
+    let perfAnimated = false;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !perfAnimated) {
+                perfAnimated = true;
+
+                perfCircles.forEach(circle => {
+                    const target = +circle.getAttribute('data-target');
+                    const offset = CIRCUMFERENCE - (target / 100) * CIRCUMFERENCE;
+                    circle.style.strokeDashoffset = offset;
+                });
+
+                counters.forEach((counter) => {
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2500;
+                    let startTimestamp = null;
+
+                    const step = (timestamp) => {
+                        if (!startTimestamp) startTimestamp = timestamp;
+                        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                        const easeOut = 1 - Math.pow(1 - progress, 4);
+                        counter.innerText = Math.floor(easeOut * target);
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    window.requestAnimationFrame(step);
+                });
+            }
+        });
+    }, { threshold: 0.3 });
+
+    if (performanceSection) {
+        observer.observe(performanceSection);
+    }
+
+    // 2. Interactive Spotlight Effect (Mouse Tracking)
+    const panels = document.querySelectorAll('.spotlight-panel');
+    panels.forEach(panel => {
+        panel.addEventListener('mousemove', e => {
+            const rect = panel.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            panel.style.setProperty('--mouse-x', `${x}px`);
+            panel.style.setProperty('--mouse-y', `${y}px`);
+        });
+    });
+});
+
