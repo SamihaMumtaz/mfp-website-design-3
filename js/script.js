@@ -331,3 +331,39 @@ if (brandMarquee && partnerLogos.length > 0) {
 
     brandMarquee.innerHTML = imagesHTML + imagesHTML;
 }
+
+// 1. Back to Top Logic
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-8');
+        backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
+    } else {
+        backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-8');
+        backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+    }
+});
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// 2. Scroll Animation Logic (Fade-in-up on every section)
+document.addEventListener("DOMContentLoaded", function () {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                scrollObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in-section').forEach((section) => {
+        scrollObserver.observe(section);
+    });
+});

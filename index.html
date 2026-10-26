@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en" class="h-full scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,7 @@
 
     <!-- TOPBAR -->
     <div
-        class="relative z-50 flex flex-col md:flex-row justify-center md:justify-between items-center py-2 md:py-3 px-4 md:px-12 text-xs tracking-wider font-medium bg-[#0a0c12]/95 backdrop-blur-md border-b border-[#46B77B]/20 text-white/80 overflow-hidden topbar">
+        class="relative z-50 flex flex-col md:flex-row justify-center md:justify-between items-center py-2 md:py-3 px-4 md:px-8 text-xs tracking-wider font-medium bg-[#0a0c12]/95 backdrop-blur-md border-b border-[#46B77B]/20 text-white/80 overflow-hidden topbar">
         <div class="flex items-center gap-4 md:gap-6 relative z-10 flex-wrap justify-center">
             <span class="flex items-center gap-2 whitespace-nowrap"><i class="fas fa-envelope text-[#46B77B]"></i>
                 info@mfp.com.pk</span>
@@ -50,155 +50,127 @@
 
     <!-- NAVBAR -->
     <nav
-        class="sticky top-0 z-[60] flex justify-between items-center py-2 md:py-3 px-4 md:px-12 bg-white/95 backdrop-blur-md border-b border-black/5 navbar">
-        <a href="#" class="flex items-center">
-            <img src="images/logo.png" alt="Maqsood Faisal Logo" class="h-9 md:h-14 w-auto object-contain">
+        class="sticky top-0 z-[60] flex justify-between items-center py-2 px-4 md:px-8 bg-white/95 backdrop-blur-md border-b border-black/5 navbar">
+        <a href="#" class="flex items-center shrink-0">
+            <img src="images/logo.png" alt="Maqsood Faisal Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain">
         </a>
 
-        <ul class="hidden lg:flex items-center gap-8 list-none">
+        <ul class="hidden lg:flex items-center gap-4 lg:gap-6 list-none">
             <li><a href="#"
-                    class="group relative flex items-center gap-2 text-[#0A0C12] text-sm font-semibold py-2 transition-colors"><i
-                        class="fas fa-home text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Home<span
-                        class="absolute bottom-0 left-0 w-full h-[2px] bg-[#46B77B] scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-transform duration-300 rounded-full"></span></a>
+                    class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i
+                        class="fas fa-home text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Home</a>
             </li>
             <li><a href="#"
-                    class="group relative flex items-center gap-2 text-[#0A0C12] text-sm font-semibold py-2 transition-colors"><i
+                    class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i
                         class="fas fa-info-circle text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> About
-                    Us<span
-                        class="absolute bottom-0 left-0 w-full h-[2px] bg-[#46B77B] scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-transform duration-300 rounded-full"></span></a>
+                    Us</a></li>
+            <li><a href="#"
+                    class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i
+                        class="fas fa-cogs text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Services</a>
             </li>
             <li><a href="#"
-                    class="group relative flex items-center gap-2 text-[#0A0C12] text-sm font-semibold py-2 transition-colors"><i
-                        class="fas fa-cogs text-gray-500 group-hover:text-[#46B77B] transition-colors"></i>
-                    Services<span
-                        class="absolute bottom-0 left-0 w-full h-[2px] bg-[#46B77B] scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-transform duration-300 rounded-full"></span></a>
+                    class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i
+                        class="fas fa-award text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Quality</a>
             </li>
             <li><a href="#"
-                    class="group relative flex items-center gap-2 text-[#0A0C12] text-sm font-semibold py-2 transition-colors"><i
-                        class="fas fa-award text-gray-500 group-hover:text-[#46B77B] transition-colors"></i>
-                    Quality<span
-                        class="absolute bottom-0 left-0 w-full h-[2px] bg-[#46B77B] scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-transform duration-300 rounded-full"></span></a>
-            </li>
-            <li><a href="#"
-                    class="group relative flex items-center gap-2 text-[#0A0C12] text-sm font-semibold py-2 transition-colors"><i
+                    class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i
                         class="fas fa-handshake text-gray-500 group-hover:text-[#46B77B] transition-colors"></i>
-                    Clients<span
-                        class="absolute bottom-0 left-0 w-full h-[2px] bg-[#46B77B] scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-transform duration-300 rounded-full"></span></a>
-            </li>
+                    Clients</a></li>
             <li><a href="#"
-                    class="group relative flex items-center gap-2 text-[#0A0C12] text-sm font-semibold py-2 transition-colors"><i
+                    class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i
                         class="fas fa-envelope-open-text text-gray-500 group-hover:text-[#46B77B] transition-colors"></i>
-                    Contact Us<span
-                        class="absolute bottom-0 left-0 w-full h-[2px] bg-[#46B77B] scale-x-0 group-hover:scale-x-100 origin-right group-hover:origin-left transition-transform duration-300 rounded-full"></span></a>
-            </li>
+                    Contact</a></li>
         </ul>
 
         <a href="#"
-            class="hidden lg:flex items-center gap-2 py-2.5 px-6 rounded-lg text-sm font-bold text-white bg-gradient-to-br from-[#46B77B] to-[#61CE70] hover:-translate-y-0.5 hover:shadow-lg transition-all">Get
+            class="hidden lg:flex items-center gap-2 py-2 px-4 rounded-lg text-xs lg:text-sm font-bold text-white bg-[#46B77B] hover:bg-[#3ca56b] transition-all shadow-md whitespace-nowrap">Get
             a Quote <i class="fas fa-arrow-right"></i></a>
 
-        <div class="lg:hidden text-2xl text-[#0A0C12] cursor-pointer z-[100]" id="hamburger"><i class="fas fa-bars"></i>
-        </div>
+        <div class="lg:hidden text-2xl text-[#0A0C12] cursor-pointer z-[100] p-2" id="hamburger"><i
+                class="fas fa-bars"></i></div>
     </nav>
 
     <!-- SIDEBAR MOBILE -->
     <div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[150] opacity-0 invisible transition-all duration-300"
         id="sidebarOverlay"></div>
-    <div class="fixed top-0 -right-full w-80 h-screen bg-white z-[200] p-8 flex flex-col shadow-2xl transition-all duration-400"
+    <div class="fixed top-0 -right-full w-72 h-screen bg-white z-[200] p-6 flex flex-col shadow-2xl transition-all duration-400"
         id="sidebar">
-        <div class="flex justify-between items-center mb-10">
-            <img src="images/logo.png" alt="Logo" class="h-10">
-            <i class="fas fa-times text-xl cursor-pointer text-gray-500 hover:text-[#46B77B] hover:rotate-90 transition-all bg-gray-100 w-9 h-9 flex items-center justify-center rounded-full"
+        <div class="flex justify-between items-center mb-8">
+            <img src="images/logo.png" alt="Logo" class="h-8">
+            <i class="fas fa-times text-xl cursor-pointer text-gray-500 hover:text-[#46B77B] hover:rotate-90 transition-all bg-gray-100 w-8 h-8 flex items-center justify-center rounded-full"
                 id="sidebarClose"></i>
         </div>
-        <ul class="flex flex-col gap-6 list-none">
+        <ul class="flex flex-col gap-5 list-none">
             <li><a href="#"
-                    class="flex items-center gap-4 text-[#0A0C12] text-lg font-semibold hover:text-[#46B77B] hover:translate-x-1 transition-all"><i
+                    class="flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i
                         class="fas fa-home text-gray-400 w-5 text-center"></i> Home</a></li>
             <li><a href="#"
-                    class="flex items-center gap-4 text-[#0A0C12] text-lg font-semibold hover:text-[#46B77B] hover:translate-x-1 transition-all"><i
+                    class="flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i
                         class="fas fa-info-circle text-gray-400 w-5 text-center"></i> About Us</a></li>
             <li><a href="#"
-                    class="flex items-center gap-4 text-[#0A0C12] text-lg font-semibold hover:text-[#46B77B] hover:translate-x-1 transition-all"><i
+                    class="flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i
                         class="fas fa-cogs text-gray-400 w-5 text-center"></i> Services</a></li>
             <li><a href="#"
-                    class="flex items-center gap-4 text-[#0A0C12] text-lg font-semibold hover:text-[#46B77B] hover:translate-x-1 transition-all"><i
+                    class="flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i
                         class="fas fa-award text-gray-400 w-5 text-center"></i> Quality</a></li>
             <li><a href="#"
-                    class="flex items-center gap-4 text-[#0A0C12] text-lg font-semibold hover:text-[#46B77B] hover:translate-x-1 transition-all"><i
+                    class="flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i
                         class="fas fa-handshake text-gray-400 w-5 text-center"></i> Clients</a></li>
             <li><a href="#"
-                    class="flex items-center gap-4 text-[#0A0C12] text-lg font-semibold hover:text-[#46B77B] hover:translate-x-1 transition-all"><i
+                    class="flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i
                         class="fas fa-envelope-open-text text-gray-400 w-5 text-center"></i> Contact Us</a></li>
         </ul>
         <a href="#"
-            class="mt-auto flex justify-center items-center gap-2 py-3 px-6 rounded-lg text-sm font-bold text-white bg-gradient-to-br from-[#46B77B] to-[#61CE70] hover:-translate-y-0.5 transition-all">Get
+            class="mt-auto flex justify-center items-center gap-2 py-3 px-6 rounded-lg text-sm font-bold text-white bg-[#46B77B] hover:bg-[#3ca56b] transition-all">Get
             a Quote <i class="fas fa-arrow-right"></i></a>
     </div>
 
     <!-- HERO SECTION -->
     <section
-        class="relative z-10 flex-1 flex flex-col-reverse lg:flex-row items-center justify-center text-center lg:text-left py-4 px-4 md:py-12 md:px-12 max-w-7xl mx-auto w-full gap-8 lg:gap-16">
-
-        <!-- LEFT COLUMN (TEXT) -->
-        <div class="flex flex-col items-center lg:items-start w-full lg:w-1/2 z-20 mt-0">
-
+        class="fade-in-section relative z-10 flex-1 flex flex-col-reverse md:flex-row items-center justify-center text-center md:text-left py-8 px-4 md:py-12 md:px-8 max-w-7xl mx-auto w-full gap-8 lg:gap-16">
+        <!-- LEFT COLUMN -->
+        <div class="flex flex-col items-center md:items-start w-full md:w-1/2 z-20">
             <div
                 class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full text-[0.65rem] md:text-xs font-bold tracking-widest uppercase text-[#46B77B] bg-[#46B77B]/10 border border-[#46B77B]/30 mb-5">
                 <i class="fas fa-leaf"></i> Premium Packaging
             </div>
-
-            <!-- NEW HEADING (For Your + Typing in one flow) -->
             <h1
-                class="text-[2rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] xl:text-[3.8rem] font-black leading-[1.2] tracking-tight text-[#0A0C12] mb-4 w-full">
+                class="text-[1.8rem] sm:text-4xl md:text-4xl lg:text-[3.2rem] xl:text-[3.8rem] font-black leading-[1.2] tracking-tight text-[#0A0C12] mb-4 w-full">
                 We Are Solutions For Your <br>
                 <span class="text-[#46B77B] inline-flex items-center whitespace-nowrap">
                     <span id="typedText"></span><span
                         class="inline-block w-1 h-[0.9em] bg-[#46B77B] ml-1 animate-pulse"></span>
                 </span>
             </h1>
-
-            <!-- DYNAMIC PARAGRAPH -->
             <p id="dynamicDesc"
-                class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 mb-6 md:mb-8 max-w-lg transition-opacity duration-300">
+                class="text-sm sm:text-base md:text-sm lg:text-base leading-relaxed text-gray-600 mb-6 md:mb-8 max-w-lg transition-opacity duration-300">
                 Offset printing is a high-quality, cost-effective method ideal for large volumes. It ensures vibrant
                 colors, sharp images, and professional results on various materials.
             </p>
-
-            <!-- BUTTONS -->
             <div
-                class="flex flex-row justify-center lg:justify-start items-center gap-3 w-full max-w-[400px] mx-auto lg:mx-0">
-
-                <!-- Start Button -->
+                class="flex flex-row justify-center md:justify-start items-center gap-3 w-full max-w-[400px] mx-auto md:mx-0">
                 <a href="#offset-printing" id="dynamicBtnStart"
-                    class="flex-1 flex items-baseline justify-center gap-2 py-3 px-3 md:px-6 rounded-xl font-bold text-xs md:text-base text-white bg-gradient-to-br from-[#46B77B] to-[#61CE70] hover:-translate-y-1 hover:shadow-lg transition-all group whitespace-nowrap">
+                    class="flex-1 flex items-baseline justify-center gap-2 py-3 px-3 md:px-6 rounded-xl font-bold text-xs md:text-sm text-white bg-[#46B77B] hover:bg-[#3ca56b] hover:-translate-y-1 hover:shadow-lg transition-all group whitespace-nowrap">
                     <span id="btnStartText" class="truncate">Get Offset Printing</span>
                     <i
                         class="fas fa-arrow-right text-[0.9em] shrink-0 transition-transform group-hover:translate-x-1"></i>
                 </a>
-
-                <!-- Explore Button -->
                 <a href="#"
-                    class="flex-1 flex items-baseline justify-center gap-2 py-3 px-3 md:px-6 rounded-xl font-bold text-xs md:text-base text-[#0A0C12] bg-white border-2 border-[#61CE70] hover:-translate-y-1 hover:shadow-lg transition-all group whitespace-nowrap">
+                    class="flex-1 flex items-baseline justify-center gap-2 py-3 px-3 md:px-6 rounded-xl font-bold text-xs md:text-sm text-[#0A0C12] bg-white border-2 border-gray-200 hover:border-[#46B77B] hover:-translate-y-1 hover:shadow-lg transition-all group whitespace-nowrap">
                     <span class="truncate">Explore Services</span>
                     <i class="fas fa-cogs text-[0.9em] shrink-0 transition-transform group-hover:rotate-90"></i>
                 </a>
-
             </div>
         </div>
 
-        <!-- RIGHT COLUMN (IMAGE) -->
-        <div class="w-full lg:w-1/2 flex justify-center items-center relative z-10 mt-0">
-
+        <!-- RIGHT COLUMN -->
+        <div class="w-full md:w-1/2 flex justify-center items-center relative z-10 mb-8 md:mb-0">
             <div class="absolute inset-0 bg-[#46B77B]/20 blur-[60px] rounded-full scale-75 animate-pulse"></div>
-
-            <div class="relative w-full max-w-[320px] md:max-w-[380px] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(70,183,123,0.3)] border-[6px] border-white bg-white group transition-all duration-500"
+            <div class="relative w-full max-w-[280px] md:max-w-[340px] lg:max-w-[380px] aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(70,183,123,0.3)] border-[6px] border-white bg-white group transition-all duration-500"
                 id="mainImageWrapper">
                 <img src="" id="dynamicImage"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     alt="Service Image">
-
-                <!-- Overlay badge -->
                 <div
                     class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-3 rounded-xl flex justify-between items-center shadow-lg">
                     <span class="text-xs md:text-sm font-bold text-[#0A0C12] uppercase tracking-wide">Premium
@@ -207,13 +179,11 @@
                 </div>
             </div>
         </div>
-
     </section>
 
-    <!-- ULTRA ADVANCED PREMIUM PERFORMANCE SECTION (COMPACT DESKTOP) -->
-    <section class="relative z-10 pt-16 md:pt-20 pb-20 md:pb-28 px-4 md:px-8 w-full overflow-hidden bg-[#050806]">
-
-        <!-- Animated Background Aurora Glow -->
+    <!-- PERFORMANCE SECTION -->
+    <section
+        class="fade-in-section relative z-10 pt-16 md:pt-20 pb-20 md:pb-28 px-4 md:px-8 w-full overflow-hidden bg-[#050806]">
         <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
             <div
                 class="absolute -top-[20%] left-[10%] w-[600px] h-[600px] bg-[#46B77B]/10 blur-[150px] rounded-full animate-[float_10s_ease-in-out_infinite]">
@@ -222,13 +192,10 @@
                 class="absolute -bottom-[20%] right-[10%] w-[500px] h-[500px] bg-[#61CE70]/10 blur-[120px] rounded-full animate-[float_12s_ease-in-out_infinite_reverse]">
             </div>
         </div>
-
         <div class="max-w-6xl mx-auto relative z-10">
-            <!-- Header Row -->
             <div
                 class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8 mb-10 md:mb-16 px-2 md:px-0">
                 <div class="max-w-2xl">
-                    <!-- Top Badge -->
                     <div
                         class="inline-flex items-center gap-2 py-1.5 md:py-2 px-4 md:px-5 rounded-full text-[0.6rem] md:text-[0.65rem] font-bold tracking-[0.2em] md:tracking-[0.25em] uppercase text-[#61CE70] bg-[#46B77B]/10 border border-[#46B77B]/30 mb-4 md:mb-5 shadow-[0_0_20px_rgba(70,183,123,0.15)] backdrop-blur-md">
                         <span class="relative flex h-1.5 w-1.5 md:h-2 md:w-2">
@@ -239,7 +206,6 @@
                         </span>
                         Our Performance
                     </div>
-                    <!-- Main Heading -->
                     <h2
                         class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] md:leading-[1.05]">
                         Excellence in<br>
@@ -249,7 +215,6 @@
                         </span>
                     </h2>
                 </div>
-                <!-- Right Side Text -->
                 <div class="relative md:max-w-[280px] md:pb-2">
                     <div
                         class="hidden md:block absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#61CE70] to-transparent rounded-full">
@@ -259,32 +224,22 @@
                     </p>
                 </div>
             </div>
-
-            <!-- Ultra Advanced Glass Panel with Spotlight -->
             <div id="performance-grid"
                 class="spotlight-panel relative bg-[#0a0f0d]/80 backdrop-blur-2xl rounded-[1.5rem] md:rounded-[2rem] border border-white/10 shadow-[0_30px_100px_-20px_rgba(0,0,0,0.8)] overflow-hidden">
-
-                <!-- Moving Laser Line -->
                 <div
                     class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#61CE70] to-transparent opacity-50">
                 </div>
-
-                <!-- Grid: Mobile par bhi columns (row) mein rahega -->
                 <div class="grid grid-cols-3 divide-x divide-white/5 relative z-10">
-
                     <!-- Metric 1 -->
                     <div
                         class="perf-cell group relative p-3 sm:p-6 md:p-8 lg:p-10 transition-all duration-700 hover:bg-white/[0.02] flex flex-col items-center justify-center text-center">
                         <div
                             class="relative w-[75px] h-[75px] sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 mb-3 sm:mb-5 md:mb-6 transition-transform duration-700 group-hover:scale-[1.03]">
-                            <!-- Rotating Dashed Ring Background -->
                             <svg class="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite] opacity-20 group-hover:opacity-50 transition-opacity duration-500"
                                 viewBox="0 0 120 120">
                                 <circle cx="60" cy="60" r="58" fill="none" stroke="#61CE70" stroke-width="1.5"
                                     stroke-dasharray="4 8" stroke-linecap="round" />
                             </svg>
-
-                            <!-- Main Progress Ring -->
                             <svg class="w-full h-full -rotate-90 relative z-10" viewBox="0 0 120 120">
                                 <defs>
                                     <linearGradient id="ringGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -296,7 +251,6 @@
                                         <stop offset="100%" stop-color="transparent" />
                                     </radialGradient>
                                 </defs>
-
                                 <circle cx="60" cy="60" r="52" fill="url(#innerGlow1)"
                                     class="animate-[pulse_3s_ease-in-out_infinite]" />
                                 <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.04)"
@@ -306,8 +260,6 @@
                                     stroke-dashoffset="326.7" data-target="95"
                                     style="transition: stroke-dashoffset 2.5s cubic-bezier(0.34,1.2,0.64,1); filter: drop-shadow(0 0 10px rgba(97,206,112,0.5));" />
                             </svg>
-
-                            <!-- Center Number -->
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <span
                                     class="text-base sm:text-2xl md:text-4xl font-black text-white counter leading-none tracking-tighter"
@@ -316,7 +268,6 @@
                                     class="text-[0.6rem] sm:text-xs md:text-lg font-bold text-[#61CE70] mt-0.5 md:mt-1 ml-0.5">%</span>
                             </div>
                         </div>
-
                         <div class="w-full transform transition-transform duration-500 group-hover:-translate-y-1 px-1">
                             <h3
                                 class="text-[0.65rem] sm:text-xs md:text-sm font-black tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white mb-1 md:mb-1.5 group-hover:text-[#61CE70] transition-colors duration-300">
@@ -326,7 +277,6 @@
                                 Standards.</p>
                         </div>
                     </div>
-
                     <!-- Metric 2 -->
                     <div
                         class="perf-cell group relative p-3 sm:p-6 md:p-8 lg:p-10 transition-all duration-700 hover:bg-white/[0.02] flex flex-col items-center justify-center text-center">
@@ -337,7 +287,6 @@
                                 <circle cx="60" cy="60" r="58" fill="none" stroke="#61CE70" stroke-width="1.5"
                                     stroke-dasharray="4 8" stroke-linecap="round" />
                             </svg>
-
                             <svg class="w-full h-full -rotate-90 relative z-10" viewBox="0 0 120 120">
                                 <defs>
                                     <linearGradient id="ringGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -349,7 +298,6 @@
                                         <stop offset="100%" stop-color="transparent" />
                                     </radialGradient>
                                 </defs>
-
                                 <circle cx="60" cy="60" r="52" fill="url(#innerGlow2)"
                                     class="animate-[pulse_3s_ease-in-out_infinite_0.5s]" />
                                 <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.04)"
@@ -359,7 +307,6 @@
                                     stroke-dashoffset="326.7" data-target="93"
                                     style="transition: stroke-dashoffset 2.5s cubic-bezier(0.34,1.2,0.64,1) 0.15s; filter: drop-shadow(0 0 10px rgba(97,206,112,0.5));" />
                             </svg>
-
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <span
                                     class="text-base sm:text-2xl md:text-4xl font-black text-white counter leading-none tracking-tighter"
@@ -368,7 +315,6 @@
                                     class="text-[0.6rem] sm:text-xs md:text-lg font-bold text-[#61CE70] mt-0.5 md:mt-1 ml-0.5">%</span>
                             </div>
                         </div>
-
                         <div class="w-full transform transition-transform duration-500 group-hover:-translate-y-1 px-1">
                             <h3
                                 class="text-[0.65rem] sm:text-xs md:text-sm font-black tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white mb-1 md:mb-1.5 group-hover:text-[#61CE70] transition-colors duration-300">
@@ -378,7 +324,6 @@
                                 Eco-friendly materials.</p>
                         </div>
                     </div>
-
                     <!-- Metric 3 -->
                     <div
                         class="perf-cell group relative p-3 sm:p-6 md:p-8 lg:p-10 transition-all duration-700 hover:bg-white/[0.02] flex flex-col items-center justify-center text-center">
@@ -389,7 +334,6 @@
                                 <circle cx="60" cy="60" r="58" fill="none" stroke="#61CE70" stroke-width="1.5"
                                     stroke-dasharray="4 8" stroke-linecap="round" />
                             </svg>
-
                             <svg class="w-full h-full -rotate-90 relative z-10" viewBox="0 0 120 120">
                                 <defs>
                                     <linearGradient id="ringGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -401,7 +345,6 @@
                                         <stop offset="100%" stop-color="transparent" />
                                     </radialGradient>
                                 </defs>
-
                                 <circle cx="60" cy="60" r="52" fill="url(#innerGlow3)"
                                     class="animate-[pulse_3s_ease-in-out_infinite_1s]" />
                                 <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.04)"
@@ -411,7 +354,6 @@
                                     stroke-dashoffset="326.7" data-target="90"
                                     style="transition: stroke-dashoffset 2.5s cubic-bezier(0.34,1.2,0.64,1) 0.3s; filter: drop-shadow(0 0 10px rgba(97,206,112,0.5));" />
                             </svg>
-
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <span
                                     class="text-base sm:text-2xl md:text-4xl font-black text-white counter leading-none tracking-tighter"
@@ -420,7 +362,6 @@
                                     class="text-[0.6rem] sm:text-xs md:text-lg font-bold text-[#61CE70] mt-0.5 md:mt-1 ml-0.5">%</span>
                             </div>
                         </div>
-
                         <div class="w-full transform transition-transform duration-500 group-hover:-translate-y-1 px-1">
                             <h3
                                 class="text-[0.65rem] sm:text-xs md:text-sm font-black tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white mb-1 md:mb-1.5 group-hover:text-[#61CE70] transition-colors duration-300">
@@ -435,20 +376,746 @@
         </div>
     </section>
 
-    <!-- ULTRA CLEAN BRANDS SECTION -->
-<section class="relative z-10 py-6 md:py-6 border-y border-gray-200/60 bg-transparent w-full overflow-hidden">
-    
-    <!-- Edge Fade Shadows (Background ke sath match karne ke liye) -->
-    <div class="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-[#f4fbf6] to-transparent z-20 pointer-events-none"></div>
-    <div class="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-[#f4fbf6] to-transparent z-20 pointer-events-none"></div>
+    <!-- BRANDS SECTION -->
+    <section
+        class="fade-in-section relative z-10 py-6 md:py-8 border-y border-gray-200/60 bg-transparent w-full overflow-hidden">
+        <div
+            class="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-[#f4fbf6] to-transparent z-20 pointer-events-none">
+        </div>
+        <div
+            class="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-[#f4fbf6] to-transparent z-20 pointer-events-none">
+        </div>
+        <div class="marquee-container relative w-full flex overflow-hidden">
+            <div class="marquee-track flex items-center w-max animate-marquee" id="brand-marquee"></div>
+        </div>
+    </section>
 
-    <!-- Scrolling Track -->
-    <div class="marquee-container relative w-full flex overflow-hidden">
-        <div class="marquee-track flex items-center w-max animate-marquee" id="brand-marquee">
-            <!-- Images injected via JS -->
+    <!-- ABOUT SECTION (Now Column on 768px) -->
+    <section class="fade-in-section relative z-10 w-full overflow-hidden bg-white py-16 md:py-24">
+        <!-- Changed md:flex-row to lg:flex-row so on 768px (md) it stays column -->
+        <div
+            class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10 flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-20">
+
+            <!-- LEFT: CONTENT -->
+            <div class="w-full lg:w-1/2 flex flex-col items-start">
+                <div class="flex items-center gap-3 mb-5 md:mb-6">
+                    <span class="h-px w-10 bg-[#46B77B]"></span>
+                    <span class="text-[0.65rem] font-bold tracking-[0.3em] uppercase text-[#46B77B]">About Our
+                        Company</span>
+                </div>
+                <h2
+                    class="text-3xl sm:text-4xl md:text-[2.5rem] lg:text-[3.4rem] font-black text-[#0A0C12] leading-[1.05] tracking-[-0.03em] mb-5 md:mb-7">
+                    We craft packaging<br>
+                    that <span class="relative inline-block text-[#46B77B]">
+                        speaks.
+                        <svg class="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 200 10"
+                            preserveAspectRatio="none" fill="none">
+                            <path d="M2 7C50 3 100 2 198 6" stroke="#46B77B" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </span>
+                </h2>
+                <p class="text-gray-500 text-sm md:text-[0.95rem] leading-[1.85] mb-8 max-w-lg">
+                    Welcome to <strong class="font-bold text-[#0A0C12]">Maqsood Faisal Printing Press</strong> — your
+                    premier partner in eco-friendly printing and packaging. With cutting-edge technology and a deep
+                    commitment to sustainability, we bring your visions to life with minimal environmental impact.
+                </p>
+
+                <div class="grid grid-cols-2 gap-2 md:gap-3 w-full mb-8 md:mb-10">
+                    <div
+                        class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div
+                            class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0">
+                            <svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor"
+                                stroke-width="3" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span
+                            class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Sustainable
+                            Practices</span>
+                    </div>
+                    <div
+                        class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div
+                            class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0">
+                            <svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor"
+                                stroke-width="3" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Advanced
+                            Technology</span>
+                    </div>
+                    <div
+                        class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div
+                            class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0">
+                            <svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor"
+                                stroke-width="3" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span
+                            class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Eco-Friendly
+                            Solutions</span>
+                    </div>
+                    <div
+                        class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div
+                            class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0">
+                            <svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor"
+                                stroke-width="3" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Trusted
+                            by Brands</span>
+                    </div>
+                    <div
+                        class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div
+                            class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0">
+                            <svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor"
+                                stroke-width="3" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span
+                            class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Innovative
+                            Packaging</span>
+                    </div>
+                    <div
+                        class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div
+                            class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0">
+                            <svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor"
+                                stroke-width="3" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <span
+                            class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Environmentally
+                            Responsible</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-row gap-2 sm:gap-3 w-full relative z-20">
+                    <a href="#"
+                        class="group flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-2 py-3 px-3 sm:px-8 rounded-lg font-bold text-xs sm:text-sm text-white bg-[#46B77B] hover:bg-[#3ca56b] transition-all shadow-md">
+                        Get in Touch
+                        <svg class="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" fill="none"
+                            stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="group flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-2 py-3 px-3 sm:px-8 rounded-lg font-bold text-xs sm:text-sm text-gray-700 bg-white border border-gray-200 hover:border-[#46B77B] hover:text-[#46B77B] transition-all shadow-sm">
+                        Our Services
+                        <svg class="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:rotate-90" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT: IMAGE -->
+            <div class="w-full lg:w-1/2 relative mt-8 lg:mt-0">
+                <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-[#46B77B]/10 rounded-[2rem] rotate-6 z-0"></div>
+                <div
+                    class="relative z-10 rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-15px_rgba(10,12,18,0.2)] aspect-[4/5] sm:aspect-[4/4] md:aspect-[4/4.5] group border-4 border-white bg-white">
+                    <img src="images/about-maqsood-faisal.jpg" alt="About Maqsood Faisal"
+                        class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0A0C12]/70 via-transparent to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-black text-sm leading-tight">Maqsood Faisal</p>
+                                <p class="text-white/60 text-[0.65rem] font-semibold tracking-widest uppercase">Printing
+                                    Press</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-5 -left-4 md:-left-6 z-20">
+                    <div
+                        class="bg-white rounded-2xl p-3 pr-5 shadow-xl border border-gray-100 flex items-center gap-3 hover:-translate-y-1 transition-transform">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#46B77B] to-[#61CE70] flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-lg font-black text-[#0A0C12] leading-none">100%</p>
+                            <p class="text-[0.55rem] font-bold text-gray-400 uppercase tracking-widest mt-1">Trusted
+                                Quality</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ULTRA-PREMIUM CENTERED SERVICES SECTION ═══════════════ -->
+    <section class="fade-in-section relative z-10 w-full py-16 md:py-24 bg-[#050806] overflow-hidden font-sans">
+
+        <!-- Clean Dark Background -->
+        <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#050806] via-[#0A0F0D] to-[#050806]"></div>
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#46B77B]/10 blur-[150px] rounded-full mix-blend-screen animate-pulse-slow">
+            </div>
+            <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#61CE70]/10 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow"
+                style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 md:px-8 relative z-10 text-center">
+
+            <!-- ═══════════════ CENTERED TEXT DESIGN ═══════════════ -->
+
+            <!-- Badge -->
+            <div
+                class="inline-flex items-center gap-2.5 py-1.5 px-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6">
+                <span class="relative flex h-2 w-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#46B77B] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-[#46B77B]"></span>
+                </span>
+                <span class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-gray-300">Our Expertise</span>
+            </div>
+
+            <!-- Center Heading (Responsive & Fits all screens) -->
+            <h2
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold text-white leading-[1.2] tracking-tight mb-6">
+                We Provide Various<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#46B77B] via-[#61CE70] to-[#9DFF9D]">
+                    Packaging Services.
+                </span>
+            </h2>
+
+            <!-- Center Description -->
+            <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-8">
+                Explore our premium packaging solutions designed for modern brands. From sustainable materials to
+                vibrant prints.
+            </p>
+
+            <!-- Center Swipe Hint -->
+            <div
+                class="flex items-center justify-center gap-3 text-[#61CE70] text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.2em]">
+                <span class="w-8 h-[1px] bg-[#61CE70]"></span> Swipe to explore <span
+                    class="w-8 h-[1px] bg-[#61CE70]"></span>
+            </div>
+        </div>
+
+        <!-- ═══════════════ GLASS CARDS SLIDER ═══════════════ -->
+        <div class="relative w-full overflow-hidden mt-10 md:mt-14 group/slider">
+
+            <!-- Edge Fades -->
+            <div
+                class="absolute inset-y-0 left-0 w-8 md:w-24 bg-gradient-to-r from-[#050806] to-transparent z-20 pointer-events-none">
+            </div>
+            <div
+                class="absolute inset-y-0 right-0 w-8 md:w-24 bg-gradient-to-l from-[#050806] to-transparent z-20 pointer-events-none">
+            </div>
+
+            <!-- Infinite Track -->
+            <div class="flex w-max animate-marquee-infinite group-hover/slider:[animation-play-state:paused]">
+
+                <!-- Track 1 -->
+                <div class="flex gap-4 md:gap-6 px-4 md:px-6 pb-6 pt-2">
+
+                    <!-- Card 1 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/plastic-packing.png" alt="Plastic Packaging"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-box text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Plastic Packaging</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                Cost-effective, robust, and sustainable plastic packaging solutions for everyday
+                                products.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/tissue-conversion.png" alt="Tissue Conversion"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-scroll text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Tissue Conversion</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                Eco-sensitive tissue products balancing softness and strength for premium use.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/offset-printing.jpg" alt="Offset Printing"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-print text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Offset Printing</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                High-volume, vibrant, and eco-friendly printing solutions for large-scale production.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/roll-to-roll.png" alt="Roll to Roll Labels"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-tags text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Roll to Roll Labels</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                Speedy, accurate, and customizable eco-conscious labels for your brand.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/laminated-tubes.png" alt="Laminated Tubes"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-tube text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Laminated Tubes</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                Aesthetic and functional tubes for various industries, with a focus on sustainability.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/flexible-printing.png" alt="Flexible Packaging"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-layer-group text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Flexible Packaging</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                Durable, lightweight, and environmentally-friendly packaging options for versatile use.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Track 2 (Duplicate for Infinite Loop) -->
+                <div class="flex gap-4 md:gap-6 px-4 md:px-6 pb-6 pt-2" aria-hidden="true">
+                    <!-- Card 1 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/plastic-packing.png" alt="Plastic Packaging"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-box text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Plastic Packaging</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                Cost-effective, robust, and sustainable plastic packaging solutions for everyday
+                                products.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/tissue-conversion.png" alt="Tissue Conversion"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-scroll text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Tissue Conversion</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                Eco-sensitive tissue products balancing softness and strength for premium use.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/offset-printing.jpg" alt="Offset Printing"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-print text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Offset Printing</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                High-volume, vibrant, and eco-friendly printing solutions for large-scale production.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/roll-to-roll.png" alt="Roll to Roll Labels"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-tags text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Roll to Roll Labels</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                Speedy, accurate, and customizable eco-conscious labels for your brand.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/laminated-tubes.png" alt="Laminated Tubes"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-tube text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Laminated Tubes</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                Aesthetic and functional tubes for various industries, with a focus on sustainability.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div
+                        class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/flexible-printing.png" alt="Flexible Packaging"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300">
+                                <i class="fas fa-layer-group text-white text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3
+                                    class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">
+                                    Flexible Packaging</h3>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all">
+                                    <i
+                                        class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
+                                Durable, lightweight, and environmentally-friendly packaging options for versatile use.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ PREMIUM SPLIT TIMELINE QUALITY SECTION ═══════════════ -->
+<section class="fade-in-section relative z-10 w-full py-20 md:py-28 bg-[#FAFBF9] overflow-hidden font-sans border-t border-gray-200/50">
+    
+    <!-- Background Glow -->
+    <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#46B77B]/5 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#61CE70]/5 blur-[120px] rounded-full"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10">
+        
+        <!-- Mobile par Column, 768px+ par Row -->
+        <div class="flex flex-col md:flex-row items-stretch gap-8 md:gap-10 lg:gap-16">
+            
+            <!-- ═══════════════ LEFT SIDE: IMAGE ═══════════════ -->
+            <div class="w-full md:w-1/2 relative order-1 flex justify-start">
+                <!-- Decorative Background -->
+                <div class="absolute -top-4 -left-4 md:-top-6 md:-left-6 w-24 md:w-32 h-24 md:h-32 bg-[#46B77B]/10 rounded-full blur-2xl z-0"></div>
+                <div class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-32 md:w-40 h-32 md:h-40 bg-[#61CE70]/10 rounded-[2rem] rotate-12 z-0"></div>
+
+                <!-- Main Image Container -->
+                <!-- Yahan object-cover use kiya hai aur minimum height fix ki hai -->
+                <div class="relative z-10 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-15px_rgba(0,0,0,0.2)] border-[4px] md:border-[6px] border-white bg-white group w-full h-[300px] md:h-auto">
+                    
+                    <!-- object-cover lagaya hai aur h-full diya hai taake box ke sath stretch ho aur crop na ho -->
+                    <img src="images/quality.png" alt="Quality Packaging" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105">
+                    
+                    <!-- Overlay Gradient for Badge -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0A0C12]/60 via-transparent to-transparent opacity-80 pointer-events-none"></div>
+
+                    <!-- Glass Badge -->
+                    <div class="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 bg-white/10 backdrop-blur-md border border-white/20 p-3 md:p-4 rounded-xl md:rounded-2xl flex items-center justify-between z-20">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-white flex items-center justify-center shadow-lg">
+                                <i class="fas fa-check-double text-[#46B77B] text-sm md:text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-base md:text-xl font-black text-white leading-none">100%</p>
+                                <p class="text-[0.55rem] md:text-[0.6rem] font-bold text-white/80 uppercase tracking-widest mt-0.5 md:mt-1">Quality Assured</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ═══════════════ RIGHT SIDE: TEXT & TIMELINE ═══════════════ -->
+            <div class="w-full md:w-1/2 flex flex-col justify-center order-2 text-left">
+                
+                <!-- Eyebrow -->
+                <div class="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
+                    <span class="h-px w-6 md:w-10 bg-[#46B77B]"></span>
+                    <span class="text-[0.55rem] md:text-[0.65rem] font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[#46B77B]">Our Quality Promise</span>
+                </div>
+
+                <!-- Heading -->
+                <h2 class="text-[1.3rem] sm:text-3xl md:text-[1.8rem] lg:text-[2.2rem] xl:text-[3rem] font-black text-[#0A0C12] leading-[1.15] tracking-[-0.03em] mb-4 md:mb-6 pr-2">
+                    <span class="block whitespace-nowrap">Accelerating Innovations</span>
+                    <span class="text-[#46B77B] block mt-1">In Packaging.</span>
+                </h2>
+
+                <!-- Paragraph -->
+                <p class="text-gray-500 text-xs md:text-[0.95rem] leading-relaxed mb-6 md:mb-10 max-w-lg">
+                    Our expertise in printing and packaging drives impactful, innovative solutions tailored to elevate brands. We combine quality, speed, and creativity to meet evolving packaging needs.
+                </p>
+
+                <!-- 3 Points Timeline -->
+                <div class="flex flex-col gap-6 md:gap-8 relative w-full">
+                    
+                    <!-- Timeline Line -->
+                    <div class="absolute left-[19px] md:left-[23px] top-4 bottom-7 w-[2px] bg-gradient-to-b from-[#46B77B]/40 via-amber-400/40 to-purple-500/40 -z-10"></div>
+
+                    <!-- Point 1 -->
+                    <div class="group relative flex flex-row items-start gap-3 md:gap-5 cursor-default">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center shrink-0 group-hover:border-[#46B77B] group-hover:bg-[#46B77B] transition-all duration-300 z-10">
+                            <i class="fas fa-leaf text-sm md:text-lg text-[#46B77B] group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div class="pt-0.5 md:pt-1">
+                            <h3 class="text-sm md:text-lg font-bold text-[#0A0C12] mb-1 group-hover:text-[#46B77B] transition-colors">Environmentally Friendly</h3>
+                            <p class="text-gray-500 text-[0.7rem] md:text-sm leading-relaxed">Sustainable packaging solutions designed to reduce waste and protect nature.</p>
+                        </div>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="group relative flex flex-row items-start gap-3 md:gap-5 cursor-default">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center shrink-0 group-hover:border-amber-400 group-hover:bg-amber-400 transition-all duration-300 z-10">
+                            <i class="fas fa-medal text-sm md:text-lg text-amber-500 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div class="pt-0.5 md:pt-1">
+                            <h3 class="text-sm md:text-lg font-bold text-[#0A0C12] mb-1 group-hover:text-amber-500 transition-colors">Best Quality Of Packaging</h3>
+                            <p class="text-gray-500 text-[0.7rem] md:text-sm leading-relaxed">Exceptional packaging quality ensures durability, appeal, and customer satisfaction.</p>
+                        </div>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="group relative flex flex-row items-start gap-3 md:gap-5 cursor-default">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center shrink-0 group-hover:border-purple-500 group-hover:bg-purple-500 transition-all duration-300 z-10">
+                            <i class="fas fa-palette text-sm md:text-lg text-purple-500 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div class="pt-0.5 md:pt-1">
+                            <h3 class="text-sm md:text-lg font-bold text-[#0A0C12] mb-1 group-hover:text-purple-500 transition-colors">Creative Packaging</h3>
+                            <p class="text-gray-500 text-[0.7rem] md:text-sm leading-relaxed">Unleashing unique designs that make your packaging stand out beautifully.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </section>
+
+    <!-- ═══════════════ ULTRA ADVANCED BACK TO TOP BUTTON ═══════════════ -->
+    <button id="backToTop"
+        class="group fixed bottom-8 right-8 z-[100] w-16 h-16 rounded-full flex items-center justify-center opacity-0 invisible translate-y-8 transition-all duration-500 hover:-translate-y-2">
+
+        <!-- Outer Glow / Ring -->
+        <div
+            class="absolute inset-0 rounded-full bg-[#46B77B]/20 blur-md group-hover:bg-[#46B77B]/40 transition-all duration-500">
+        </div>
+
+        <!-- Animated Spinning Dashed Ring (Hidden by default, shows on hover) -->
+        <svg class="absolute inset-0 w-full h-full animate-[spin_3s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="46" fill="none" stroke="#46B77B" stroke-width="2" stroke-dasharray="10 15"
+                stroke-linecap="round" />
+        </svg>
+
+        <!-- Inner Solid Circle -->
+        <div
+            class="relative w-12 h-12 rounded-full bg-gradient-to-br from-[#46B77B] to-[#3ca56b] shadow-[0_4px_15px_rgba(70,183,123,0.5)] flex items-center justify-center overflow-hidden z-10 group-hover:scale-110 transition-transform duration-300">
+            <!-- Shine Effect -->
+            <div
+                class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+            <!-- Arrow Icon -->
+            <i
+                class="fas fa-arrow-up text-white text-lg transition-transform duration-500 group-hover:-translate-y-1"></i>
+        </div>
+    </button>
 
     <!-- JS File -->
     <script src="js/script.js"></script>
