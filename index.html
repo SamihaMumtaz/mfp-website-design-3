@@ -22,24 +22,8 @@
     <div class="glow fixed rounded-full -z-40 pointer-events-none glow-2"></div>
     <canvas id="particle-canvas" class="fixed inset-0 -z-30 pointer-events-none opacity-45"></canvas>
 
-    <!-- TOPBAR -->
-    <div class="relative z-50 flex flex-col md:flex-row justify-center md:justify-between items-center py-2 md:py-3 px-4 md:px-8 text-xs tracking-wider font-medium bg-[#0a0c12]/95 backdrop-blur-md border-b border-[#46B77B]/20 text-white/80 overflow-hidden topbar">
-        <div class="flex items-center gap-4 md:gap-6 relative z-10 flex-wrap justify-center">
-            <span class="flex items-center gap-2 whitespace-nowrap"><i class="fas fa-envelope text-[#46B77B]"></i> info@mfp.com.pk</span>
-            <span class="flex items-center gap-2 whitespace-nowrap"><i class="fas fa-phone text-[#46B77B]"></i> +92 111333301</span>
-        </div>
-        <div class="hidden md:flex items-center gap-4 relative z-10">
-            <a href="#" class="flex items-center gap-2 bg-white/5 py-1 px-4 rounded-full border border-white/10 text-white/85 hover:bg-white/10 transition-colors">
-                <i class="fas fa-map-marker-alt text-[#46B77B]"></i> 18-Km Ferozpur Road, Lahore.
-            </a>
-            <a href="#" class="flex items-center justify-center w-7 h-7 rounded-full bg-white/5 text-white hover:bg-[#46B77B] transition-colors"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="flex items-center justify-center w-7 h-7 rounded-full bg-white/5 text-white hover:bg-[#46B77B] transition-colors"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="flex items-center justify-center w-7 h-7 rounded-full bg-white/5 text-white hover:bg-[#46B77B] transition-colors"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-    </div>
-
     <!-- NAVBAR -->
-    <nav class="sticky top-0 z-[60] flex justify-between items-center py-2 px-4 md:px-8 bg-white/95 backdrop-blur-md border-b border-black/5 navbar">
+    <nav class="sticky top-0 z-[60] flex justify-between items-center py-3 px-4 md:px-8 bg-white/95 backdrop-blur-md border-b border-black/5 navbar">
         <a href="#home" class="flex items-center shrink-0">
             <img src="images/logo.png" alt="Maqsood Faisal Logo" class="h-8 md:h-10 lg:h-12 w-auto object-contain">
         </a>
@@ -47,7 +31,26 @@
         <ul class="hidden lg:flex items-center gap-4 lg:gap-6 list-none">
             <li><a href="#home" class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i class="fas fa-home text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Home</a></li>
             <li><a href="#about" class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i class="fas fa-info-circle text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> About Us</a></li>
-            <li><a href="#services" class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i class="fas fa-cogs text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Services</a></li>
+
+            <!-- SERVICES DROPDOWN -->
+            <li class="relative group/dropdown">
+                <button class="flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors hover:text-[#46B77B] focus:outline-none">
+                    <i class="fas fa-cogs text-gray-500 group-hover/dropdown:text-[#46B77B] transition-colors"></i>
+                    Services
+                    <i class="fas fa-chevron-down text-[0.6rem] ml-1 transition-transform duration-300 group-hover/dropdown:rotate-180"></i>
+                </button>
+                <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible translate-y-2 group-hover/dropdown:opacity-100 group-hover/dropdown:visible group-hover/dropdown:translate-y-0 transition-all duration-300 z-[70]">
+                    <ul class="bg-white rounded-xl shadow-[0_20px_50px_-15px_rgba(0,0,0,0.2)] border border-gray-100 py-2 w-64 overflow-hidden">
+                        <li><a href="#" class="flex items-center gap-3 px-4 py-2.5 text-xs font-semibold text-[#0A0C12] hover:bg-[#46B77B]/10 hover:text-[#46B77B] transition-colors"><i class="fas fa-print w-4 text-center text-[#46B77B]"></i> Offset Printing</a></li>
+                        <li><a href="#" class="flex items-center gap-3 px-4 py-2.5 text-xs font-semibold text-[#0A0C12] hover:bg-[#46B77B]/10 hover:text-[#46B77B] transition-colors"><i class="fas fa-tags w-4 text-center text-[#46B77B]"></i> Roll to Roll Label Printing</a></li>
+                        <li><a href="#" class="flex items-center gap-3 px-4 py-2.5 text-xs font-semibold text-[#0A0C12] hover:bg-[#46B77B]/10 hover:text-[#46B77B] transition-colors"><i class="fas fa-layer-group w-4 text-center text-[#46B77B]"></i> Flexible Packaging</a></li>
+                        <li><a href="#" class="flex items-center gap-3 px-4 py-2.5 text-xs font-semibold text-[#0A0C12] hover:bg-[#46B77B]/10 hover:text-[#46B77B] transition-colors"><i class="fas fa-scroll w-4 text-center text-[#46B77B]"></i> Tissue Conversion</a></li>
+                        <li><a href="#" class="flex items-center gap-3 px-4 py-2.5 text-xs font-semibold text-[#0A0C12] hover:bg-[#46B77B]/10 hover:text-[#46B77B] transition-colors"><i class="fas fa-box w-4 text-center text-[#46B77B]"></i> Plastic Packaging</a></li>
+                        <li><a href="#" class="flex items-center gap-3 px-4 py-2.5 text-xs font-semibold text-[#0A0C12] hover:bg-[#46B77B]/10 hover:text-[#46B77B] transition-colors"><i class="fas fa-prescription-bottle w-4 text-center text-[#46B77B]"></i> Laminated Tubes</a></li>
+                    </ul>
+                </div>
+            </li>
+
             <li><a href="#quality" class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i class="fas fa-award text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Quality</a></li>
             <li><a href="#clients" class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i class="fas fa-handshake text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Clients</a></li>
             <li><a href="#contact" class="group relative flex items-center gap-1.5 text-[#0A0C12] text-xs lg:text-sm font-semibold py-2 transition-colors"><i class="fas fa-envelope-open-text text-gray-500 group-hover:text-[#46B77B] transition-colors"></i> Contact</a></li>
@@ -60,42 +63,65 @@
 
     <!-- SIDEBAR MOBILE -->
     <div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[150] opacity-0 invisible transition-all duration-300" id="sidebarOverlay"></div>
-    <div class="fixed top-0 -right-full w-72 h-screen bg-white z-[200] p-6 flex flex-col shadow-2xl transition-all duration-400" id="sidebar">
-        <div class="flex justify-between items-center mb-8">
+    <div class="fixed top-0 -right-full w-72 h-screen bg-white z-[200] p-6 flex flex-col shadow-2xl transition-all duration-400 overflow-y-auto" id="sidebar">
+        <div class="flex justify-between items-center mb-8 shrink-0">
             <img src="images/logo.png" alt="Logo" class="h-8">
             <i class="fas fa-times text-xl cursor-pointer text-gray-500 hover:text-[#46B77B] hover:rotate-90 transition-all bg-gray-100 w-8 h-8 flex items-center justify-center rounded-full" id="sidebarClose"></i>
         </div>
         <ul class="flex flex-col gap-5 list-none">
-            <li><a href="#home" class="sidebar-link flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i class="fas fa-home text-gray-400 w-5 text-center"></i> Home</a></li>
-            <li><a href="#about" class="sidebar-link flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i class="fas fa-info-circle text-gray-400 w-5 text-center"></i> About Us</a></li>
-            <li><a href="#services" class="sidebar-link flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i class="fas fa-cogs text-gray-400 w-5 text-center"></i> Services</a></li>
-            <li><a href="#quality" class="sidebar-link flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i class="fas fa-award text-gray-400 w-5 text-center"></i> Quality</a></li>
-            <li><a href="#clients" class="sidebar-link flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i class="fas fa-handshake text-gray-400 w-5 text-center"></i> Clients</a></li>
-            <li><a href="#contact" class="sidebar-link flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all"><i class="fas fa-envelope-open-text text-gray-400 w-5 text-center"></i> Contact Us</a></li>
+            <li><a href="#home" class="sidebar-link flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all">
+                <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                Home</a></li>
+            <li><a href="#about" class="sidebar-link flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all">
+                <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                About Us</a></li>
+
+            <!-- Mobile Services Accordion (SVG Icons) -->
+            <li>
+                <button id="mobileServicesToggle" class="w-full flex items-center justify-between text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all">
+                    <span class="flex items-center gap-4">
+                        <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        Services
+                    </span>
+                    <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform duration-300" id="mobileServicesChevron"></i>
+                </button>
+                <ul id="mobileServicesList" class="hidden flex-col gap-3 mt-3 pl-9 list-none">
+                    <li><a href="#" class="sidebar-link block text-sm font-semibold text-gray-600 hover:text-[#46B77B] transition-all">Offset Printing</a></li>
+                    <li><a href="#" class="sidebar-link block text-sm font-semibold text-gray-600 hover:text-[#46B77B] transition-all">Roll to Roll Label Printing</a></li>
+                    <li><a href="#" class="sidebar-link block text-sm font-semibold text-gray-600 hover:text-[#46B77B] transition-all">Flexible Packaging</a></li>
+                    <li><a href="#" class="sidebar-link block text-sm font-semibold text-gray-600 hover:text-[#46B77B] transition-all">Tissue Conversion</a></li>
+                    <li><a href="#" class="sidebar-link block text-sm font-semibold text-gray-600 hover:text-[#46B77B] transition-all">Plastic Packaging</a></li>
+                    <li><a href="#" class="sidebar-link block text-sm font-semibold text-gray-600 hover:text-[#46B77B] transition-all">Laminated Tubes</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#quality" class="sidebar-link flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all">
+                <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                Quality</a></li>
+            <li><a href="#clients" class="sidebar-link flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all">
+                <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                Clients</a></li>
+            <li><a href="#contact" class="sidebar-link flex items-center gap-4 text-[#0A0C12] text-base font-semibold hover:text-[#46B77B] transition-all">
+                <svg class="w-5 h-5 text-gray-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Contact Us</a></li>
         </ul>
-        <a href="#contact" class="sidebar-link mt-auto flex justify-center items-center gap-2 py-3 px-6 rounded-lg text-sm font-bold text-white bg-[#46B77B] hover:bg-[#3ca56b] transition-all">Get a Quote <i class="fas fa-arrow-right"></i></a>
+        <a href="#contact" class="sidebar-link mt-auto flex justify-center items-center gap-2 py-3 px-6 rounded-lg text-sm font-bold text-white bg-[#46B77B] hover:bg-[#3ca56b] transition-all mt-8">Get a Quote <i class="fas fa-arrow-right"></i></a>
     </div>
 
-    <!-- ═══════════════ HERO SECTION (ID: home) ═══════════════ -->
-    <!-- scroll-mt-24 lagaya hai taake navbar ke neeche na chupe -->
+    <!-- ═══════════════ HERO SECTION ═══════════════ -->
     <section id="home" class="fade-in-section relative z-10 w-full overflow-hidden flex items-center py-16 md:py-24 scroll-mt-24">
-        <!-- Dynamic Background Image -->
         <div class="absolute inset-0 -z-10 bg-[#050806]">
             <img src="images/plastic-packing.png" id="dynamicImage" class="w-full h-full object-cover transition-all duration-1000 ease-out scale-105" alt="Background Service Image">
-            <!-- FULL IMAGE LINEAR GRADIENT -->
             <div class="absolute inset-0 bg-gradient-to-b from-[#050806]/90 via-[#050806]/50 to-[#050806]/90"></div>
-            <!-- Subtle Glow Effect -->
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#46B77B]/10 blur-[150px] rounded-full mix-blend-screen pointer-events-none"></div>
         </div>
 
         <div class="max-w-7xl mx-auto w-full px-4 md:px-8 lg:px-12 relative z-10">
             <div class="max-w-3xl mx-auto flex flex-col items-center text-center">
-                <!-- Badge -->
                 <div class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full text-[0.65rem] md:text-xs font-bold tracking-widest uppercase text-[#46B77B] bg-[#46B77B]/10 border border-[#46B77B]/30 mb-4 md:mb-6 backdrop-blur-md">
                     <i class="fas fa-leaf"></i> Premium Packaging
                 </div>
-                
-                <!-- Heading -->
+
                 <h1 class="font-black leading-[1.15] tracking-tight text-white mb-4 md:mb-6 w-full drop-shadow-md text-[1.35rem] sm:text-[1.8rem] md:text-[2.5rem] lg:text-[3rem]">
                     <span class="block whitespace-nowrap">We Are Solutions For Your</span>
                     <span class="block text-[#61CE70] min-h-[1.2em] mt-2 whitespace-nowrap">
@@ -103,18 +129,17 @@
                     </span>
                 </h1>
 
-                <!-- Description -->
                 <p id="dynamicDesc" class="text-sm sm:text-base md:text-lg leading-relaxed text-gray-200 mb-8 md:mb-10 max-w-2xl transition-opacity duration-300 drop-shadow-md">
                     Offset printing is a high-quality, cost-effective method ideal for large volumes. It ensures vibrant colors, sharp images, and professional results on various materials.
                 </p>
-                
+
                 <!-- Buttons -->
                 <div class="flex flex-row justify-center items-center gap-3 w-full max-w-[400px] mx-auto">
                     <a href="#offset-printing" id="dynamicBtnStart" class="flex-1 flex items-baseline justify-center gap-2 py-3.5 px-4 md:px-6 rounded-xl font-bold text-xs md:text-sm text-white bg-[#46B77B] hover:bg-[#3ca56b] hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(70,183,123,0.5)] transition-all group whitespace-nowrap">
                         <span id="btnStartText" class="truncate">Get Offset Printing</span>
                         <i class="fas fa-arrow-right text-[0.9em] shrink-0 transition-transform group-hover:translate-x-1"></i>
                     </a>
-                    <a href="#services" class="flex-1 flex items-baseline justify-center gap-2 py-3.5 px-4 md:px-6 rounded-xl font-bold text-xs md:text-sm text-white bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/40 hover:-translate-y-1 transition-all group whitespace-nowrap">
+                    <a href="#" class="flex-1 flex items-baseline justify-center gap-2 py-3.5 px-4 md:px-6 rounded-xl font-bold text-xs md:text-sm text-white bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/40 hover:-translate-y-1 transition-all group whitespace-nowrap">
                         <span class="truncate">Explore Services</span>
                         <i class="fas fa-cogs text-[0.9em] shrink-0 transition-transform group-hover:rotate-90"></i>
                     </a>
@@ -123,8 +148,7 @@
         </div>
     </section>
 
-    <!-- ═══════════════ BRANDS SECTION (ID: clients) ═══════════════ -->
-    <!-- Yahan se Brands section start ho raha hai -->
+    <!-- ═══════════════ BRANDS SECTION ═══════════════ -->
     <section id="clients" class="fade-in-section relative z-10 py-6 md:py-8 border-y border-gray-200/60 bg-transparent w-full overflow-hidden scroll-mt-24">
         <div class="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-[#f4fbf6] to-transparent z-20 pointer-events-none"></div>
         <div class="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-[#f4fbf6] to-transparent z-20 pointer-events-none"></div>
@@ -135,7 +159,6 @@
 
     <!-- ═══════════════ PERFORMANCE SECTION ═══════════════ -->
     <section class="fade-in-section relative z-10 pt-16 md:pt-20 pb-20 md:pb-28 px-4 md:px-8 w-full overflow-hidden bg-[#050806] scroll-mt-24">
-        <!-- Performance Content (Same as before) -->
         <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
             <div class="absolute -top-[20%] left-[10%] w-[600px] h-[600px] bg-[#46B77B]/10 blur-[150px] rounded-full animate-[float_10s_ease-in-out_infinite]"></div>
             <div class="absolute -bottom-[20%] right-[10%] w-[500px] h-[500px] bg-[#61CE70]/10 blur-[120px] rounded-full animate-[float_12s_ease-in-out_infinite_reverse]"></div>
@@ -152,20 +175,15 @@
                     </div>
                     <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tighter leading-[1.1] md:leading-[1.05]">
                         Excellence in<br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#46B77B] via-[#61CE70] to-[#46B77B] animate-[gradient_4s_linear_infinite] bg-[length:200%_auto]">
-                            Every Metric.
-                        </span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#46B77B] via-[#61CE70] to-[#46B77B] animate-[gradient_4s_linear_infinite] bg-[length:200%_auto]">Every Metric.</span>
                     </h2>
                 </div>
                 <div class="relative md:max-w-[280px] md:pb-2">
                     <div class="hidden md:block absolute left-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#61CE70] to-transparent rounded-full"></div>
-                    <p class="text-gray-400 text-xs md:text-sm leading-relaxed md:text-right md:pl-5">
-                        Real-time results, meticulously measured across every project we deliver.
-                    </p>
+                    <p class="text-gray-400 text-xs md:text-sm leading-relaxed md:text-right md:pl-5">Real-time results, meticulously measured across every project we deliver.</p>
                 </div>
             </div>
             <div id="performance-grid" class="spotlight-panel relative bg-[#0a0f0d]/80 backdrop-blur-2xl rounded-[1.5rem] md:rounded-[2rem] border border-white/10 shadow-[0_30px_100px_-20px_rgba(0,0,0,0.8)] overflow-hidden">
-                <!-- Metrics (Same as before) -->
                 <div class="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-[#61CE70] to-transparent opacity-50"></div>
                 <div class="grid grid-cols-3 divide-x divide-white/5 relative z-10">
                     <!-- Metric 1 -->
@@ -173,101 +191,179 @@
                         <div class="relative w-[75px] h-[75px] sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 mb-3 sm:mb-5 md:mb-6 transition-transform duration-700 group-hover:scale-[1.03]">
                             <svg class="absolute inset-0 w-full h-full animate-[spin_20s_linear_infinite] opacity-20 group-hover:opacity-50 transition-opacity duration-500" viewBox="0 0 120 120"><circle cx="60" cy="60" r="58" fill="none" stroke="#61CE70" stroke-width="1.5" stroke-dasharray="4 8" stroke-linecap="round" /></svg>
                             <svg class="w-full h-full -rotate-90 relative z-10" viewBox="0 0 120 120">
-                                <defs><linearGradient id="ringGrad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#61CE70" /><stop offset="100%" stop-color="#46B77B" /></linearGradient><radialGradient id="innerGlow1" cx="50%" cy="50%" r="50%"><stop offset="50%" stop-color="rgba(97,206,112,0.15)" /><stop offset="100%" stop-color="transparent" /></radialGradient></defs>
-                                <circle cx="60" cy="60" r="52" fill="url(#innerGlow1)" class="animate-[pulse_3s_ease-in-out_infinite]" /><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="6" />
+                                <defs>
+                                    <linearGradient id="ringGrad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#61CE70" /><stop offset="100%" stop-color="#46B77B" /></linearGradient>
+                                    <radialGradient id="innerGlow1" cx="50%" cy="50%" r="50%"><stop offset="50%" stop-color="rgba(97,206,112,0.15)" /><stop offset="100%" stop-color="transparent" /></radialGradient>
+                                </defs>
+                                <circle cx="60" cy="60" r="52" fill="url(#innerGlow1)" class="animate-[pulse_3s_ease-in-out_infinite]" />
+                                <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="6" />
                                 <circle class="perf-circle" cx="60" cy="60" r="52" fill="none" stroke="url(#ringGrad1)" stroke-width="6" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" data-target="95" style="transition: stroke-dashoffset 2.5s cubic-bezier(0.34,1.2,0.64,1); filter: drop-shadow(0 0 10px rgba(97,206,112,0.5));" />
                             </svg>
                             <div class="absolute inset-0 flex items-center justify-center"><span class="text-base sm:text-2xl md:text-4xl font-black text-white counter leading-none tracking-tighter" data-target="95">0</span><span class="text-[0.6rem] sm:text-xs md:text-lg font-bold text-[#61CE70] mt-0.5 md:mt-1 ml-0.5">%</span></div>
                         </div>
-                        <div class="w-full transform transition-transform duration-500 group-hover:-translate-y-1 px-1"><h3 class="text-[0.65rem] sm:text-xs md:text-sm font-black tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white mb-1 md:mb-1.5 group-hover:text-[#61CE70] transition-colors duration-300">Quality</h3><p class="text-[0.6rem] sm:text-[0.7rem] md:text-xs text-gray-400 leading-tight md:leading-relaxed max-w-[150px] mx-auto">Standards.</p></div>
+                        <div class="w-full transform transition-transform duration-500 group-hover:-translate-y-1 px-1">
+                            <h3 class="text-[0.65rem] sm:text-xs md:text-sm font-black tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white mb-1 md:mb-1.5 group-hover:text-[#61CE70] transition-colors duration-300">Quality</h3>
+                            <p class="text-[0.6rem] sm:text-[0.7rem] md:text-xs text-gray-400 leading-tight md:leading-relaxed max-w-[150px] mx-auto">Standards.</p>
+                        </div>
                     </div>
                     <!-- Metric 2 -->
                     <div class="perf-cell group relative p-3 sm:p-6 md:p-8 lg:p-10 transition-all duration-700 hover:bg-white/[0.02] flex flex-col items-center justify-center text-center">
                         <div class="relative w-[75px] h-[75px] sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 mb-3 sm:mb-5 md:mb-6 transition-transform duration-700 group-hover:scale-[1.03]">
                             <svg class="absolute inset-0 w-full h-full animate-[spin_25s_linear_infinite_reverse] opacity-20 group-hover:opacity-50 transition-opacity duration-500" viewBox="0 0 120 120"><circle cx="60" cy="60" r="58" fill="none" stroke="#61CE70" stroke-width="1.5" stroke-dasharray="4 8" stroke-linecap="round" /></svg>
                             <svg class="w-full h-full -rotate-90 relative z-10" viewBox="0 0 120 120">
-                                <defs><linearGradient id="ringGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#61CE70" /><stop offset="100%" stop-color="#46B77B" /></linearGradient><radialGradient id="innerGlow2" cx="50%" cy="50%" r="50%"><stop offset="50%" stop-color="rgba(97,206,112,0.15)" /><stop offset="100%" stop-color="transparent" /></radialGradient></defs>
-                                <circle cx="60" cy="60" r="52" fill="url(#innerGlow2)" class="animate-[pulse_3s_ease-in-out_infinite_0.5s]" /><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="6" />
+                                <defs>
+                                    <linearGradient id="ringGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#61CE70" /><stop offset="100%" stop-color="#46B77B" /></linearGradient>
+                                    <radialGradient id="innerGlow2" cx="50%" cy="50%" r="50%"><stop offset="50%" stop-color="rgba(97,206,112,0.15)" /><stop offset="100%" stop-color="transparent" /></radialGradient>
+                                </defs>
+                                <circle cx="60" cy="60" r="52" fill="url(#innerGlow2)" class="animate-[pulse_3s_ease-in-out_infinite_0.5s]" />
+                                <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="6" />
                                 <circle class="perf-circle" cx="60" cy="60" r="52" fill="none" stroke="url(#ringGrad2)" stroke-width="6" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" data-target="93" style="transition: stroke-dashoffset 2.5s cubic-bezier(0.34,1.2,0.64,1) 0.15s; filter: drop-shadow(0 0 10px rgba(97,206,112,0.5));" />
                             </svg>
                             <div class="absolute inset-0 flex items-center justify-center"><span class="text-base sm:text-2xl md:text-4xl font-black text-white counter leading-none tracking-tighter" data-target="93">0</span><span class="text-[0.6rem] sm:text-xs md:text-lg font-bold text-[#61CE70] mt-0.5 md:mt-1 ml-0.5">%</span></div>
                         </div>
-                        <div class="w-full transform transition-transform duration-500 group-hover:-translate-y-1 px-1"><h3 class="text-[0.65rem] sm:text-xs md:text-sm font-black tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white mb-1 md:mb-1.5 group-hover:text-[#61CE70] transition-colors duration-300">Sustainable</h3><p class="text-[0.6rem] sm:text-[0.7rem] md:text-xs text-gray-400 leading-tight md:leading-relaxed max-w-[150px] mx-auto">Eco-friendly materials.</p></div>
+                        <div class="w-full transform transition-transform duration-500 group-hover:-translate-y-1 px-1">
+                            <h3 class="text-[0.65rem] sm:text-xs md:text-sm font-black tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white mb-1 md:mb-1.5 group-hover:text-[#61CE70] transition-colors duration-300">Sustainable</h3>
+                            <p class="text-[0.6rem] sm:text-[0.7rem] md:text-xs text-gray-400 leading-tight md:leading-relaxed max-w-[150px] mx-auto">Eco-friendly materials.</p>
+                        </div>
                     </div>
                     <!-- Metric 3 -->
                     <div class="perf-cell group relative p-3 sm:p-6 md:p-8 lg:p-10 transition-all duration-700 hover:bg-white/[0.02] flex flex-col items-center justify-center text-center">
                         <div class="relative w-[75px] h-[75px] sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-36 lg:h-36 mb-3 sm:mb-5 md:mb-6 transition-transform duration-700 group-hover:scale-[1.03]">
                             <svg class="absolute inset-0 w-full h-full animate-[spin_22s_linear_infinite] opacity-20 group-hover:opacity-50 transition-opacity duration-500" viewBox="0 0 120 120"><circle cx="60" cy="60" r="58" fill="none" stroke="#61CE70" stroke-width="1.5" stroke-dasharray="4 8" stroke-linecap="round" /></svg>
                             <svg class="w-full h-full -rotate-90 relative z-10" viewBox="0 0 120 120">
-                                <defs><linearGradient id="ringGrad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#61CE70" /><stop offset="100%" stop-color="#46B77B" /></linearGradient><radialGradient id="innerGlow3" cx="50%" cy="50%" r="50%"><stop offset="50%" stop-color="rgba(97,206,112,0.15)" /><stop offset="100%" stop-color="transparent" /></radialGradient></defs>
-                                <circle cx="60" cy="60" r="52" fill="url(#innerGlow3)" class="animate-[pulse_3s_ease-in-out_infinite_1s]" /><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="6" />
+                                <defs>
+                                    <linearGradient id="ringGrad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#61CE70" /><stop offset="100%" stop-color="#46B77B" /></linearGradient>
+                                    <radialGradient id="innerGlow3" cx="50%" cy="50%" r="50%"><stop offset="50%" stop-color="rgba(97,206,112,0.15)" /><stop offset="100%" stop-color="transparent" /></radialGradient>
+                                </defs>
+                                <circle cx="60" cy="60" r="52" fill="url(#innerGlow3)" class="animate-[pulse_3s_ease-in-out_infinite_1s]" />
+                                <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="6" />
                                 <circle class="perf-circle" cx="60" cy="60" r="52" fill="none" stroke="url(#ringGrad3)" stroke-width="6" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" data-target="90" style="transition: stroke-dashoffset 2.5s cubic-bezier(0.34,1.2,0.64,1) 0.3s; filter: drop-shadow(0 0 10px rgba(97,206,112,0.5));" />
                             </svg>
                             <div class="absolute inset-0 flex items-center justify-center"><span class="text-base sm:text-2xl md:text-4xl font-black text-white counter leading-none tracking-tighter" data-target="90">0</span><span class="text-[0.6rem] sm:text-xs md:text-lg font-bold text-[#61CE70] mt-0.5 md:mt-1 ml-0.5">%</span></div>
                         </div>
-                        <div class="w-full transform transition-transform duration-500 group-hover:-translate-y-1 px-1"><h3 class="text-[0.65rem] sm:text-xs md:text-sm font-black tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white mb-1 md:mb-1.5 group-hover:text-[#61CE70] transition-colors duration-300">Design</h3><p class="text-[0.6rem] sm:text-[0.7rem] md:text-xs text-gray-400 leading-tight md:leading-relaxed max-w-[150px] mx-auto">Creative packaging.</p></div>
+                        <div class="w-full transform transition-transform duration-500 group-hover:-translate-y-1 px-1">
+                            <h3 class="text-[0.65rem] sm:text-xs md:text-sm font-black tracking-[0.1em] sm:tracking-[0.2em] uppercase text-white mb-1 md:mb-1.5 group-hover:text-[#61CE70] transition-colors duration-300">Design</h3>
+                            <p class="text-[0.6rem] sm:text-[0.7rem] md:text-xs text-gray-400 leading-tight md:leading-relaxed max-w-[150px] mx-auto">Creative packaging.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════ ABOUT SECTION (ID: about) ═══════════════ -->
+    <!-- ═══════════════ ABOUT SECTION ═══════════════ -->
     <section id="about" class="fade-in-section relative z-10 w-full overflow-hidden bg-white py-16 md:py-24 scroll-mt-24">
-        <!-- About Content (Same as before) -->
-        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10 flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-20">
-            <div class="w-full lg:w-1/2 flex flex-col items-start slide-in-left">
-                <div class="flex items-center gap-3 mb-5 md:mb-6"><span class="h-px w-10 bg-[#46B77B]"></span><span class="text-[0.65rem] font-bold tracking-[0.3em] uppercase text-[#46B77B]">About Our Company</span></div>
-                <h2 class="text-3xl sm:text-4xl md:text-[2.5rem] lg:text-[3.4rem] font-black text-[#0A0C12] leading-[1.05] tracking-[-0.03em] mb-5 md:mb-7">
-                    We craft packaging<br>that <span class="relative inline-block text-[#46B77B]">speaks.
-                        <svg class="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 200 10" preserveAspectRatio="none" fill="none"><path d="M2 7C50 3 100 2 198 6" stroke="#46B77B" stroke-width="3" stroke-linecap="round" /></svg>
-                    </span>
-                </h2>
-                <p class="text-gray-500 text-sm md:text-[0.95rem] leading-[1.85] mb-8 max-w-lg">
-                    Welcome to <strong class="font-bold text-[#0A0C12]">Maqsood Faisal Printing Press</strong> — your premier partner in eco-friendly printing and packaging. With cutting-edge technology and a deep commitment to sustainability, we bring your visions to life with minimal environmental impact.
-                </p>
-                <!-- Features Grid -->
-                <div class="grid grid-cols-2 gap-2 md:gap-3 w-full mb-8 md:mb-10">
-                    <!-- Repeat 6 items -->
-                    <div class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all"><div class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div><span class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Sustainable Practices</span></div>
-                    <div class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all"><div class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div><span class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Advanced Technology</span></div>
-                    <div class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all"><div class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div><span class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Eco-Friendly Solutions</span></div>
-                    <div class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all"><div class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div><span class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Trusted by Brands</span></div>
-                    <div class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all"><div class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div><span class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Innovative Packaging</span></div>
-                    <div class="group flex items-center gap-2 md:gap-3 py-2 px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all"><div class="w-5 h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div><span class="text-[0.65rem] md:text-[0.8rem] font-semibold text-gray-700 leading-tight">Environmentally Responsible</span></div>
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10 flex flex-col min-[991px]:flex-row items-center gap-10 min-[991px]:gap-12 lg:gap-20">
+            
+            <!-- Text Column -->
+            <div class="w-full min-[991px]:w-1/2 flex flex-col items-start slide-in-left">
+                <div class="flex items-center gap-3 mb-5 md:mb-6">
+                    <span class="h-px w-10 bg-[#46B77B]"></span>
+                    <span class="text-[0.65rem] font-bold tracking-[0.3em] uppercase text-[#46B77B]">About Our Company</span>
                 </div>
-                <div class="flex flex-row gap-2 sm:gap-3 w-full relative z-20">
-                    <a href="#contact" class="group flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-2 py-3 px-3 sm:px-8 rounded-lg font-bold text-xs sm:text-sm text-white bg-[#46B77B] hover:bg-[#3ca56b] transition-all shadow-md">Get in Touch<svg class="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></a>
-                    <a href="#services" class="group flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-2 py-3 px-3 sm:px-8 rounded-lg font-bold text-xs sm:text-sm text-gray-700 bg-white border border-gray-200 hover:border-[#46B77B] hover:text-[#46B77B] transition-all shadow-sm">Our Services<svg class="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:rotate-90" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg></a>
+                
+                <!-- Heading h3 -->
+                <h3 class="text-2xl sm:text-3xl min-[991px]:text-[1.75rem] lg:text-[2.2rem] font-black text-[#0A0C12] leading-[1.2] tracking-[-0.02em] mb-5 md:mb-6">
+                    Packaging Excellence.<br>Built Around <span class="relative inline-block text-[#46B77B]">Your Brand.
+                        <svg class="absolute -bottom-1.5 left-0 w-full" height="7" viewBox="0 0 200 10" preserveAspectRatio="none" fill="none">
+                            <path d="M2 7C50 3 100 2 198 6" stroke="#46B77B" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </span>
+                </h3>
+
+                <!-- Subheading -->
+                <p class="text-gray-800 text-sm md:text-[1rem] font-semibold leading-[1.85] mb-4 max-w-lg">
+                    Your Trusted Partner in Printing & Packaging Solutions
+                </p>
+
+                <!-- Paragraphs -->
+                <div class="space-y-4 mb-8 max-w-lg">
+                    <p class="text-gray-500 text-sm md:text-[0.95rem] leading-[1.85]">
+                        At <strong class="font-bold text-[#0A0C12]">Maqsood Faisal Printing Press</strong>, we bring together advanced technology, manufacturing expertise, and a commitment to quality to deliver packaging solutions that make a difference.
+                    </p>
+                    <p class="text-gray-500 text-sm md:text-[0.95rem] leading-[1.85]">
+                        From premium printed cartons and flexible packaging to labels, laminated tubes, and plastic containers, we help businesses protect their products, strengthen their identity, and stand out in competitive markets.
+                    </p>
+                </div>
+
+                <!-- Feature Grid (Mobile par 2 by 2 Fix) -->
+                <!-- grid-cols-2 har size par laga diya hai, gap aur padding thori kam ki hai taake mobile par fit aaye -->
+                <div class="grid grid-cols-2 gap-1.5 sm:gap-2 md:gap-3 w-full mb-8 md:mb-10">
+                    <div class="group flex items-center gap-1.5 sm:gap-2 md:gap-3 py-2 px-1.5 sm:px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div class="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div>
+                        <span class="text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] font-semibold text-gray-700 leading-[1.2]">Advanced Technology</span>
+                    </div>
+                    <div class="group flex items-center gap-1.5 sm:gap-2 md:gap-3 py-2 px-1.5 sm:px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div class="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div>
+                        <span class="text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] font-semibold text-gray-700 leading-[1.2]">Premium Quality</span>
+                    </div>
+                    <div class="group flex items-center gap-1.5 sm:gap-2 md:gap-3 py-2 px-1.5 sm:px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div class="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div>
+                        <span class="text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] font-semibold text-gray-700 leading-[1.2]">Innovative Packaging</span>
+                    </div>
+                    <div class="group flex items-center gap-1.5 sm:gap-2 md:gap-3 py-2 px-1.5 sm:px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div class="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div>
+                        <span class="text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] font-semibold text-gray-700 leading-[1.2]">Trusted by Leading Brands</span>
+                    </div>
+                    <div class="group flex items-center gap-1.5 sm:gap-2 md:gap-3 py-2 px-1.5 sm:px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div class="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div>
+                        <span class="text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] font-semibold text-gray-700 leading-[1.2]">Complete Packaging Solutions</span>
+                    </div>
+                    <div class="group flex items-center gap-1.5 sm:gap-2 md:gap-3 py-2 px-1.5 sm:px-2 md:px-3 rounded-lg bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 hover:bg-white transition-all">
+                        <div class="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 rounded bg-[#46B77B]/10 flex items-center justify-center shrink-0"><svg class="w-2.5 h-2.5 md:w-3.5 md:h-3.5 text-[#46B77B]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg></div>
+                        <span class="text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] font-semibold text-gray-700 leading-[1.2]">Environmentally Responsible Practices</span>
+                    </div>
+                </div>
+                
+                <!-- Buttons -->
+                <div class="flex flex-wrap sm:flex-nowrap gap-2 sm:gap-3 w-full relative z-20">
+                    <a href="#contact" class="group flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 py-3 px-4 sm:px-8 rounded-lg font-bold text-xs sm:text-sm text-white bg-[#46B77B] hover:bg-[#3ca56b] transition-all shadow-md whitespace-nowrap">
+                        Get in Touch
+                        <svg class="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                    <a href="#" class="group flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 py-3 px-4 sm:px-8 rounded-lg font-bold text-xs sm:text-sm text-gray-700 bg-white border border-gray-200 hover:border-[#46B77B] hover:text-[#46B77B] transition-all shadow-sm whitespace-nowrap">
+                        Our Services
+                        <svg class="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:rotate-90" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+                    </a>
                 </div>
             </div>
-            <!-- About Image -->
-            <div class="w-full lg:w-1/2 relative mt-8 lg:mt-0 slide-in-right">
+
+            <!-- Image Column -->
+            <div class="w-full min-[991px]:w-1/2 relative mt-8 min-[991px]:mt-0 slide-in-right">
                 <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-[#46B77B]/10 rounded-[2rem] rotate-6 z-0"></div>
                 <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-[0_20px_50px_-15px_rgba(10,12,18,0.2)] aspect-[4/5] sm:aspect-[4/4] md:aspect-[4/4.5] group border-4 border-white bg-white">
                     <img src="images/about-maqsood-faisal.jpg" alt="About Maqsood Faisal" class="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0A0C12]/70 via-transparent to-transparent"></div>
                     <div class="absolute bottom-0 left-0 right-0 p-4 md:p-6">
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
-                            <div><p class="text-white font-black text-sm leading-tight">Maqsood Faisal</p><p class="text-white/60 text-[0.65rem] font-semibold tracking-widest uppercase">Printing Press</p></div>
+                            <div class="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                            </div>
+                            <div>
+                                <p class="text-white font-black text-sm leading-tight">Maqsood Faisal</p>
+                                <p class="text-white/60 text-[0.65rem] font-semibold tracking-widest uppercase">Printing Press</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="absolute -bottom-5 -left-4 md:-left-6 z-20">
                     <div class="bg-white rounded-2xl p-3 pr-5 shadow-xl border border-gray-100 flex items-center gap-3 hover:-translate-y-1 transition-transform">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#46B77B] to-[#61CE70] flex items-center justify-center"><svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg></div>
-                        <div><p class="text-lg font-black text-[#0A0C12] leading-none">100%</p><p class="text-[0.55rem] font-bold text-gray-400 uppercase tracking-widest mt-1">Trusted Quality</p></div>
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#46B77B] to-[#61CE70] flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        </div>
+                        <div>
+                            <p class="text-lg font-black text-[#0A0C12] leading-none">100%</p>
+                            <p class="text-[0.55rem] font-bold text-gray-400 uppercase tracking-widest mt-1">Trusted Quality</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
 
-    <!-- ═══════════════ SERVICES SECTION (ID: services) ═══════════════ -->
-    <!-- Yahan ID aur scroll-mt-24 lagaya hai -->
+    <!-- ═══════════════ SERVICES SECTION ═══════════════ -->
     <section id="services" class="fade-in-section relative z-10 w-full py-16 md:py-24 bg-[#050806] overflow-hidden font-sans scroll-mt-24">
-        <!-- Services Content (Same as before) -->
         <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-b from-[#050806] via-[#0A0F0D] to-[#050806]"></div>
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#46B77B]/10 blur-[150px] rounded-full mix-blend-screen animate-pulse-slow"></div>
@@ -283,57 +379,108 @@
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#46B77B] via-[#61CE70] to-[#9DFF9D]">Packaging Services.</span>
             </h2>
             <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-8">Explore our premium packaging solutions designed for modern brands. From sustainable materials to vibrant prints.</p>
-            <div class="flex items-center justify-center gap-3 text-[#61CE70] text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.2em]"><span class="w-8 h-[1px] bg-[#61CE70]"></span> Swipe to explore <span class="w-8 h-[1px] bg-[#61CE70]"></span></div>
+            <div class="flex items-center justify-center gap-3 text-[#61CE70] text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.2em]">
+                <span class="w-8 h-[1px] bg-[#61CE70]"></span> Swipe to explore <span class="w-8 h-[1px] bg-[#61CE70]"></span>
+            </div>
         </div>
         <div class="relative w-full overflow-hidden mt-10 md:mt-14 group/slider">
             <div class="absolute inset-y-0 left-0 w-8 md:w-24 bg-gradient-to-r from-[#050806] to-transparent z-20 pointer-events-none"></div>
             <div class="absolute inset-y-0 right-0 w-8 md:w-24 bg-gradient-to-l from-[#050806] to-transparent z-20 pointer-events-none"></div>
-            <!-- Slider content (same as before, 6 cards + duplicate) -->
             <div class="flex w-max animate-marquee-infinite group-hover/slider:[animation-play-state:paused]">
                 <div class="flex gap-4 md:gap-6 px-4 md:px-6 pb-6 pt-2">
                     <!-- Card 1 -->
                     <div class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
-                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden"><img src="images/plastic-packing.png" alt="Plastic Packaging" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0"><div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-box text-white text-sm"></i></div></div>
-                        <div class="px-4 py-5"><div class="flex items-center justify-between mb-2"><h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Plastic Packaging</h3><div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div></div><p class="text-gray-400 text-xs md:text-sm leading-relaxed">Cost-effective, robust, and sustainable plastic packaging solutions for everyday products.</p></div>
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/plastic-packing.png" alt="Plastic Packaging" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-box text-white text-sm"></i></div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Plastic Packaging</h3>
+                                <div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">Cost-effective, robust, and sustainable plastic packaging solutions for everyday products.</p>
+                        </div>
                     </div>
                     <!-- Card 2 -->
                     <div class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
-                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden"><img src="images/tissue-conversion.png" alt="Tissue Conversion" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0"><div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-scroll text-white text-sm"></i></div></div>
-                        <div class="px-4 py-5"><div class="flex items-center justify-between mb-2"><h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Tissue Conversion</h3><div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div></div><p class="text-gray-400 text-xs md:text-sm leading-relaxed">Eco-sensitive tissue products balancing softness and strength for premium use.</p></div>
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/tissue-conversion.png" alt="Tissue Conversion" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-scroll text-white text-sm"></i></div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Tissue Conversion</h3>
+                                <div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">Eco-sensitive tissue products balancing softness and strength for premium use.</p>
+                        </div>
                     </div>
                     <!-- Card 3 -->
                     <div class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
-                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden"><img src="images/offset-printing.jpg" alt="Offset Printing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0"><div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-print text-white text-sm"></i></div></div>
-                        <div class="px-4 py-5"><div class="flex items-center justify-between mb-2"><h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Offset Printing</h3><div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div></div><p class="text-gray-400 text-xs md:text-sm leading-relaxed">High-volume, vibrant, and eco-friendly printing solutions for large-scale production.</p></div>
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/offset-printing.jpg" alt="Offset Printing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-print text-white text-sm"></i></div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Offset Printing</h3>
+                                <div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">High-volume, vibrant, and eco-friendly printing solutions for large-scale production.</p>
+                        </div>
                     </div>
                     <!-- Card 4 -->
                     <div class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
-                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden"><img src="images/roll-to-roll.png" alt="Roll to Roll Labels" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0"><div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-tags text-white text-sm"></i></div></div>
-                        <div class="px-4 py-5"><div class="flex items-center justify-between mb-2"><h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Roll to Roll Labels</h3><div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div></div><p class="text-gray-400 text-xs md:text-sm leading-relaxed">Speedy, accurate, and customizable eco-conscious labels for your brand.</p></div>
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/roll-to-roll.png" alt="Roll to Roll Labels" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-tags text-white text-sm"></i></div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Roll to Roll Labels</h3>
+                                <div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">Speedy, accurate, and customizable eco-conscious labels for your brand.</p>
+                        </div>
                     </div>
                     <!-- Card 5 -->
                     <div class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
-                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden"><img src="images/laminated-tubes.png" alt="Laminated Tubes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0"><div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-tube text-white text-sm"></i></div></div>
-                        <div class="px-4 py-5"><div class="flex items-center justify-between mb-2"><h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Laminated Tubes</h3><div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div></div><p class="text-gray-400 text-xs md:text-sm leading-relaxed">Aesthetic and functional tubes for various industries, with a focus on sustainability.</p></div>
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/laminated-tubes.png" alt="Laminated Tubes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-tube text-white text-sm"></i></div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Laminated Tubes</h3>
+                                <div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">Aesthetic and functional tubes for various industries, with a focus on sustainability.</p>
+                        </div>
                     </div>
                     <!-- Card 6 -->
                     <div class="shrink-0 w-[260px] sm:w-[320px] lg:w-[350px] group relative bg-white/5 backdrop-blur-xl rounded-[2rem] border border-white/10 p-2 transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:shadow-[0_20px_40px_-10px_rgba(70,183,123,0.3)] cursor-pointer text-left">
-                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden"><img src="images/flexible-printing.png" alt="Flexible Packaging" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0"><div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-layer-group text-white text-sm"></i></div></div>
-                        <div class="px-4 py-5"><div class="flex items-center justify-between mb-2"><h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Flexible Packaging</h3><div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div></div><p class="text-gray-400 text-xs md:text-sm leading-relaxed">Durable, lightweight, and environmentally-friendly packaging options for versatile use.</p></div>
+                        <div class="relative w-full h-[200px] rounded-[1.5rem] overflow-hidden">
+                            <img src="images/flexible-printing.png" alt="Flexible Packaging" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out grayscale-[30%] group-hover:grayscale-0">
+                            <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors duration-300"><i class="fas fa-layer-group text-white text-sm"></i></div>
+                        </div>
+                        <div class="px-4 py-5">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-lg md:text-xl font-bold text-white group-hover:text-[#61CE70] transition-colors">Flexible Packaging</h3>
+                                <div class="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#46B77B]/20 group-hover:border-[#46B77B]/50 transition-all"><i class="fas fa-arrow-up-right-from-square text-xs text-gray-400 group-hover:text-[#46B77B]"></i></div>
+                            </div>
+                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">Durable, lightweight, and environmentally-friendly packaging options for versatile use.</p>
+                        </div>
                     </div>
                 </div>
-                <!-- Duplicate Cards (Skipped for brevity, add same as above) -->
-                 <div class="flex gap-4 md:gap-6 px-4 md:px-6 pb-6 pt-2" aria-hidden="true">
-                    <!-- Paste the same 6 cards here -->
-                 </div>
+                <div class="flex gap-4 md:gap-6 px-4 md:px-6 pb-6 pt-2" aria-hidden="true"></div>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════ QUALITY SECTION (ID: quality) ═══════════════ -->
+    <!-- ═══════════════ QUALITY SECTION ═══════════════ -->
     <section id="quality" class="fade-in-section relative z-10 w-full py-20 md:py-28 bg-[#FAFBF9] overflow-hidden font-sans border-t border-gray-200/50 scroll-mt-24">
-        <!-- Quality Content (Same as before) -->
-         <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+        <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
             <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#46B77B]/5 blur-[120px] rounded-full"></div>
             <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#61CE70]/5 blur-[120px] rounded-full"></div>
         </div>
@@ -346,46 +493,102 @@
                         <img src="images/quality.png" alt="Quality Packaging" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0A0C12]/60 via-transparent to-transparent opacity-80 pointer-events-none"></div>
                         <div class="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 bg-white/10 backdrop-blur-md border border-white/20 p-3 md:p-4 rounded-xl md:rounded-2xl flex items-center justify-between z-20">
-                            <div class="flex items-center gap-3"><div class="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-white flex items-center justify-center shadow-lg"><i class="fas fa-check-double text-[#46B77B] text-sm md:text-lg"></i></div><div><p class="text-base md:text-xl font-black text-white leading-none">100%</p><p class="text-[0.55rem] md:text-[0.6rem] font-bold text-white/80 uppercase tracking-widest mt-0.5 md:mt-1">Quality Assured</p></div></div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-white flex items-center justify-center shadow-lg"><i class="fas fa-check-double text-[#46B77B] text-sm md:text-lg"></i></div>
+                                <div>
+                                    <p class="text-base md:text-xl font-black text-white leading-none">100%</p>
+                                    <p class="text-[0.55rem] md:text-[0.6rem] font-bold text-white/80 uppercase tracking-widest mt-0.5 md:mt-1">Quality Assured</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 flex flex-col justify-center order-2 text-left slide-in-right">
                     <div class="flex items-center gap-2 md:gap-3 mb-4 md:mb-6"><span class="h-px w-6 md:w-10 bg-[#46B77B]"></span><span class="text-[0.55rem] md:text-[0.65rem] font-bold tracking-[0.2em] md:tracking-[0.3em] uppercase text-[#46B77B]">Our Quality Promise</span></div>
-                    <h2 class="text-[1.3rem] sm:text-3xl md:text-[1.8rem] lg:text-[2.2rem] xl:text-[3rem] font-black text-[#0A0C12] leading-[1.15] tracking-[-0.03em] mb-4 md:mb-6 pr-2"><span class="block whitespace-nowrap">Accelerating Innovations</span><span class="text-[#46B77B] block mt-1">In Packaging.</span></h2>
+                    <h2 class="text-[1.3rem] sm:text-3xl md:text-[1.8rem] lg:text-[2.2rem] xl:text-[3rem] font-black text-[#0A0C12] leading-[1.15] tracking-[-0.03em] mb-4 md:mb-6 pr-2">
+                        <span class="block whitespace-nowrap">Accelerating Innovations</span><span class="text-[#46B77B] block mt-1">In Packaging.</span>
+                    </h2>
                     <p class="text-gray-500 text-xs md:text-[0.95rem] leading-relaxed mb-6 md:mb-10 max-w-lg">Our expertise in printing and packaging drives impactful, innovative solutions tailored to elevate brands. We combine quality, speed, and creativity to meet evolving packaging needs.</p>
                     <div class="flex flex-col gap-6 md:gap-8 relative w-full">
                         <div class="absolute left-[19px] md:left-[23px] top-4 bottom-7 w-[2px] bg-gradient-to-b from-[#46B77B]/40 via-amber-400/40 to-purple-500/40 -z-10"></div>
-                        <div class="group relative flex flex-row items-start gap-3 md:gap-5 cursor-default"><div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center shrink-0 group-hover:border-[#46B77B] group-hover:bg-[#46B77B] transition-all duration-300 z-10"><i class="fas fa-leaf text-sm md:text-lg text-[#46B77B] group-hover:text-white transition-colors"></i></div><div class="pt-0.5 md:pt-1"><h3 class="text-sm md:text-lg font-bold text-[#0A0C12] mb-1 group-hover:text-[#46B77B] transition-colors">Environmentally Friendly</h3><p class="text-gray-500 text-[0.7rem] md:text-sm leading-relaxed">Sustainable packaging solutions designed to reduce waste and protect nature.</p></div></div>
-                        <div class="group relative flex flex-row items-start gap-3 md:gap-5 cursor-default"><div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center shrink-0 group-hover:border-amber-400 group-hover:bg-amber-400 transition-all duration-300 z-10"><i class="fas fa-medal text-sm md:text-lg text-amber-500 group-hover:text-white transition-colors"></i></div><div class="pt-0.5 md:pt-1"><h3 class="text-sm md:text-lg font-bold text-[#0A0C12] mb-1 group-hover:text-amber-500 transition-colors">Best Quality Of Packaging</h3><p class="text-gray-500 text-[0.7rem] md:text-sm leading-relaxed">Exceptional packaging quality ensures durability, appeal, and customer satisfaction.</p></div></div>
-                        <div class="group relative flex flex-row items-start gap-3 md:gap-5 cursor-default"><div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center shrink-0 group-hover:border-purple-500 group-hover:bg-purple-500 transition-all duration-300 z-10"><i class="fas fa-palette text-sm md:text-lg text-purple-500 group-hover:text-white transition-colors"></i></div><div class="pt-0.5 md:pt-1"><h3 class="text-sm md:text-lg font-bold text-[#0A0C12] mb-1 group-hover:text-purple-500 transition-colors">Creative Packaging</h3><p class="text-gray-500 text-[0.7rem] md:text-sm leading-relaxed">Unleashing unique designs that make your packaging stand out beautifully.</p></div></div>
+                        <div class="group relative flex flex-row items-start gap-3 md:gap-5 cursor-default">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center shrink-0 group-hover:border-[#46B77B] group-hover:bg-[#46B77B] transition-all duration-300 z-10"><i class="fas fa-leaf text-sm md:text-lg text-[#46B77B] group-hover:text-white transition-colors"></i></div>
+                            <div class="pt-0.5 md:pt-1">
+                                <h3 class="text-sm md:text-lg font-bold text-[#0A0C12] mb-1 group-hover:text-[#46B77B] transition-colors">Environmentally Friendly</h3>
+                                <p class="text-gray-500 text-[0.7rem] md:text-sm leading-relaxed">Sustainable packaging solutions designed to reduce waste and protect nature.</p>
+                            </div>
+                        </div>
+                        <div class="group relative flex flex-row items-start gap-3 md:gap-5 cursor-default">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center shrink-0 group-hover:border-amber-400 group-hover:bg-amber-400 transition-all duration-300 z-10"><i class="fas fa-medal text-sm md:text-lg text-amber-500 group-hover:text-white transition-colors"></i></div>
+                            <div class="pt-0.5 md:pt-1">
+                                <h3 class="text-sm md:text-lg font-bold text-[#0A0C12] mb-1 group-hover:text-amber-500 transition-colors">Best Quality Of Packaging</h3>
+                                <p class="text-gray-500 text-[0.7rem] md:text-sm leading-relaxed">Exceptional packaging quality ensures durability, appeal, and customer satisfaction.</p>
+                            </div>
+                        </div>
+                        <div class="group relative flex flex-row items-start gap-3 md:gap-5 cursor-default">
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-200 shadow-sm flex items-center justify-center shrink-0 group-hover:border-purple-500 group-hover:bg-purple-500 transition-all duration-300 z-10"><i class="fas fa-palette text-sm md:text-lg text-purple-500 group-hover:text-white transition-colors"></i></div>
+                            <div class="pt-0.5 md:pt-1">
+                                <h3 class="text-sm md:text-lg font-bold text-[#0A0C12] mb-1 group-hover:text-purple-500 transition-colors">Creative Packaging</h3>
+                                <p class="text-gray-500 text-[0.7rem] md:text-sm leading-relaxed">Unleashing unique designs that make your packaging stand out beautifully.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════ CONTACT SECTION (ID: contact) ═══════════════ -->
+    <!-- ═══════════════ CONTACT SECTION ═══════════════ -->
     <section id="contact" class="fade-in-section relative z-10 w-full py-16 md:py-24 bg-transparent overflow-hidden font-sans border-t border-black/5 scroll-mt-24">
-        <!-- Contact Content (Same as before) -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col [@media(min-width:991px)]:flex-row gap-8 lg:gap-12 items-stretch">
                 <div class="w-full [@media(min-width:991px)]:w-1/2 flex flex-col slide-in-left">
                     <div class="mb-6 md:mb-8">
-                        <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/80 backdrop-blur-md border border-gray-200 shadow-sm mb-4"><i class="fas fa-headset text-[#46B77B]"></i><span class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#0A0C12]">Get In Touch</span></div>
+                        <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/80 backdrop-blur-md border border-gray-200 shadow-sm mb-4">
+                            <i class="fas fa-headset text-[#46B77B]"></i><span class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#0A0C12]">Get In Touch</span>
+                        </div>
                         <h2 class="text-3xl sm:text-4xl lg:text-[2.8rem] font-black text-[#0A0C12] leading-[1.15]">Let's Discuss Your <br class="hidden sm:block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#46B77B] to-[#61CE70]">Next Project.</span></h2>
                     </div>
                     <div class="grid grid-cols-2 gap-3 md:gap-4 mb-6">
-                        <div class="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 p-3 md:p-4 rounded-2xl bg-white border border-gray-100 shadow-sm hover:border-[#46B77B]/40 transition-all group"><div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-[#46B77B]/10 flex items-center justify-center shrink-0 group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-map-marker-alt text-[#46B77B] text-sm md:text-base group-hover:text-white transition-colors"></i></div><div><h4 class="text-[#0A0C12] font-bold mb-0.5 text-xs md:text-sm">Location</h4><p class="text-gray-500 text-[0.65rem] md:text-xs leading-snug">18-Km Ferozpur Road, Lahore.</p></div></div>
-                        <div class="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 p-3 md:p-4 rounded-2xl bg-white border border-gray-100 shadow-sm hover:border-[#46B77B]/40 transition-all group"><div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-[#46B77B]/10 flex items-center justify-center shrink-0 group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-envelope text-[#46B77B] text-sm md:text-base group-hover:text-white transition-colors"></i></div><div><h4 class="text-[#0A0C12] font-bold mb-0.5 text-xs md:text-sm">Email</h4><a href="mailto:info@mfp.com.pk" class="text-gray-500 text-[0.65rem] md:text-xs hover:text-[#46B77B] transition-colors break-all">info@mfp.com.pk</a></div></div>
-                        <div class="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 p-3 md:p-4 rounded-2xl bg-white border border-gray-100 shadow-sm hover:border-[#46B77B]/40 transition-all group"><div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-[#46B77B]/10 flex items-center justify-center shrink-0 group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-phone-alt text-[#46B77B] text-sm md:text-base group-hover:text-white transition-colors"></i></div><div><h4 class="text-[#0A0C12] font-bold mb-0.5 text-xs md:text-sm">UAN</h4><a href="tel:+92111333301" class="text-gray-500 text-[0.65rem] md:text-xs hover:text-[#46B77B] transition-colors">+92 111333301</a></div></div>
-                        <div class="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 p-3 md:p-4 rounded-2xl bg-white border border-gray-100 shadow-sm hover:border-[#46B77B]/40 transition-all group"><div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-[#46B77B]/10 flex items-center justify-center shrink-0 group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-phone text-[#46B77B] text-sm md:text-base group-hover:text-white transition-colors"></i></div><div><h4 class="text-[#0A0C12] font-bold mb-0.5 text-xs md:text-sm">Landline</h4><a href="tel:+924235402021" class="text-gray-500 text-[0.65rem] md:text-xs hover:text-[#46B77B] transition-colors">+92 42 35402021-24</a></div></div>
+                        <div class="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 p-3 md:p-4 rounded-2xl bg-white border border-gray-100 shadow-sm hover:border-[#46B77B]/40 transition-all group">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-[#46B77B]/10 flex items-center justify-center shrink-0 group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-map-marker-alt text-[#46B77B] text-sm md:text-base group-hover:text-white transition-colors"></i></div>
+                            <div>
+                                <h4 class="text-[#0A0C12] font-bold mb-0.5 text-xs md:text-sm">Location</h4>
+                                <p class="text-gray-500 text-[0.65rem] md:text-xs leading-snug">18-Km Ferozpur Road, Lahore.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 p-3 md:p-4 rounded-2xl bg-white border border-gray-100 shadow-sm hover:border-[#46B77B]/40 transition-all group">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-[#46B77B]/10 flex items-center justify-center shrink-0 group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-envelope text-[#46B77B] text-sm md:text-base group-hover:text-white transition-colors"></i></div>
+                            <div>
+                                <h4 class="text-[#0A0C12] font-bold mb-0.5 text-xs md:text-sm">Email</h4><a href="mailto:info@mfp.com.pk" class="text-gray-500 text-[0.65rem] md:text-xs hover:text-[#46B77B] transition-colors break-all">info@mfp.com.pk</a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 p-3 md:p-4 rounded-2xl bg-white border border-gray-100 shadow-sm hover:border-[#46B77B]/40 transition-all group">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-[#46B77B]/10 flex items-center justify-center shrink-0 group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-phone-alt text-[#46B77B] text-sm md:text-base group-hover:text-white transition-colors"></i></div>
+                            <div>
+                                <h4 class="text-[#0A0C12] font-bold mb-0.5 text-xs md:text-sm">UAN</h4><a href="tel:+92111333301" class="text-gray-500 text-[0.65rem] md:text-xs hover:text-[#46B77B] transition-colors">+92 111333301</a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-start gap-2 sm:gap-3 p-3 md:p-4 rounded-2xl bg-white border border-gray-100 shadow-sm hover:border-[#46B77B]/40 transition-all group">
+                            <div class="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-[#46B77B]/10 flex items-center justify-center shrink-0 group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-phone text-[#46B77B] text-sm md:text-base group-hover:text-white transition-colors"></i></div>
+                            <div>
+                                <h4 class="text-[#0A0C12] font-bold mb-0.5 text-xs md:text-sm">Landline</h4><a href="tel:+924235402021" class="text-gray-500 text-[0.65rem] md:text-xs hover:text-[#46B77B] transition-colors">+92 42 35402021-24</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white rounded-2xl p-4 md:p-5 border border-gray-100 shadow-sm relative overflow-hidden flex-grow"><div class="absolute top-0 right-0 w-32 h-32 bg-[#46B77B]/5 blur-2xl rounded-full"></div><h3 class="text-base md:text-lg font-bold text-[#0A0C12] mb-1.5 flex items-center gap-2 relative z-10"><i class="fas fa-briefcase text-[#46B77B]"></i> Join Us Now!</h3><p class="text-gray-500 text-[0.7rem] md:text-xs leading-relaxed mb-1.5 relative z-10">Join Maqsood Faisal Printing Press for a rewarding career in printing and packaging. We offer dynamic opportunities for growth, creativity, and skill development.</p><p class="text-gray-500 text-[0.7rem] md:text-xs leading-relaxed relative z-10">Become part of our team and contribute to high-quality, impactful printing solutions that support businesses nationwide.</p></div>
+                    <div class="bg-white rounded-2xl p-4 md:p-5 border border-gray-100 shadow-sm relative overflow-hidden flex-grow">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#46B77B]/5 blur-2xl rounded-full"></div>
+                        <h3 class="text-base md:text-lg font-bold text-[#0A0C12] mb-1.5 flex items-center gap-2 relative z-10"><i class="fas fa-briefcase text-[#46B77B]"></i> Join Us Now!</h3>
+                        <p class="text-gray-500 text-[0.7rem] md:text-xs leading-relaxed mb-1.5 relative z-10">Join Maqsood Faisal Printing Press for a rewarding career in printing and packaging. We offer dynamic opportunities for growth, creativity, and skill development.</p>
+                        <p class="text-gray-500 text-[0.7rem] md:text-xs leading-relaxed relative z-10">Become part of our team and contribute to high-quality, impactful printing solutions that support businesses nationwide.</p>
+                    </div>
                 </div>
                 <div class="w-full [@media(min-width:991px)]:w-1/2 flex flex-col slide-in-right">
                     <div class="bg-white rounded-[1.5rem] p-5 sm:p-6 lg:p-8 border border-gray-100 shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] relative overflow-hidden [@media(min-width:991px)]:h-full flex flex-col">
-                        <div class="mb-4 md:mb-6 relative z-10"><h3 class="text-xl md:text-2xl font-black text-[#0A0C12]">Leave A Message</h3><p class="text-gray-500 text-xs md:text-sm mt-1">Fill out the form below and our team will get back to you shortly.</p></div>
+                        <div class="mb-4 md:mb-6 relative z-10">
+                            <h3 class="text-xl md:text-2xl font-black text-[#0A0C12]">Leave A Message</h3>
+                            <p class="text-gray-500 text-xs md:text-sm mt-1">Fill out the form below and our team will get back to you shortly.</p>
+                        </div>
                         <form class="space-y-4 relative z-10 flex-grow flex flex-col">
                             <div class="relative"><input type="text" id="name" class="peer w-full bg-[#FAFBF9] border border-gray-200 rounded-lg px-4 py-3 text-[#0A0C12] text-sm focus:outline-none focus:border-[#46B77B] focus:ring-1 focus:ring-[#46B77B] transition-all placeholder-transparent" placeholder="Name" required><label for="name" class="absolute left-4 top-3 text-gray-400 text-sm transition-all peer-focus:-top-2 peer-focus:text-[0.6rem] peer-focus:text-[#46B77B] peer-focus:bg-white peer-focus:px-1 peer-valid:-top-2 peer-valid:text-[0.6rem] peer-valid:text-[#46B77B] peer-valid:bg-white peer-valid:px-1 pointer-events-none">Your Name</label></div>
                             <div class="relative"><input type="email" id="email" class="peer w-full bg-[#FAFBF9] border border-gray-200 rounded-lg px-4 py-3 text-[#0A0C12] text-sm focus:outline-none focus:border-[#46B77B] focus:ring-1 focus:ring-[#46B77B] transition-all placeholder-transparent" placeholder="Email" required><label for="email" class="absolute left-4 top-3 text-gray-400 text-sm transition-all peer-focus:-top-2 peer-focus:text-[0.6rem] peer-focus:text-[#46B77B] peer-focus:bg-white peer-focus:px-1 peer-valid:-top-2 peer-valid:text-[0.6rem] peer-valid:text-[#46B77B] peer-valid:bg-white peer-valid:px-1 pointer-events-none">Email Address</label></div>
@@ -399,28 +602,147 @@
         </div>
     </section>
 
-    <!-- ═══════════════ FOOTER ═══════════════ -->
+        <!-- ═══════════════ FOOTER ═══════════════ -->
     <footer class="relative z-10 w-full bg-[#050806] overflow-hidden font-sans border-t border-white/10">
-        <!-- Footer content (same as before) -->
-        <div class="absolute inset-0 pointer-events-none overflow-hidden -z-10"><div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#46B77B]/10 blur-[150px] rounded-full"></div><div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#61CE70]/5 blur-[120px] rounded-full"></div></div>
-        <div class="relative w-full border-b border-white/10 bg-white/[0.02]"><div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 flex flex-col md:flex-row items-center justify-between gap-8"><div class="text-center md:text-left"><h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-[1.1] mb-3">Ready to Elevate <br class="hidden md:block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#46B77B] to-[#61CE70]">Your Brand?</span></h2><p class="text-gray-400 text-sm md:text-base max-w-md mx-auto md:mx-0">Get premium eco-friendly packaging tailored to your needs.</p></div><a href="#contact" class="group relative inline-flex items-center justify-center gap-2 py-4 px-8 rounded-xl font-bold text-sm text-[#0A0C12] bg-white hover:bg-[#46B77B] hover:text-white transition-all duration-300 shadow-[0_10px_30px_-10px_rgba(255,255,255,0.2)] hover:shadow-[0_15px_30px_-10px_rgba(70,183,123,0.5)] shrink-0">Get a Quote <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i></a></div></div>
-        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-20"><div class="grid grid-cols-2 [@media(min-width:991px)]:grid-cols-12 gap-8 lg:gap-8"><div class="col-span-2 [@media(min-width:991px)]:col-span-4 flex flex-col items-center md:items-start text-center md:text-left mb-6 md:mb-0"><img src="images/logo.png" alt="Maqsood Faisal Logo" class="h-10 md:h-12 w-auto object-contain mb-6 brightness-0 invert"><p class="text-gray-400 text-xs md:text-sm leading-relaxed mb-6">Your premier partner in eco-friendly printing and packaging solutions. We bring your visions to life with cutting-edge technology and minimal environmental impact.</p><div class="flex flex-wrap justify-center md:justify-start items-center gap-2"><span class="inline-flex items-center gap-1.5 px-2 py-1 md:px-3 md:py-1.5 rounded-full bg-[#46B77B]/10 border border-[#46B77B]/20 text-[0.6rem] md:text-[0.65rem] font-bold text-[#46B77B]"><i class="fas fa-leaf"></i> Eco-Friendly</span><span class="inline-flex items-center gap-1.5 px-2 py-1 md:px-3 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-[0.6rem] md:text-[0.65rem] font-bold text-gray-300"><i class="fas fa-award text-[#46B77B]"></i> Premium Quality</span><span class="inline-flex items-center gap-1.5 px-2 py-1 md:px-3 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-[0.6rem] md:text-[0.65rem] font-bold text-gray-300"><i class="fas fa-check-circle text-[#46B77B]"></i> Trusted</span></div></div><div class="col-span-1 [@media(min-width:991px)]:col-span-2"><h4 class="text-white font-bold text-base md:text-lg mb-5 relative inline-block">Quick Links<span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#46B77B] rounded-full"></span></h4><ul class="flex flex-col gap-3 md:gap-4"><li><a href="#home" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-home text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Home</a></li><li><a href="#about" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-info-circle text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> About Us</a></li><li><a href="#services" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-cogs text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Services</a></li><li><a href="#quality" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-award text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Quality</a></li><li><a href="#clients" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-handshake text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Clients</a></li><li><a href="#contact" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-envelope-open-text text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Contact</a></li></ul></div><div class="col-span-1 [@media(min-width:991px)]:col-span-3"><h4 class="text-white font-bold text-base md:text-lg mb-5 relative inline-block">Our Services<span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#46B77B] rounded-full"></span></h4><ul class="flex flex-col gap-3 md:gap-4"><li><a href="#services" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-print text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Offset Printing</a></li><li><a href="#services" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-layer-group text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Flexible Packaging</a></li><li><a href="#services" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-tags text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Roll to Roll</a></li><li><a href="#services" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-box text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Plastic Packaging</a></li><li><a href="#services" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-prescription-bottle text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Laminated Tubes</a></li><li><a href="#services" class="group flex items-center gap-2 md:gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors"><i class="fas fa-scroll text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Tissue Conversion</a></li></ul></div><div class="col-span-2 [@media(min-width:991px)]:col-span-3 flex flex-col gap-8 mt-4 lg:mt-0"><div><h4 class="text-white font-bold text-base md:text-lg mb-5 relative inline-block">Get In Touch<span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#46B77B] rounded-full"></span></h4><ul class="flex flex-col gap-4"><li class="flex items-start gap-3 text-gray-400 text-xs md:text-sm"><div class="w-6 h-6 rounded bg-white/5 flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-map-marker-alt text-[#46B77B] text-[0.65rem]"></i></div><span>18-Km Ferozpur Road, Lahore, Pakistan</span></li><li class="flex items-start gap-3 text-gray-400 text-xs md:text-sm"><div class="w-6 h-6 rounded bg-white/5 flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-phone-alt text-[#46B77B] text-[0.65rem]"></i></div><a href="tel:+92111333301" class="hover:text-white transition-colors mt-1">+92 111 333 301</a></li><li class="flex items-start gap-3 text-gray-400 text-xs md:text-sm"><div class="w-6 h-6 rounded bg-white/5 flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-envelope text-[#46B77B] text-[0.65rem]"></i></div><a href="mailto:info@mfp.com.pk" class="hover:text-white transition-colors mt-1 break-all">info@mfp.com.pk</a></li></ul></div><div><h4 class="text-white font-bold text-base md:text-lg mb-2">Newsletter</h4><p class="text-gray-400 text-xs mb-4">Subscribe for updates & exclusive offers.</p><form class="relative w-full group"><input type="email" placeholder="Your Email Address" class="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-12 py-3 text-xs md:text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#46B77B] focus:ring-1 focus:ring-[#46B77B] transition-all" required><button type="submit" class="absolute right-1.5 top-1.5 bottom-1.5 w-9 flex items-center justify-center bg-[#46B77B] hover:bg-[#3ca56b] text-white rounded-lg transition-all duration-300 group-hover:scale-105"><i class="fas fa-paper-plane text-[0.65rem]"></i></button></form></div></div></div></div>
-        <div class="border-t border-white/10 bg-[#030504]"><div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4"><p class="text-gray-500 text-xs text-center md:text-left">&copy; 2024 <span class="text-gray-300 font-semibold">Maqsood Faisal Printing Press</span>. All Rights Reserved.</p><div class="flex items-center gap-4 text-xs"><a href="#" class="text-gray-500 hover:text-[#46B77B] transition-colors">Privacy Policy</a><span class="text-gray-700">|</span><a href="#" class="text-gray-500 hover:text-[#46B77B] transition-colors">Terms of Service</a></div><div class="flex items-center gap-1 text-gray-500 text-xs">Crafted with <i class="fas fa-heart text-[#46B77B] animate-pulse mx-1"></i> in Pakistan</div></div></div>
+        <!-- Background Glows -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+            <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#46B77B]/10 blur-[150px] rounded-full"></div>
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#61CE70]/5 blur-[120px] rounded-full"></div>
+        </div>
+        
+        <!-- Top CTA Area -->
+        <div class="relative w-full border-b border-white/10 bg-white/[0.02]">
+            <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-[1.1] mb-3">Ready to Elevate <br class="hidden md:block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#46B77B] to-[#61CE70]">Your Brand?</span></h2>
+                    <p class="text-gray-400 text-sm md:text-base max-w-md mx-auto md:mx-0">Get premium eco-friendly packaging tailored to your needs.</p>
+                </div>
+                <a href="#contact" class="group relative inline-flex items-center justify-center gap-2 py-4 px-8 rounded-xl font-bold text-sm text-[#0A0C12] bg-white hover:bg-[#46B77B] hover:text-white transition-all duration-300 shadow-[0_10px_30px_-10px_rgba(255,255,255,0.2)] hover:shadow-[0_15px_30px_-10px_rgba(70,183,123,0.5)] shrink-0">Get a Quote <i class="fas fa-arrow-right transition-transform group-hover:translate-x-1"></i></a>
+            </div>
+        </div>
+        
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16">
+            
+            <!-- 4 Main Columns Grid (2x2 on Mobile, 4 Cols on Desktop) -->
+            <div class="grid grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-12">
+                
+                <!-- COLUMN 1: Logo, Desc (Spans 4 cols on Desktop) -->
+                <div class="col-span-2 lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left">
+                    <!-- Logo -->
+                    <img src="images/logo.png" alt="Maqsood Faisal Logo" class="h-10 md:h-12 w-auto object-contain mb-6 brightness-0 invert">
+                    
+                    <!-- Description -->
+                    <p class="text-gray-400 text-xs md:text-sm leading-relaxed mb-6 lg:pr-4">Your premier partner in eco-friendly printing and packaging solutions. We bring your visions to life with cutting-edge technology and minimal environmental impact.</p>
+                    
+                    <!-- Badges -->
+                    <div class="flex flex-wrap justify-center lg:justify-start items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#46B77B]/10 border border-[#46B77B]/20 text-[0.65rem] font-bold text-[#46B77B]"><i class="fas fa-leaf"></i> Eco-Friendly</span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[0.65rem] font-bold text-gray-300"><i class="fas fa-award text-[#46B77B]"></i> Premium Quality</span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-[0.65rem] font-bold text-gray-300"><i class="fas fa-check-circle text-[#46B77B]"></i> Trusted</span>
+                    </div>
+                </div>
+
+                <!-- COLUMN 2: Quick Links -->
+                <div class="col-span-1 lg:col-span-2 flex flex-col items-start text-left mt-2 lg:mt-0">
+                    <h4 class="text-white font-bold text-base md:text-lg mb-6 relative inline-block">Quick Links<span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#46B77B] rounded-full"></span></h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="#home" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-home text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Home</a></li>
+                        <li><a href="#about" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-info-circle text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> About Us</a></li>
+                        <li><a href="#" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-cogs text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Services</a></li>
+                        <li><a href="#quality" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-award text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Quality</a></li>
+                        <li><a href="#clients" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-handshake text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Clients</a></li>
+                        <li><a href="#contact" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-envelope-open-text text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- COLUMN 3: Our Services -->
+                <div class="col-span-1 lg:col-span-3 flex flex-col items-start text-left mt-2 lg:mt-0">
+                    <h4 class="text-white font-bold text-base md:text-lg mb-6 relative inline-block">Our Services<span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#46B77B] rounded-full"></span></h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a href="#" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-print text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Offset Printing</a></li>
+                        <li><a href="#" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-layer-group text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Flexible Packaging</a></li>
+                        <li><a href="#" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-tags text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Roll to Roll</a></li>
+                        <li><a href="#" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-box text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Plastic Packaging</a></li>
+                        <li><a href="#" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-prescription-bottle text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Laminated Tubes</a></li>
+                        <li><a href="#" class="group flex items-center gap-3 text-gray-400 text-xs md:text-sm hover:text-white transition-colors"><div class="w-5 h-5 rounded bg-white/5 flex items-center justify-center group-hover:bg-[#46B77B] transition-colors shrink-0"><i class="fas fa-scroll text-[0.6rem] text-[#46B77B] group-hover:text-white"></i></div> Tissue Conversion</a></li>
+                    </ul>
+                </div>
+                
+                <!-- COLUMN 4: Get In Touch -->
+                <div class="col-span-2 lg:col-span-3 flex flex-col items-start text-left mt-4 lg:mt-0">
+                    <h4 class="text-white font-bold text-base md:text-lg mb-6 relative inline-block">Get In Touch<span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-[#46B77B] rounded-full"></span></h4>
+                    <ul class="flex flex-col gap-4">
+                        <li class="flex items-start gap-3 text-gray-400 text-xs md:text-sm">
+                            <div class="w-6 h-6 rounded bg-white/5 flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-map-marker-alt text-[#46B77B] text-[0.65rem]"></i></div>
+                            <span>18-Km Ferozpur Road, Lahore, Pakistan</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400 text-xs md:text-sm">
+                            <div class="w-6 h-6 rounded bg-white/5 flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-phone-alt text-[#46B77B] text-[0.65rem]"></i></div>
+                            <a href="tel:+92111333301" class="hover:text-white transition-colors mt-1">+92 111 333 301</a>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400 text-xs md:text-sm">
+                            <div class="w-6 h-6 rounded bg-white/5 flex items-center justify-center shrink-0 mt-0.5"><i class="fas fa-envelope text-[#46B77B] text-[0.65rem]"></i></div>
+                            <a href="mailto:info@mfp.com.pk" class="hover:text-white transition-colors mt-1 break-all">info@mfp.com.pk</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BOTTOM ROW: Follow Us & Newsletter (Always in a Row, Left & Right) -->
+            <div class="flex flex-row items-end justify-between border-t border-white/10 pt-8 mt-4 w-full gap-3 sm:gap-6">
+                
+                <!-- Follow Us (Left) -->
+                <div class="flex flex-col items-start gap-2 sm:gap-3 shrink-0">
+                    <h4 class="text-white font-bold text-xs sm:text-sm">Follow Us</h4>
+                    <div class="flex items-center gap-1.5 sm:gap-2">
+                        <a href="#" class="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-[#46B77B] hover:text-white hover:border-[#46B77B] transition-all duration-300" aria-label="Facebook"><i class="fab fa-facebook-f text-[0.65rem] sm:text-xs"></i></a>
+                        <a href="#" class="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-[#46B77B] hover:text-white hover:border-[#46B77B] transition-all duration-300" aria-label="Instagram"><i class="fab fa-instagram text-[0.65rem] sm:text-xs"></i></a>
+                        <a href="#" class="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-[#46B77B] hover:text-white hover:border-[#46B77B] transition-all duration-300" aria-label="LinkedIn"><i class="fab fa-linkedin-in text-[0.65rem] sm:text-xs"></i></a>
+                    </div>
+                </div>
+
+                <!-- Newsletter (Right) -->
+                <div class="flex flex-col items-start gap-2 sm:gap-3 flex-1 max-w-[200px] sm:max-w-[280px]">
+                    <h4 class="text-white font-bold text-xs sm:text-sm">Newsletter</h4>
+                    <form class="relative w-full group">
+                        <input type="email" placeholder="Email" class="w-full bg-white/5 border border-white/10 rounded-lg pl-2.5 sm:pl-3 pr-7 sm:pr-9 py-1.5 sm:py-2 text-[0.65rem] sm:text-[0.7rem] text-white placeholder-gray-500 focus:outline-none focus:border-[#46B77B] focus:ring-1 focus:ring-[#46B77B] transition-all" required>
+                        <button type="submit" class="absolute right-1 top-1 bottom-1 w-5 sm:w-6 flex items-center justify-center bg-[#46B77B] hover:bg-[#3ca56b] text-white rounded transition-all duration-300 group-hover:scale-105"><i class="fas fa-paper-plane text-[0.5rem] sm:text-[0.55rem]"></i></button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom Bar (Copyright) -->
+        <div class="border-t border-white/10 bg-[#030504]">
+            <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-xs text-center md:text-left">&copy; 2024 <span class="text-gray-300 font-semibold">Maqsood Faisal Printing Press</span>. All Rights Reserved.</p>
+                <div class="flex items-center gap-4 text-xs"><a href="#" class="text-gray-500 hover:text-[#46B77B] transition-colors">Privacy Policy</a><span class="text-gray-700">|</span><a href="#" class="text-gray-500 hover:text-[#46B77B] transition-colors">Terms of Service</a></div>
+                <div class="flex items-center gap-1 text-gray-500 text-xs">Crafted with <i class="fas fa-heart text-[#46B77B] animate-pulse mx-1"></i> in Pakistan</div>
+            </div>
+        </div>
     </footer>
 
     <!-- BACK TO TOP BUTTON -->
-    <button id="backToTop" class="group fixed bottom-8 right-8 z-[100] w-16 h-16 rounded-full flex items-center justify-center opacity-0 invisible translate-y-8 transition-all duration-500 hover:-translate-y-2"><div class="absolute inset-0 rounded-full bg-[#46B77B]/20 blur-md group-hover:bg-[#46B77B]/40 transition-all duration-500"></div><svg class="absolute inset-0 w-full h-full animate-[spin_3s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-300" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="#46B77B" stroke-width="2" stroke-dasharray="10 15" stroke-linecap="round" /></svg><div class="relative w-12 h-12 rounded-full bg-gradient-to-br from-[#46B77B] to-[#3ca56b] shadow-[0_4px_15px_rgba(70,183,123,0.5)] flex items-center justify-center overflow-hidden z-10 group-hover:scale-110 transition-transform duration-300"><div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div><i class="fas fa-arrow-up text-white text-lg transition-transform duration-500 group-hover:-translate-y-1"></i></div></button>
+    <button id="backToTop" class="group fixed bottom-8 right-8 z-[100] w-16 h-16 rounded-full flex items-center justify-center opacity-0 invisible translate-y-8 transition-all duration-500 hover:-translate-y-2">
+        <div class="absolute inset-0 rounded-full bg-[#46B77B]/20 blur-md group-hover:bg-[#46B77B]/40 transition-all duration-500"></div>
+        <svg class="absolute inset-0 w-full h-full animate-[spin_3s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-300" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="#46B77B" stroke-width="2" stroke-dasharray="10 15" stroke-linecap="round" /></svg>
+        <div class="relative w-12 h-12 rounded-full bg-gradient-to-br from-[#46B77B] to-[#3ca56b] shadow-[0_4px_15px_rgba(70,183,123,0.5)] flex items-center justify-center overflow-hidden z-10 group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <i class="fas fa-arrow-up text-white text-lg transition-transform duration-500 group-hover:-translate-y-1"></i>
+        </div>
+    </button>
 
     <!-- JS File -->
     <script src="js/script.js"></script>
 
     <!-- Animation Script -->
     <script>
-        // 1. Sidebar Close Logic for Mobile Menu
         document.addEventListener('DOMContentLoaded', function () {
+            // Sidebar logic
             const sidebarLinks = document.querySelectorAll('.sidebar-link');
             const closeSidebarBtn = document.getElementById('sidebarClose');
-
             if (closeSidebarBtn) {
                 sidebarLinks.forEach(link => {
                     link.addEventListener('click', () => {
@@ -430,68 +752,61 @@
                     });
                 });
             }
-        });
 
-        // 2. Advanced Section Animations (Fade & Slide)
-        document.addEventListener("DOMContentLoaded", function () {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            };
-
+            // Scroll Animations
+            const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
             const scrollObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    } else {
-                        entry.target.classList.remove('is-visible');
-                    }
+                    if (entry.isIntersecting) { entry.target.classList.add('is-visible'); } 
+                    else { entry.target.classList.remove('is-visible'); }
                 });
             }, observerOptions);
-
             document.querySelectorAll('.fade-in-section').forEach((section) => {
                 scrollObserver.observe(section);
             });
+
+            // Mobile Services Accordion Toggle
+            const toggle = document.getElementById('mobileServicesToggle');
+            const list = document.getElementById('mobileServicesList');
+            const chevron = document.getElementById('mobileServicesChevron');
+            if (toggle && list && chevron) {
+                toggle.addEventListener('click', function () {
+                    list.classList.toggle('hidden');
+                    list.classList.toggle('flex');
+                    chevron.classList.toggle('rotate-180');
+                });
+            }
         });
     </script>
 
     <style>
-        /* Section Fade in Animation */
         .fade-in-section {
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
             will-change: opacity, transform;
         }
-
         .fade-in-section.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* ABOUT SECTION SLIDE ANIMATIONS */
         .slide-in-left {
             opacity: 0;
             transform: translateX(-50px);
             transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
             will-change: opacity, transform;
         }
-
         .slide-in-right {
             opacity: 0;
             transform: translateX(50px);
             transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
             will-change: opacity, transform;
         }
-
-        /* When parent has 'is-visible' class, animate children */
         .fade-in-section.is-visible .slide-in-left,
         .fade-in-section.is-visible .slide-in-right {
             opacity: 1;
             transform: translateX(0);
         }
-
-        /* Delay for right side image so text comes first */
         .fade-in-section.is-visible .slide-in-right {
             transition-delay: 0.15s;
         }

@@ -161,7 +161,6 @@ let charIndex = 0;
 let isDeleting = false;
 
 if (dynamicImage) {
-    // Initial Image load
     dynamicImage.src = data[0].image;
 }
 
