@@ -5,14 +5,18 @@ const sidebarOverlay = document.getElementById('sidebarOverlay');
 const sidebarClose = document.getElementById('sidebarClose');
 
 function openSidebar() {
-    sidebar.classList.add('active');
-    sidebarOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    if (sidebar && sidebarOverlay) {
+        sidebar.classList.add('active');
+        sidebarOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
 }
 function closeSidebar() {
-    sidebar.classList.remove('active');
-    sidebarOverlay.classList.remove('active');
-    document.body.style.overflow = '';
+    if (sidebar && sidebarOverlay) {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 }
 
 if (hamburger && sidebar && sidebarOverlay && sidebarClose) {
@@ -103,7 +107,7 @@ if (canvas) {
 }
 
 /* ============================================================
-   DYNAMIC TYPING, TEXT & SINGLE IMAGE (HERO SECTION)
+   HOME PAGE DYNAMIC HERO (TEXT, IMAGE & DESCRIPTION CHANGE)
 ============================================================ */
 const data = [
     {
@@ -164,13 +168,11 @@ if (dynamicImage) {
     dynamicImage.src = data[0].image;
 }
 
-// Background Image Change Function
+// Background Image Change Function (With Fade Effect)
 function updateImage(imageUrl) {
     if (!dynamicImage) return;
-    
     dynamicImage.style.opacity = '0';
     dynamicImage.style.transform = 'scale(1.1)';
-
     setTimeout(() => {
         dynamicImage.src = imageUrl;
         dynamicImage.onload = () => {
@@ -180,9 +182,8 @@ function updateImage(imageUrl) {
     }, 300);
 }
 
-function typeEffect() {
+function typeHomeEffect() {
     if (!typedElement) return;
-
     const currentItem = data[phraseIndex];
 
     if (isDeleting) {
@@ -198,45 +199,127 @@ function typeEffect() {
     if (!isDeleting && charIndex === currentItem.title.length) {
         speed = 2000;
         isDeleting = true;
-    }
-    else if (isDeleting && charIndex === 0) {
+    } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % data.length;
-
+        
         if (descElement) descElement.style.opacity = 0;
-
+        
         setTimeout(() => {
             if (descElement) {
                 descElement.textContent = data[phraseIndex].desc;
                 descElement.style.opacity = 1;
             }
-
             if (btnStart) btnStart.href = data[phraseIndex].link;
             if (btnStartText) btnStartText.textContent = data[phraseIndex].btnText;
-
             updateImage(data[phraseIndex].image);
-
         }, 200);
-
         speed = 500;
     }
-
-    setTimeout(typeEffect, speed);
+    setTimeout(typeHomeEffect, speed);
 }
 
-if (typedElement) typeEffect();
+/* ============================================================
+   INNER PAGES TYPING EFFECT (SMART DETECTION)
+============================================================ */
+const offsetTypedText = document.getElementById('offsetTypedText');
+
+function typeInnerPagesEffect() {
+    let phrase = "& Folding Cartons"; // Default
+    const currentUrl = window.location.href.toLowerCase();
+    const pageTitle = document.title.toLowerCase();
+
+    if (currentUrl.includes("laminated") || pageTitle.includes("laminated")) {
+        phrase = "& Barrier Protection"; 
+    } else if (currentUrl.includes("plastic") || pageTitle.includes("plastic")) {
+        phrase = "& Durable Solutions"; 
+    } else if (currentUrl.includes("tissue") || pageTitle.includes("tissue")) {
+        phrase = "& Premium Comfort";
+    } else if (currentUrl.includes("flexible") || pageTitle.includes("flexible")) {
+        phrase = "& Sustainability"; 
+    } else if (currentUrl.includes("roll-to-roll") || currentUrl.includes("roll") || pageTitle.includes("roll to roll")) {
+        phrase = "& Special Finishes";
+    }
+
+    let idx = 0;
+    let deleting = false;
+
+    function type() {
+        if (deleting) {
+            offsetTypedText.textContent = phrase.substring(0, idx - 1);
+            idx--;
+        } else {
+            offsetTypedText.textContent = phrase.substring(0, idx + 1);
+            idx++;
+        }
+
+        let speed = deleting ? 40 : 100; 
+
+        if (!deleting && idx === phrase.length) {
+            speed = 2500; 
+            deleting = true;
+        } else if (deleting && idx === 0) {
+            deleting = false;
+            speed = 500; 
+        }
+
+        setTimeout(type, speed);
+    }
+    
+    setTimeout(type, 500);
+}
+
+/* ============================================================
+   INITIALIZE EFFECTS ON PAGE LOAD
+============================================================ */
+document.addEventListener('DOMContentLoaded', function () {
+    // 1. Sidebar Links Logic
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    const closeSidebarBtn = document.getElementById('sidebarClose');
+    if (closeSidebarBtn) {
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const sb = document.getElementById('sidebar');
+                const overlay = document.getElementById('sidebarOverlay');
+                if (sb) sb.classList.remove('active');
+                if (overlay) overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+
+    // 2. Mobile Accordion
+    const toggle = document.getElementById('mobileServicesToggle');
+    const list = document.getElementById('mobileServicesList');
+    const chevron = document.getElementById('mobileServicesChevron');
+    if (toggle && list && chevron) {
+        toggle.addEventListener('click', function () {
+            list.classList.toggle('hidden');
+            list.classList.toggle('flex');
+            chevron.classList.toggle('rotate-180');
+        });
+    }
+
+    // 3. Start Typing Effects
+    // Agar Home page hai (dynamicImage mojood hai) toh Home wala chalao
+    if (dynamicImage) {
+        typeHomeEffect();
+    } 
+    // Agar Inner page hai (offsetTypedText mojood hai) toh Inner page wala chalao
+    else if (offsetTypedText) {
+        typeInnerPagesEffect();
+    }
+});
+
 
 /* ============================================================
    PERFORMANCE SECTION ANIMATIONS
 ============================================================ */
-
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Scroll Animation (Circles & Numbers)
     const performanceSection = document.getElementById('performance-grid');
     const counters = document.querySelectorAll('.counter');
     const perfCircles = document.querySelectorAll('.perf-circle');
     const CIRCUMFERENCE = 2 * Math.PI * 52;
-
     let perfAnimated = false;
 
     const observer = new IntersectionObserver((entries) => {
@@ -276,7 +359,7 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(performanceSection);
     }
 
-    // 2. Interactive Spotlight Effect (Mouse Tracking)
+    // Interactive Spotlight Effect (Mouse Tracking)
     const panels = document.querySelectorAll('.spotlight-panel');
     panels.forEach(panel => {
         panel.addEventListener('mousemove', e => {
@@ -311,7 +394,6 @@ if (brandMarquee && partnerLogos.length > 0) {
     const imagesHTML = partnerLogos.map(src => `
         <img src="${src}" alt="Partner Logo" class="marquee-logo" loading="lazy">
     `).join('');
-
     brandMarquee.innerHTML = imagesHTML + imagesHTML;
 }
 
@@ -320,8 +402,7 @@ if (brandMarquee && partnerLogos.length > 0) {
 ============================================================ */
 document.addEventListener("DOMContentLoaded", function () {
     const backToTopBtn = document.getElementById('backToTop');
-    
-    // 1. Back to Top Logic
+
     if (backToTopBtn) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
@@ -332,13 +413,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
             }
         });
-        
+
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
-    // 2. Scroll Animation Logic (Fade-in-up on every section)
     const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
@@ -358,3 +438,105 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollObserver.observe(section);
     });
 });
+
+/* ============================================================
+   INTERACTIVE TABS LOGIC (WHY CHOOSE US)
+============================================================ */
+function openTab(tabName) {
+    var i, tabcontent, tabbuttons;
+
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tabbuttons = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tabbuttons.length; i++) {
+        tabbuttons[i].classList.remove("active-tab");
+        tabbuttons[i].style.backgroundColor = "transparent";
+        tabbuttons[i].style.borderLeft = "none";
+        tabbuttons[i].style.borderBottom = "none";
+
+        var icon = tabbuttons[i].querySelector('.tab-icon');
+        if (icon) {
+            icon.style.backgroundColor = "#f3f4f6"; // Gray 100
+            icon.style.color = "#9ca3af"; // Gray 400
+        }
+
+        var text = tabbuttons[i].querySelector('.tab-text');
+        if (text) {
+            text.style.color = "#1f2937"; // Gray 800
+        }
+    }
+
+    var activeContent = document.getElementById(tabName);
+    if (activeContent) {
+        activeContent.style.display = "block";
+    }
+
+    var activeBtn = document.getElementById("btn-" + tabName);
+    if (activeBtn) {
+        activeBtn.classList.add("active-tab");
+        activeBtn.style.backgroundColor = "#FAFBF9";
+        if (window.innerWidth < 768) {
+            activeBtn.style.borderLeft = "none";
+            activeBtn.style.borderBottom = "4px solid #46B77B";
+        } else {
+            activeBtn.style.borderLeft = "4px solid #46B77B";
+            activeBtn.style.borderBottom = "none";
+        }
+
+        var activeIcon = activeBtn.querySelector('.tab-icon');
+        if (activeIcon) {
+            activeIcon.style.backgroundColor = "#46B77B";
+            activeIcon.style.color = "#ffffff";
+        }
+
+        var activeText = activeBtn.querySelector('.tab-text');
+        if (activeText) {
+            activeText.style.color = "#46B77B";
+        }
+    }
+}
+
+// Page Load Hote Hi Default Tab (Tab 1) Show Karein
+document.addEventListener('DOMContentLoaded', function () {
+    if (document.getElementById('tab1') && document.getElementById('btn-tab1')) {
+        openTab('tab1');
+    }
+});
+
+function toggleProcessReveal(revealId, cardId) {
+    const content = document.getElementById(revealId);
+    const card = document.getElementById(cardId);
+    const title = card.querySelector('.card-title');
+    const icon = card.querySelector('.card-icon');
+    const iconInner = card.querySelector('.card-icon i');
+    const text = card.querySelector('.card-text');
+
+    if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        card.classList.remove('bg-white/60', 'border-gray-200/80');
+        card.classList.add('bg-[#050806]', 'border-white/10', 'shadow-2xl');
+        title.classList.remove('text-[#0A0C12]');
+        title.classList.add('text-white');
+        icon.classList.remove('border-gray-300');
+        icon.classList.add('border-[#46B77B]', 'bg-[#46B77B]');
+        iconInner.classList.remove('text-gray-500', 'fa-plus');
+        iconInner.classList.add('text-white', 'fa-times', 'rotate-90');
+        text.classList.remove('text-gray-500');
+        text.classList.add('text-gray-400');
+    } else {
+        content.classList.add('hidden');
+        card.classList.add('bg-white/60', 'border-gray-200/80');
+        card.classList.remove('bg-[#050806]', 'border-white/10', 'shadow-2xl');
+        title.classList.add('text-[#0A0C12]');
+        title.classList.remove('text-white');
+        icon.classList.add('border-gray-300');
+        icon.classList.remove('border-[#46B77B]', 'bg-[#46B77B]');
+        iconInner.classList.add('text-gray-500', 'fa-plus');
+        iconInner.classList.remove('text-white', 'fa-times', 'rotate-90');
+        text.classList.add('text-gray-500');
+        text.classList.remove('text-gray-400');
+    }
+}

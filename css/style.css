@@ -282,3 +282,21 @@ body {
 .animate-pulse-slow {
     animation: pulse-slow 8s ease-in-out infinite;
 }
+
+/* ================= INTERACTIVE TABS (WHY CHOOSE US) ================= */
+.active-tab {
+    background-color: #FAFBF9;
+    border-left: 4px solid #46B77B;
+}
+
+@keyframes floatOrb {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(30px, -30px) scale(1.05);
+    }
+}

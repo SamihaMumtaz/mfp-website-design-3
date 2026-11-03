@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Packaging — Maqsood Faisal Printing Press</title>
+
+    <!-- Font Awesome & Tailwind CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white text-[#0A0C12] overflow-x-hidden min-h-screen font-sans relative flex flex-col">
+
+    <!-- BACKGROUNDS -->
+    <div class="bg-morph fixed inset-0 -z-50"></div>
+    <div class="glow fixed rounded-full -z-40 pointer-events-none glow-1"></div>
+    <div class="glow fixed rounded-full -z-40 pointer-events-none glow-2"></div>
+    <canvas id="particle-canvas" class="fixed inset-0 -z-30 pointer-events-none opacity-45"></canvas>
+
+    <!-- HEADER PLACEHOLDER (loaded via JS) -->
+    <div id="header-placeholder" class="contents"></div>
+
+    <!-- ═══════════════ HERO SECTION (PLASTIC PACKAGING) ═══════════════ -->
+    <section id="hero-offset"
+        class="fade-in-section relative z-10 w-full overflow-hidden flex items-center py-20 md:py-28 lg:py-32 min-h-[70vh]">
+
+        <!-- Dynamic Background Image (Bright & Clear) -->
+        <div class="absolute inset-0 -z-10 bg-[#050806]">
+            <img src="images/plastic-packing.png" class="w-full h-full object-cover opacity-60 scale-105"
+                alt="Plastic Packaging Background">
+
+            <!-- Lighter Dark Gradient Overlays for readability (Bohot halka) -->
+            <div class="absolute inset-0 bg-gradient-to-b from-[#050806]/50 via-[#050806]/10 to-[#050806]/60"></div>
+
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#46B77B]/10 blur-[150px] rounded-full mix-blend-screen pointer-events-none">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full px-4 md:px-8 lg:px-12 relative z-10">
+            <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+
+                <!-- Badge -->
+                <div
+                    class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full text-[0.65rem] md:text-xs font-bold tracking-widest uppercase text-[#46B77B] bg-[#46B77B]/10 border border-[#46B77B]/30 mb-6 md:mb-8 backdrop-blur-md">
+                    <i class="fas fa-box"></i> Premium Plastic Packaging
+                </div>
+
+                <!-- Heading with Typing Effect -->
+                <h1
+                    class="font-black leading-[1.15] tracking-tight text-white mb-6 md:mb-8 w-full drop-shadow-md text-[1.8rem] sm:text-[2.5rem] md:text-[3.2rem] lg:text-[3.8rem]">
+                    <span class="block">Versatility & Reliability</span>
+
+                    <!-- Text jo type hoga (Plastic Packaging specific) -->
+                    <span
+                        class="block text-transparent bg-clip-text bg-gradient-to-r from-[#46B77B] to-[#61CE70] mt-1 pb-1 min-h-[1.2em]">
+                        <span id="offsetTypedText"></span>
+                        <span class="inline-block w-1 h-[0.8em] bg-[#61CE70] ml-1 animate-pulse"></span>
+                    </span>
+
+                    <!-- Hidden span for js/script.js -->
+                    <span id="typedText" style="visibility: hidden; position: absolute; pointer-events: none;"></span>
+                </h1>
+
+                <!-- Full Description (Updated Text) -->
+                <p
+                    class="text-sm sm:text-base md:text-[1.05rem] leading-relaxed md:leading-loose text-gray-200 mb-10 md:mb-12 max-w-4xl transition-opacity duration-300 drop-shadow-md">
+                    Embrace the versatility and reliability of plastic with Maqsood Faisal Printing Press’s Plastic
+                    Packaging services. Plastic has emerged as an integral element in daily life, celebrated for its
+                    durability, lightweight nature, and suitability for both food and non-food contact packaging. At
+                    MFP, we have harnessed the potential of plastic to manufacture a diverse range of packaging
+                    solutions, from Confectionary Jars to PET Bottles, aligning with our commitment to quality, customer
+                    satisfaction, and environmental conservation.
+                </p>
+
+                <!-- Buttons -->
+                <div class="flex flex-row justify-center items-center gap-3 w-full max-w-[450px] mx-auto">
+                    <a href="#contact"
+                        class="flex-1 flex items-center justify-center gap-2 py-3.5 px-4 md:px-6 rounded-xl font-bold text-xs md:text-sm text-white bg-[#46B77B] hover:bg-[#3ca56b] hover:-translate-y-1 hover:shadow-[0_10px_20px_-10px_rgba(70,183,123,0.5)] transition-all group whitespace-nowrap">
+                        Get a Quote
+                        <i
+                            class="fas fa-arrow-right text-[0.9em] shrink-0 transition-transform group-hover:translate-x-1"></i>
+                    </a>
+
+                    <button type="button"
+                        class="flex-1 flex items-center justify-center gap-2 py-3.5 px-4 md:px-6 rounded-xl font-bold text-xs md:text-sm text-white bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:border-white/40 hover:-translate-y-1 transition-all group whitespace-nowrap cursor-default">
+                        Explore Details
+                        <i
+                            class="fas fa-chevron-right text-[0.9em] shrink-0 transition-transform group-hover:translate-y-1"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ WHY CHOOSE US (INTERACTIVE TABS) ═══════════════ -->
+    <section id="why-choose-us"
+        class="fade-in-section relative z-10 py-16 md:py-24 bg-[#FAFBF9] border-t border-gray-200/50 overflow-hidden font-sans">
+
+        <!-- Background Glow -->
+        <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#46B77B]/5 blur-[120px] rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10">
+
+            <!-- Heading -->
+            <div class="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+                <div
+                    class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-[#46B77B]/10 border border-[#46B77B]/20 mb-5 backdrop-blur-md">
+                    <span class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#46B77B]">Why Choose
+                        Us</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl md:text-5xl font-black text-[#0A0C12] leading-[1.1] tracking-tight">
+                    Our Plastic <br class="hidden sm:block"><span class="text-[#46B77B]">Packaging Range</span>
+                </h2>
+            </div>
+
+            <!-- Main Container -->
+            <div
+                class="bg-white border border-gray-100 rounded-2xl md:rounded-[2rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] overflow-hidden flex flex-row items-stretch min-h-[auto] md:min-h-[400px]">
+
+                <!-- Left Side (Tabs / Menu) -->
+                <div class="w-[35%] md:w-[40%] border-r border-gray-100 flex flex-col bg-white">
+
+                    <!-- Tab 1 -->
+                    <button onclick="openTab('tab1')" id="btn-tab1"
+                        class="tab-btn w-full text-left px-2 py-3 md:px-8 md:py-6 border-b border-gray-100 flex flex-col md:flex-row items-start md:items-center gap-1.5 md:gap-4 transition-all duration-300 hover:bg-[#46B77B]/5">
+                        <div
+                            class="w-7 h-7 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center shrink-0 bg-gray-100 text-gray-400 tab-icon transition-colors">
+                            <i class="fas fa-cookie-bite text-[0.65rem] md:text-base"></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-800 tab-text text-[0.65rem] md:text-base leading-snug">Confectionary
+                            Jars</span>
+                    </button>
+
+                    <!-- Tab 2 -->
+                    <button onclick="openTab('tab2')" id="btn-tab2"
+                        class="tab-btn w-full text-left px-2 py-3 md:px-8 md:py-6 border-b border-gray-100 flex flex-col md:flex-row items-start md:items-center gap-1.5 md:gap-4 transition-all duration-300 hover:bg-[#46B77B]/5">
+                        <div
+                            class="w-7 h-7 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center shrink-0 bg-gray-100 text-gray-400 tab-icon transition-colors">
+                            <i class="fas fa-pump-soap text-[0.65rem] md:text-base"></i>
+                        </div>
+                        <span class="font-bold text-gray-800 tab-text text-[0.65rem] md:text-base leading-snug">Lotion &
+                            Cream Jars</span>
+                    </button>
+
+                    <!-- Tab 3 -->
+                    <button onclick="openTab('tab3')" id="btn-tab3"
+                        class="tab-btn w-full text-left px-2 py-3 md:px-8 md:py-6 border-b border-gray-100 flex flex-col md:flex-row items-start md:items-center gap-1.5 md:gap-4 transition-all duration-300 hover:bg-[#46B77B]/5">
+                        <div
+                            class="w-7 h-7 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center shrink-0 bg-gray-100 text-gray-400 tab-icon transition-colors">
+                            <i class="fas fa-spray-can text-[0.65rem] md:text-base"></i>
+                        </div>
+                        <span class="font-bold text-gray-800 tab-text text-[0.65rem] md:text-base leading-snug">Caps &
+                            Closures</span>
+                    </button>
+
+                    <!-- Tab 4 -->
+                    <button onclick="openTab('tab4')" id="btn-tab4"
+                        class="tab-btn w-full text-left px-2 py-3 md:px-8 md:py-6 flex flex-col md:flex-row items-start md:items-center gap-1.5 md:gap-4 transition-all duration-300 hover:bg-[#46B77B]/5 border-b-0">
+                        <div
+                            class="w-7 h-7 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center shrink-0 bg-gray-100 text-gray-400 tab-icon transition-colors">
+                            <i class="fas fa-wine-bottle text-[0.65rem] md:text-base"></i>
+                        </div>
+                        <span class="font-bold text-gray-800 tab-text text-[0.65rem] md:text-base leading-snug">HDPE
+                            Bottles</span>
+                    </button>
+                </div>
+
+                <!-- Right Side (Content) -->
+                <div class="w-[65%] md:w-[60%] bg-[#FAFBF9] relative flex flex-col justify-center">
+                    <!-- Background pattern -->
+                    <div class="absolute inset-0 opacity-[0.03]"
+                        style="background-image: radial-gradient(#46B77B 1px, transparent 1px); background-size: 20px 20px;">
+                    </div>
+
+                    <!-- Inner Text Box -->
+                    <div
+                        class="relative z-10 m-3 md:m-8 bg-white backdrop-blur-md p-4 md:p-8 rounded-xl md:rounded-2xl border border-gray-100 shadow-sm h-auto self-center w-full">
+
+                        <!-- Content 1 -->
+                        <div id="tab1" class="tab-content block">
+                            <h3 class="text-sm md:text-3xl font-black text-[#0A0C12] mb-2 md:mb-4">Confectionary &
+                                Facial Jars</h3>
+                            <ul
+                                class="text-gray-600 text-[0.65rem] md:text-base leading-relaxed md:leading-loose list-disc pl-4 space-y-2">
+                                <li><strong>Confectionary Jars:</strong> Perfect for preserving the freshness of sweets
+                                    and confectionaries.</li>
+                                <li><strong>Facial Jars (250 millimeter):</strong> Tailored for facial products,
+                                    providing ample space and convenience.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Content 2 -->
+                        <div id="tab2" class="tab-content hidden">
+                            <h3 class="text-sm md:text-3xl font-black text-[#0A0C12] mb-2 md:mb-4">Lotion & Cream Jars
+                            </h3>
+                            <ul
+                                class="text-gray-600 text-[0.65rem] md:text-base leading-relaxed md:leading-loose list-disc pl-4 space-y-2">
+                                <li><strong>Lotion Bottles:</strong> Ideal packaging for various lotions, ensuring easy
+                                    dispensing and storage.</li>
+                                <li><strong>Cream Jars:</strong> Aesthetic and functional containers for creams of
+                                    various capacities (18 & 22 grams).</li>
+                            </ul>
+                        </div>
+
+                        <!-- Content 3 -->
+                        <div id="tab3" class="tab-content hidden">
+                            <h3 class="text-sm md:text-3xl font-black text-[#0A0C12] mb-2 md:mb-4">Caps & Closures</h3>
+                            <ul
+                                class="text-gray-600 text-[0.65rem] md:text-base leading-relaxed md:leading-loose list-disc pl-4 space-y-2">
+                                <li><strong>Cap of Perfume Bottle:</strong> Enhancing the appeal and functionality of
+                                    perfume packaging.</li>
+                                <li><strong>Cap of Lotion Bottle:</strong> Ensuring secure closure for lotion bottles,
+                                    preserving their contents.</li>
+                                <li><strong>Cap of Shampoo Bottle:</strong> Functional and stylish caps for shampoo
+                                    bottles.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Content 4 -->
+                        <div id="tab4" class="tab-content hidden">
+                            <h3 class="text-sm md:text-3xl font-black text-[#0A0C12] mb-2 md:mb-4">HDPE Bottles</h3>
+                            <p class="text-gray-600 text-[0.65rem] md:text-base leading-relaxed md:leading-loose">
+                                <strong>HDPE Bottles (60ml – 1Litre):</strong> Elevate your product packaging with our
+                                high-quality HDPE bottles, offering durability and versatility for a wide range of
+                                industries.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ INDUSTRIES WE SERVE (ALL SCREENS 1-ROW) ═══════════════ -->
+    <section id="industries"
+        class="fade-in-section relative z-10 py-12 md:py-16 min-[991px]:py-24 bg-[#050806] overflow-hidden border-b border-white/5 font-sans">
+
+        <!-- Background Glow -->
+        <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#46B77B]/10 blur-[150px] rounded-full mix-blend-screen">
+            </div>
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-1 sm:px-4 md:px-6 min-[991px]:px-8 lg:px-12 relative z-10 flex flex-col items-center">
+
+            <!-- Heading (Badge) -->
+            <div
+                class="inline-flex items-center gap-1.5 md:gap-2 py-1 md:py-2 px-2 md:px-6 rounded-full bg-[#46B77B]/10 border border-[#46B77B]/30 mb-6 md:mb-16 backdrop-blur-md">
+                <span
+                    class="text-[0.55rem] md:text-xs font-bold tracking-[0.1em] md:tracking-[0.25em] uppercase text-[#61CE70]">Industries
+                    We Serve</span>
+            </div>
+
+            <!-- 5 Items in ONE ROW for ALL Screens -->
+            <div
+                class="flex flex-row flex-nowrap items-start justify-between w-full gap-1 sm:gap-2 md:gap-4 min-[991px]:gap-8 lg:gap-12">
+
+                <!-- Item 1 -->
+                <div class="group flex flex-col items-center text-center cursor-default flex-1">
+                    <div
+                        class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 min-[991px]:w-20 min-[991px]:h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-1.5 md:mb-4 min-[991px]:mb-6 group-hover:border-[#46B77B]/50 group-hover:bg-[#46B77B]/10 group-hover:scale-110 transition-all duration-500 relative">
+                        <div
+                            class="absolute inset-0 bg-[#46B77B]/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <i
+                            class="fas fa-store text-[0.6rem] sm:text-base md:text-xl min-[991px]:text-3xl text-gray-400 group-hover:text-[#61CE70] transition-colors relative z-10"></i>
+                    </div>
+                    <h3
+                        class="text-[0.5rem] sm:text-[0.65rem] md:text-sm min-[991px]:text-lg font-bold text-gray-400 group-hover:text-white transition-colors leading-tight">
+                        Retail</h3>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="group flex flex-col items-center text-center cursor-default flex-1">
+                    <div
+                        class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 min-[991px]:w-20 min-[991px]:h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-1.5 md:mb-4 min-[991px]:mb-6 group-hover:border-amber-400/50 group-hover:bg-amber-400/10 group-hover:scale-110 transition-all duration-500 relative">
+                        <div
+                            class="absolute inset-0 bg-amber-400/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <i
+                            class="fas fa-utensils text-[0.6rem] sm:text-base md:text-xl min-[991px]:text-3xl text-gray-400 group-hover:text-amber-400 transition-colors relative z-10"></i>
+                    </div>
+                    <h3
+                        class="text-[0.5rem] sm:text-[0.65rem] md:text-sm min-[991px]:text-lg font-bold text-gray-400 group-hover:text-white transition-colors leading-tight">
+                        Food & Beverage</h3>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="group flex flex-col items-center text-center cursor-default flex-1">
+                    <div
+                        class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 min-[991px]:w-20 min-[991px]:h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-1.5 md:mb-4 min-[991px]:mb-6 group-hover:border-blue-400/50 group-hover:bg-blue-400/10 group-hover:scale-110 transition-all duration-500 relative">
+                        <div
+                            class="absolute inset-0 bg-blue-400/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <i
+                            class="fas fa-pills text-[0.6rem] sm:text-base md:text-xl min-[991px]:text-3xl text-gray-400 group-hover:text-blue-400 transition-colors relative z-10"></i>
+                    </div>
+                    <h3
+                        class="text-[0.5rem] sm:text-[0.65rem] md:text-sm min-[991px]:text-lg font-bold text-gray-400 group-hover:text-white transition-colors leading-tight">
+                        Pharmaceuticals</h3>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="group flex flex-col items-center text-center cursor-default flex-1">
+                    <div
+                        class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 min-[991px]:w-20 min-[991px]:h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-1.5 md:mb-4 min-[991px]:mb-6 group-hover:border-purple-400/50 group-hover:bg-purple-400/10 group-hover:scale-110 transition-all duration-500 relative">
+                        <div
+                            class="absolute inset-0 bg-purple-400/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <i
+                            class="fas fa-spa text-[0.6rem] sm:text-base md:text-xl min-[991px]:text-3xl text-gray-400 group-hover:text-purple-400 transition-colors relative z-10"></i>
+                    </div>
+                    <h3
+                        class="text-[0.5rem] sm:text-[0.65rem] md:text-sm min-[991px]:text-lg font-bold text-gray-400 group-hover:text-white transition-colors leading-tight">
+                        Cosmetic & Beauty</h3>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="group flex flex-col items-center text-center cursor-default flex-1">
+                    <div
+                        class="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 min-[991px]:w-20 min-[991px]:h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-1.5 md:mb-4 min-[991px]:mb-6 group-hover:border-[#46B77B]/50 group-hover:bg-[#46B77B]/10 group-hover:scale-110 transition-all duration-500 relative">
+                        <div
+                            class="absolute inset-0 bg-[#46B77B]/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <i
+                            class="fas fa-ellipsis-h text-[0.6rem] sm:text-base md:text-xl min-[991px]:text-3xl text-gray-400 group-hover:text-[#61CE70] transition-colors relative z-10"></i>
+                    </div>
+                    <h3
+                        class="text-[0.5rem] sm:text-[0.65rem] md:text-sm min-[991px]:text-lg font-bold text-gray-400 group-hover:text-white transition-colors leading-tight">
+                        And more...</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ ADVANCED IMAGE SHOWCASE SECTION (8 IMAGES) ═══════════════ -->
+    <section id="showcase"
+        class="fade-in-section relative z-10 py-16 md:py-24 bg-transparent overflow-hidden border-t border-black/5">
+
+        <!-- Text Area -->
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10 text-center mb-10 md:mb-14">
+            <div
+                class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-[#46B77B]/10 border border-[#46B77B]/20 mb-4 backdrop-blur-md">
+                <i class="fas fa-sparkles text-[#46B77B] text-xs"></i>
+                <span class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#46B77B]">Our Portfolio</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#0A0C12] leading-[1.1] tracking-tight mb-4">
+                Excellence in Every <span class="text-[#46B77B]">Bottle & Jar.</span>
+            </h2>
+            <p class="text-gray-500 text-sm md:text-base max-w-2xl mx-auto">Take a look at some of our recent plastic
+                packaging projects that helped brands stand out.</p>
+        </div>
+
+        <!-- Marquee Slider -->
+        <div class="relative w-full overflow-hidden group/slider">
+
+            <!-- Track -->
+            <div
+                class="flex w-max animate-marquee-infinite group-hover/slider:[animation-play-state:paused] gap-5 md:gap-8 px-4 md:px-8 py-6">
+
+                <!-- Image 1 -->
+                <div
+                    class="shrink-0 w-[280px] sm:w-[320px] lg:w-[380px] aspect-[4/3] rounded-2xl overflow-hidden group relative cursor-pointer bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-500">
+                    <img src="images/plastic-packing.png" alt="Plastic Packaging Showcase"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                </div>
+
+                <!-- Image 2 -->
+                <div
+                    class="shrink-0 w-[280px] sm:w-[320px] lg:w-[380px] aspect-[4/3] rounded-2xl overflow-hidden group relative cursor-pointer bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-500">
+                    <img src="images/plastic-packing1.webp" alt="Confectionary Jars"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                </div>
+
+                <!-- Image 3 -->
+                <div
+                    class="shrink-0 w-[280px] sm:w-[320px] lg:w-[380px] aspect-[4/3] rounded-2xl overflow-hidden group relative cursor-pointer bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-500">
+                    <img src="images/plastic-packing.png" alt="Lotion Bottles"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                </div>
+
+                <!-- Image 4 -->
+                <div
+                    class="shrink-0 w-[280px] sm:w-[320px] lg:w-[380px] aspect-[4/3] rounded-2xl overflow-hidden group relative cursor-pointer bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-500">
+                    <img src="images/plastic-packing1.webp" alt="Cream Jars"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                </div>
+
+                <!-- Image 5 -->
+                <div
+                    class="shrink-0 w-[280px] sm:w-[320px] lg:w-[380px] aspect-[4/3] rounded-2xl overflow-hidden group relative cursor-pointer bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-500">
+                    <img src="images/plastic-packing.png" alt="HDPE Bottles"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                </div>
+
+                <!-- Image 6 -->
+                <div
+                    class="shrink-0 w-[280px] sm:w-[320px] lg:w-[380px] aspect-[4/3] rounded-2xl overflow-hidden group relative cursor-pointer bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-500">
+                    <img src="images/plastic-packing1.webp" alt="Caps & Closures"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                </div>
+
+                <!-- Image 7 -->
+                <div
+                    class="shrink-0 w-[280px] sm:w-[320px] lg:w-[380px] aspect-[4/3] rounded-2xl overflow-hidden group relative cursor-pointer bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-500">
+                    <img src="images/plastic-packing.png" alt="Facial Jars"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                </div>
+
+                <!-- Image 8 -->
+                <div
+                    class="shrink-0 w-[280px] sm:w-[320px] lg:w-[380px] aspect-[4/3] rounded-2xl overflow-hidden group relative cursor-pointer bg-white/40 backdrop-blur-md border border-white/60 transition-all duration-500">
+                    <img src="images/plastic-packing1.webp" alt="Custom Packaging"
+                        class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ NEED FOR SOME HELP (PREMIUM SPLIT DARK) ═══════════════ -->
+    <section id="help"
+        class="fade-in-section relative z-10 py-20 md:py-32 bg-[#050806] overflow-hidden border-b border-white/5 font-sans">
+
+        <!-- Background Glows -->
+        <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+            <div
+                class="absolute top-0 left-0 w-[500px] h-[500px] bg-[#46B77B]/10 blur-[150px] rounded-full mix-blend-screen">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#61CE70]/5 blur-[120px] rounded-full mix-blend-screen">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+
+                <!-- Left Side: Big Image with Frame -->
+                <div class="w-full lg:w-1/2 relative slide-in-left order-2 lg:order-1">
+                    <div class="relative w-full max-w-lg mx-auto">
+                        <!-- Decorative Frame Lines -->
+                        <div
+                            class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-[#46B77B]/40 rounded-tl-3xl z-0">
+                        </div>
+                        <div
+                            class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-[#46B77B]/40 rounded-br-3xl z-0">
+                        </div>
+
+                        <!-- Main Image -->
+                        <div
+                            class="relative z-10 rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl bg-white/5 border border-white/10 group">
+                            <!-- YAHAN APNI IMAGE KA NAAM DALEIN -->
+                            <img src="images/help-section.jpg" alt="Need Help"
+                                class="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-[#050806] via-[#050806]/20 to-transparent opacity-80 pointer-events-none">
+                            </div>
+                        </div>
+
+                        <!-- Floating Card Over Image -->
+                        <div
+                            class="absolute -bottom-6 -right-2 md:-right-6 z-20 bg-[#0A0F0D] border border-[#46B77B]/30 p-4 rounded-2xl shadow-xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#46B77B]/20 flex items-center justify-center">
+                                <i class="fas fa-headset text-xl text-[#61CE70]"></i>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-black text-white leading-none">24/7</p>
+                                <p class="text-[0.6rem] font-bold text-gray-400 uppercase tracking-widest mt-1">Support
+                                    Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Contact Information -->
+                <div class="w-full lg:w-1/2 order-1 lg:order-2 slide-in-right">
+                    <div
+                        class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-[#46B77B]/10 border border-[#46B77B]/30 mb-6 backdrop-blur-md">
+                        <i class="fas fa-headset text-[#61CE70]"></i>
+                        <span class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#61CE70]">Get In
+                            Touch</span>
+                    </div>
+
+                    <h2
+                        class="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.1] tracking-tight mb-4">
+                        Let's Talk <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-[#46B77B] to-[#61CE70]">Business.</span>
+                    </h2>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-10 max-w-md">
+                        Book your order now or get a free consultation with our printing experts to bring your vision to
+                        life.
+                    </p>
+
+                    <!-- Contact Details (List Style) -->
+                    <div class="flex flex-col gap-6 relative w-full">
+
+                        <!-- Phone 1 -->
+                        <div class="group relative flex flex-row items-center gap-5 cursor-default">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center shrink-0 group-hover:border-[#46B77B] group-hover:bg-[#46B77B] transition-all duration-300 z-10">
+                                <i
+                                    class="fas fa-phone-alt text-lg text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <div
+                                class="flex-1 pb-4 border-b border-white/5 group-hover:border-[#46B77B]/30 transition-colors">
+                                <h4
+                                    class="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1 group-hover:text-[#61CE70] transition-colors">
+                                    Phone (UAN)</h4>
+                                <a href="tel:+92111333301"
+                                    class="text-white text-lg font-black hover:text-[#61CE70] transition-colors">+92 111
+                                    333 301</a>
+                            </div>
+                        </div>
+
+                        <!-- Phone 2 -->
+                        <div class="group relative flex flex-row items-center gap-5 cursor-default">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center shrink-0 group-hover:border-[#46B77B] group-hover:bg-[#46B77B] transition-all duration-300 z-10">
+                                <i
+                                    class="fas fa-phone text-lg text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <div
+                                class="flex-1 pb-4 border-b border-white/5 group-hover:border-[#46B77B]/30 transition-colors">
+                                <h4
+                                    class="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1 group-hover:text-[#61CE70] transition-colors">
+                                    Landline</h4>
+                                <a href="tel:+924235402021"
+                                    class="text-white text-lg font-black hover:text-[#61CE70] transition-colors">+92 42
+                                    3540 2021-22</a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="group relative flex flex-row items-center gap-5 cursor-default">
+                            <div
+                                class="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center shrink-0 group-hover:border-[#46B77B] group-hover:bg-[#46B77B] transition-all duration-300 z-10">
+                                <i
+                                    class="fas fa-envelope text-lg text-gray-400 group-hover:text-white transition-colors"></i>
+                            </div>
+                            <div
+                                class="flex-1 pb-4 border-b border-white/5 group-hover:border-[#46B77B]/30 transition-colors">
+                                <h4
+                                    class="text-gray-400 text-xs font-bold uppercase tracking-wider mb-1 group-hover:text-[#61CE70] transition-colors">
+                                    Email Address</h4>
+                                <a href="mailto:info@maqsoodfaisal.com"
+                                    class="text-white text-lg font-black hover:text-[#61CE70] transition-colors break-all">info@maqsoodfaisal.com</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ OUR PROCESS (COLUMN + DARK ACTIVE STATE) ═══════════════ -->
+    <section id="process" class="fade-in-section relative z-10 py-20 md:py-32 bg-transparent overflow-hidden font-sans">
+
+        <!-- Background Glow -->
+        <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#46B77B]/5 blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#61CE70]/5 blur-[120px] rounded-full"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 md:px-8 lg:px-12 relative z-10">
+
+            <!-- Top Heading -->
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-20">
+                <div
+                    class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-[#46B77B]/10 border border-[#46B77B]/20 mb-5 backdrop-blur-md">
+                    <span class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#46B77B]">How We Work</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-[#0A0C12] leading-[1.1] tracking-tight">
+                    Our Process & <span class="text-[#46B77B]">Partnership.</span>
+                </h2>
+            </div>
+
+            <!-- Column Layout (Stacked) -->
+            <div class="flex flex-col w-full gap-4 md:gap-6">
+
+                <!-- Step 1: Our Process -->
+                <div id="process-card-1"
+                    class="reveal-card group cursor-pointer transition-all duration-500 rounded-2xl md:rounded-3xl border border-gray-200/80 bg-white/60 backdrop-blur-md overflow-hidden">
+                    <!-- Header (Clickable) -->
+                    <div class="flex flex-row items-center justify-between gap-4 p-6 md:p-8"
+                        onclick="toggleProcessReveal('reveal-1', 'process-card-1')">
+                        <h3
+                            class="text-xl md:text-3xl font-black text-[#0A0C12] transition-colors duration-500 card-title">
+                            Our Commitment to Quality
+                        </h3>
+                        <!-- Icon -->
+                        <div
+                            class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition-all duration-500 card-icon">
+                            <i class="fas fa-plus text-gray-500 transition-colors duration-500"></i>
+                        </div>
+                    </div>
+
+                    <!-- Content (Hidden by default) -->
+                    <div id="reveal-1" class="hidden px-6 md:px-8 pb-6 md:pb-8">
+                        <p
+                            class="text-gray-500 text-sm md:text-base leading-relaxed md:leading-loose transition-colors duration-500 card-text">
+                            At Maqsood Faisal Printing Press, we are deeply committed to providing plastic packaging
+                            solutions that not only meet the highest quality standards but also prioritize environmental
+                            conservation. Our products are crafted with a strong emphasis on their intended use,
+                            ensuring customer satisfaction while upholding eco-friendly practices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2: Partner with Us -->
+                <div id="process-card-2"
+                    class="reveal-card group cursor-pointer transition-all duration-500 rounded-2xl md:rounded-3xl border border-gray-200/80 bg-white/60 backdrop-blur-md overflow-hidden">
+                    <!-- Header (Clickable) -->
+                    <div class="flex flex-row items-center justify-between gap-4 p-6 md:p-8"
+                        onclick="toggleProcessReveal('reveal-2', 'process-card-2')">
+                        <h3
+                            class="text-xl md:text-3xl font-black text-[#0A0C12] transition-colors duration-500 card-title">
+                            Partner with Us
+                        </h3>
+                        <!-- Icon -->
+                        <div
+                            class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition-all duration-500 card-icon">
+                            <i class="fas fa-plus text-gray-500 transition-colors duration-500"></i>
+                        </div>
+                    </div>
+
+                    <!-- Content (Hidden by default) -->
+                    <div id="reveal-2" class="hidden px-6 md:px-8 pb-6 md:pb-8">
+                        <p
+                            class="text-gray-500 text-sm md:text-base leading-relaxed md:leading-loose transition-colors duration-500 card-text">
+                            Whether you require custom Confectionary Jars, innovative Lotion Bottles, or any other
+                            plastic packaging solution, Maqsood Faisal Printing Press is your trusted partner. Our team
+                            collaborates closely with clients to create packaging that not only meets but exceeds
+                            expectations.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════ FREE CONSULTATION — FULL BACKGROUND IMAGE DESIGN ═══════════════ -->
+    <section id="free-consultation" class="fade-in-section relative z-10 overflow-hidden font-sans">
+
+        <!-- FULL BACKGROUND IMAGE + overlays -->
+        <div class="absolute inset-0 -z-10">
+            <img src="images/consultation.jpg" alt="Free Consultation Background"
+                class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-[#050806]/75"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-[#46B77B]/15 via-transparent to-[#0A0F0D]/80"></div>
+            <div class="absolute inset-0 opacity-[0.06]"
+                style="background-image: radial-gradient(#61CE70 1px, transparent 1px); background-size: 24px 24px;">
+            </div>
+            <div class="absolute -top-24 -left-24 w-[400px] h-[400px] bg-[#46B77B]/20 blur-[130px] rounded-full"></div>
+            <div class="absolute -bottom-24 -right-24 w-[350px] h-[350px] bg-[#61CE70]/15 blur-[120px] rounded-full">
+            </div>
+        </div>
+
+        <!-- Main Container -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-28 relative z-10 text-center">
+
+            <!-- Badge -->
+            <div
+                class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-md">
+                <span class="relative flex h-2 w-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#61CE70] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-[#61CE70]"></span>
+                </span>
+                <span class="text-[0.6rem] sm:text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#61CE70]">Free
+                    Consultation</span>
+            </div>
+
+            <!-- Heading -->
+            <h2
+                class="text-[2rem] sm:text-4xl md:text-5xl lg:text-[3.6rem] font-black text-white leading-[1.08] tracking-tight mb-5 sm:mb-6">
+                Get A Free<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#46B77B] via-[#61CE70] to-[#46B77B]">
+                    Consultation
+                </span>
+                <span class="text-white/90">With Us</span>
+            </h2>
+
+            <!-- Description -->
+            <p class="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-10">
+                Ready to explore the world of durable, lightweight, and eco-friendly plastic packaging? Contact us today
+                to discuss your specific requirements and discover how Maqsood Faisal Printing Press can elevate your
+                product packaging.
+            </p>
+
+            <!-- Buttons: Same Height & Balanced Sizes -->
+            <div
+                class="flex flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 w-full max-w-[500px] mx-auto">
+
+                <!-- Contact Us Now -->
+                <a href="#contact"
+                    class="group h-[48px] sm:h-[56px] px-4 sm:px-7 flex items-center justify-center gap-1.5 sm:gap-2.5 rounded-xl font-bold text-[0.75rem] sm:text-sm text-[#0A0F0D] bg-[#61CE70] hover:bg-[#46B77B] shadow-[0_10px_30px_-10px_rgba(97,206,112,0.6)] transition-all duration-300 hover:-translate-y-1 whitespace-nowrap">
+                    <i class="fas fa-paper-plane text-[0.8em] sm:text-sm"></i>
+                    <span>Contact Us Now</span>
+                    <i
+                        class="fas fa-arrow-right text-[0.7em] sm:text-xs transition-transform group-hover:translate-x-1 hidden xs:inline-block"></i>
+                </a>
+
+                <!-- Phone Number Button -->
+                <a href="tel:+92111333301"
+                    class="group h-[48px] sm:h-[56px] px-3 sm:px-5 flex items-center justify-center gap-2 rounded-xl font-bold text-white bg-white/[0.08] border border-white/20 hover:border-[#46B77B]/60 hover:bg-white/[0.12] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 whitespace-nowrap">
+                    <i
+                        class="fas fa-phone-alt text-[#61CE70] text-[0.85em] sm:text-sm group-hover:rotate-12 transition-transform"></i>
+                    <span class="text-white font-black text-[0.75rem] sm:text-sm tracking-wide">+92 111 333 301</span>
+                </a>
+
+            </div>
+
+            <!-- Trust line -->
+            <div
+                class="flex flex-row items-center justify-center gap-3 sm:gap-6 text-[0.55rem] sm:text-xs text-gray-400">
+                <span class="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+                    <i class="fas fa-check text-[#61CE70] text-[0.6em] sm:text-[0.6rem]"></i> Free consultation
+                </span>
+                <span class="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+                    <i class="fas fa-check text-[#61CE70] text-[0.6em] sm:text-[0.6rem]"></i> Expert advice
+                </span>
+                <span class="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+                    <i class="fas fa-check text-[#61CE70] text-[0.6em] sm:text-[0.6rem]"></i> No obligation
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER PLACEHOLDER (loaded via JS) -->
+    <div id="footer-placeholder"></div>
+
+    <!-- BACK TO TOP PLACEHOLDER (loaded via JS) -->
+    <div id="back-to-top-placeholder"></div>
+
+    <!-- Components Loader -->
+    <script src="js/components-loader.js"></script>
+    <!-- JS File -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
