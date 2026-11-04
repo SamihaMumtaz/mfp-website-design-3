@@ -229,7 +229,11 @@ function typeInnerPagesEffect() {
     const currentUrl = window.location.href.toLowerCase();
     const pageTitle = document.title.toLowerCase();
 
-    if (currentUrl.includes("laminated") || pageTitle.includes("laminated")) {
+    // === YAHAN ABOUT PAGE KE LIYE FIX ADD KIYA GAYA HAI ===
+    if (currentUrl.includes("about") || pageTitle.includes("about")) {
+        phrase = "Brand Packaging";
+    } 
+    else if (currentUrl.includes("laminated") || pageTitle.includes("laminated")) {
         phrase = "& Barrier Protection"; 
     } else if (currentUrl.includes("plastic") || pageTitle.includes("plastic")) {
         phrase = "& Durable Solutions"; 
@@ -535,7 +539,7 @@ function toggleProcessReveal(revealId, cardId) {
         icon.classList.add('border-gray-300');
         icon.classList.remove('border-[#46B77B]', 'bg-[#46B77B]');
         iconInner.classList.add('text-gray-500', 'fa-plus');
-        iconInner.classList.remove('text-white', 'fa-times', 'rotate-90');
+        iconInner.classList.remove('text-white', 'fa-times', 'rotate-180', 'rotate-90');
         text.classList.add('text-gray-500');
         text.classList.remove('text-gray-400');
     }

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Maqsood Faisal Printing Press</title>
+
+    <!-- Font Awesome & Tailwind CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-white text-[#0A0C12] overflow-x-hidden min-h-screen font-sans relative flex flex-col">
+
+    <!-- BACKGROUNDS -->
+    <div class="bg-morph fixed inset-0 -z-50"></div>
+    <div class="glow fixed rounded-full -z-40 pointer-events-none glow-1"></div>
+    <div class="glow fixed rounded-full -z-40 pointer-events-none glow-2"></div>
+    <canvas id="particle-canvas" class="fixed inset-0 -z-30 pointer-events-none opacity-45"></canvas>
+
+    <!-- HEADER PLACEHOLDER (loaded via JS) -->
+    <div id="header-placeholder" class="contents"></div>
+
+    <!-- ═══════════════ HERO SECTION (ABOUT US) ═══════════════ -->
+    <section id="hero-about"
+        class="fade-in-section relative z-10 w-full overflow-hidden flex items-center py-20 md:py-28 lg:py-32 min-h-[70vh]">
+
+        <!-- Background Image -->
+        <div class="absolute inset-0 -z-10 bg-[#050806]">
+            <img src="images/about-maqsood-faisal.jpg" class="w-full h-full object-cover opacity-50 scale-105"
+                alt="About Maqsood Faisal">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#050806]/70 via-[#050806]/30 to-[#050806]/80"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#46B77B]/10 blur-[150px] rounded-full mix-blend-screen pointer-events-none">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full px-4 md:px-8 lg:px-12 relative z-10">
+            <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+                <!-- Badge -->
+                <div
+                    class="inline-flex items-center gap-2 py-1.5 px-5 rounded-full text-[0.65rem] md:text-xs font-bold tracking-widest uppercase text-[#46B77B] bg-[#46B77B]/10 border border-[#46B77B]/30 mb-6 md:mb-8 backdrop-blur-md">
+                    <i class="fas fa-building"></i> Our Legacy & Vision
+                </div>
+
+                <!-- Heading with Typing Effect -->
+                <h1
+                    class="font-black leading-[1.15] tracking-tight text-white mb-6 md:mb-8 w-full drop-shadow-md text-[1.8rem] sm:text-[2.5rem] md:text-[3.2rem] lg:text-[3.8rem]">
+                    <span class="block">We Are Solutions For Your</span>
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-[#46B77B] to-[#61CE70] mt-1 pb-1 min-h-[1.2em]">
+                        <span id="offsetTypedText"></span>
+                        <span class="inline-block w-1 h-[0.8em] bg-[#61CE70] ml-1 animate-pulse"></span>
+                    </span>
+                </h1>
+
+                <p class="text-sm sm:text-base md:text-[1.05rem] leading-relaxed md:leading-loose text-gray-200 mb-10 md:mb-12 max-w-3xl drop-shadow-md">
+                    At Maqsood Faisal Printing Press, our journey began with the vision of our late Chairman, Haji Maqsood Ahmed. With a single printing unit in offset printing, he sought to revolutionize the printing and packaging industry, setting the foundation for a company synonymous with excellence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ OUR ECO-FRIENDLY VISION SECTION (IMAGE ON RIGHT) ═══════════════ -->
+    <section id="vision" class="fade-in-section relative z-10 py-16 md:py-24 bg-white overflow-hidden border-t border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10">
+            
+            <!-- Grid Layout: Text Left, Image Right (991px+), Stacked on Mobile/Tablet -->
+            <div class="flex flex-col [@media(min-width:991px)]:flex-row items-center gap-10 [@media(min-width:991px)]:gap-16">
+                
+                <!-- Text Column (Order 1) -->
+                <div class="w-full [@media(min-width:991px)]:w-1/2 order-1 slide-in-left">
+                    <div class="flex items-center gap-3 mb-5 md:mb-6">
+                        <span class="h-px w-10 bg-[#46B77B]"></span>
+                        <span class="text-[0.65rem] font-bold tracking-[0.3em] uppercase text-[#46B77B]">Our Eco-Friendly Vision</span>
+                    </div>
+                    
+                    <!-- Heading (Mobile font size fixed) -->
+                    <h2 class="text-[1.6rem] sm:text-4xl md:text-[2.5rem] font-black text-[#0A0C12] leading-[1.2] mb-6">
+                        We Production Best <br>
+                        <span class="relative inline-block text-[#46B77B] mt-1">
+                            Packaging!
+                            <svg class="absolute -bottom-2.5 md:-bottom-3.5 left-0 w-full" height="7" viewBox="0 0 200 10" preserveAspectRatio="none" fill="none">
+                                <path d="M2 7C50 3 100 2 198 6" stroke="#46B77B" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </h2>
+                    
+                    <p class="text-gray-500 text-xs sm:text-sm md:text-[0.95rem] leading-relaxed mb-6">
+                        We are committed to leading the industry in an eco-friendly manner. Our operations prioritize sustainability, aiming to reduce our carbon footprint and promote environmental consciousness.
+                    </p>
+                    <p class="text-gray-500 text-xs sm:text-sm md:text-[0.95rem] leading-relaxed mb-8">
+                        At Maqsood Faisal Printing Press, we specialise in premium packaging solutions, delivering top-quality printing and packaging services that enhance brand appeal, protect products, and impress customers.
+                    </p>
+
+                    <!-- Features Grid (Fixed for 320px - stack them until sm) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+                        <div class="flex flex-col items-start p-3 sm:p-4 rounded-xl bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 transition-all">
+                            <i class="fas fa-medal text-xl sm:text-2xl text-[#46B77B] mb-2 sm:mb-3"></i>
+                            <h4 class="font-bold text-xs sm:text-sm text-[#0A0C12] mb-1">Best Quality</h4>
+                            <p class="text-[0.65rem] sm:text-[0.7rem] text-gray-500">Exceptional packaging quality ensures durability.</p>
+                        </div>
+                        <div class="flex flex-col items-start p-3 sm:p-4 rounded-xl bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 transition-all">
+                            <i class="fas fa-palette text-xl sm:text-2xl text-[#46B77B] mb-2 sm:mb-3"></i>
+                            <h4 class="font-bold text-xs sm:text-sm text-[#0A0C12] mb-1">Creative Packaging</h4>
+                            <p class="text-[0.65rem] sm:text-[0.7rem] text-gray-500">Unleashing unique designs that make you stand out.</p>
+                        </div>
+                        <div class="flex flex-col items-start p-3 sm:p-4 rounded-xl bg-[#FAFBF9] border border-gray-100 hover:border-[#46B77B]/40 transition-all">
+                            <i class="fas fa-leaf text-xl sm:text-2xl text-[#46B77B] mb-2 sm:mb-3"></i>
+                            <h4 class="font-bold text-xs sm:text-sm text-[#0A0C12] mb-1">Eco-Friendly</h4>
+                            <p class="text-[0.65rem] sm:text-[0.7rem] text-gray-500">Sustainable solutions to reduce waste and protect nature.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Column (Order 2 - Right Side) -->
+                <div class="w-full [@media(min-width:991px)]:w-1/2 order-2 relative slide-in-right mt-6 [@media(min-width:991px)]:mt-0">
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-[#46B77B]/10 rounded-full blur-2xl"></div>
+                    <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
+                        <!-- Aspect ratio fix for mobile (4/3) and desktop auto -->
+                        <img src="images/quality.png" alt="Eco-Friendly Vision" class="w-full h-[220px] sm:h-[300px] [@media(min-width:991px)]:h-auto object-cover">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ WHAT WE DO / LEADERSHIP SECTION (PREMIUM) ═══════════════ -->
+    <section id="leadership" class="fade-in-section relative z-10 py-16 md:py-24 bg-[#050806] overflow-hidden border-t border-white/10">
+        <!-- Background Glow -->
+        <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#46B77B]/10 blur-[150px] rounded-full mix-blend-screen"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#61CE70]/5 blur-[120px] rounded-full mix-blend-screen"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10">
+            <div class="flex flex-col [@media(min-width:991px)]:flex-row gap-10 [@media(min-width:991px)]:gap-16 items-center">
+                
+                <!-- Left Side: Leadership Image & Card -->
+                <div class="w-full [@media(min-width:991px)]:w-5/12 slide-in-left order-1 mt-10 [@media(min-width:991px)]:mt-0">
+                    <div class="relative group">
+                        <!-- Decorative Frames -->
+                        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-[#46B77B]/40 rounded-tl-3xl z-0"></div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-[#46B77B]/40 rounded-br-3xl z-0"></div>
+                        
+                        <!-- Main Image -->
+                        <div class="relative z-10 rounded-[2rem] overflow-hidden aspect-[4/5] shadow-2xl border border-white/10 bg-white/5">
+                            <img src="images/about-maqsood-faisal.jpg" alt="Chairman Haji Maqsood Ahmed" class="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#050806] via-transparent to-transparent"></div>
+                        </div>
+
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -right-2 md:-right-6 z-20 bg-[#0A0F0D] border border-[#46B77B]/30 p-4 rounded-2xl shadow-xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#46B77B]/20 flex items-center justify-center">
+                                <i class="fas fa-crown text-xl text-[#61CE70]"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg font-black text-white leading-none">Chairman</p>
+                                <p class="text-[0.6rem] font-bold text-gray-400 uppercase tracking-widest mt-1">Haji Maqsood Ahmed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Leadership Text -->
+                <div class="w-full [@media(min-width:991px)]:w-7/12 slide-in-right order-2">
+                    <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-[#46B77B]/10 border border-[#46B77B]/30 mb-6 backdrop-blur-md">
+                        <i class="fas fa-users text-[#61CE70] text-xs"></i>
+                        <span class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#61CE70]">What We Do & Our Leadership</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-[1.1] tracking-tight mb-6">
+                        Our <span class="relative inline-block text-[#46B77B]">
+                            Leadership
+                            <svg class="absolute -bottom-2.5 md:-bottom-3.5 left-0 w-full" height="7" viewBox="0 0 200 10" preserveAspectRatio="none" fill="none">
+                                <path d="M2 7C50 3 100 2 198 6" stroke="#46B77B" stroke-width="3" stroke-linecap="round" />
+                            </svg>
+                        </span>
+                    </h2>
+
+                    <div class="space-y-4 text-gray-400 text-sm md:text-[0.95rem] leading-relaxed md:leading-loose">
+                        <p class="border-l-2 border-[#46B77B]/50 pl-4 italic">
+                            "From the desk of CEO: The man behind the success of Maqsood Faisal Printing Press was the enlightenment of Chairman Haji Maqsood Ahmed (Late). His Dedication, Devotion & Commitment has forced us to keep this torch as the source of inspiration to move ahead."
+                        </p>
+                        <p>
+                            Integration, innovation, and Specialty for value addition are the main criteria, we are adhering to. <strong class="text-white">"Emerging Quality through design"</strong> is the Philosophy to maintain quality and customer satisfaction. Qualification for the certification of ISO 9001:2015 & FSSC 22000 version 5.1 in a row enabled the company to be recognized Internationally. The customer-driven strategy has attracted several diversified clienteles to tie in the business loop.
+                        </p>
+                        <p>
+                            In our approach, a diversified model of business is the key parameter to entail success. We believe in customer relationships and customer satisfaction by keeping no elusiveness in business deals.
+                        </p>
+                        <p>
+                            To gear up the momentum of the gained success, the company is striving to an expansion in Allama Iqbal Industrial Estate – SEZ of CPEC. <strong class="text-white">Blown Film Extrusion</strong> is the new project to explore along with Tissue Paper Convertor.
+                        </p>
+                        <p>
+                            Research & Development, training of the employees and meeting the regulatory compliance is the key components we are focusing followed by strict discipline and SOPs.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════ TRUSTED BY BRANDS (MARQUEE) ═══════════════ -->
+    <section id="clients" class="fade-in-section relative z-10 py-12 md:py-16 border-y border-gray-200/60 bg-transparent w-full overflow-hidden">
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-[#46B77B]/10 border border-[#46B77B]/20 backdrop-blur-md">
+                <i class="fas fa-handshake text-[#46B77B] text-xs"></i>
+                <span class="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-[#46B77B]">Trusted by Brands</span>
+            </div>
+        </div>
+        
+        <div class="relative w-full flex overflow-hidden">
+            <div class="absolute top-0 left-0 w-16 md:w-32 h-full bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
+            <div class="absolute top-0 right-0 w-16 md:w-32 h-full bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
+            <div class="marquee-container relative w-full flex overflow-hidden">
+                <div class="marquee-track flex items-center w-max animate-marquee" id="brand-marquee"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER PLACEHOLDER (loaded via JS) -->
+    <div id="footer-placeholder"></div>
+
+    <!-- BACK TO TOP PLACEHOLDER (loaded via JS) -->
+    <div id="back-to-top-placeholder"></div>
+
+    <!-- Components Loader -->
+    <script src="js/components-loader.js"></script>
+    
+    <!-- JS File -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
